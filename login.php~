@@ -5,6 +5,7 @@
 	//	header('Location: index.php');
 	//	exit();
 	//}	
+	
 	require_once "connect.php";
 	
 	$connection=@new mysqli($db_host,$db_user,$db_password,$db_name);
@@ -14,6 +15,13 @@
 	else{
 		$login=$_POST['login'];
 		$password=$_POST['password'];
+		
+		$cookie_login=sha1($login); // reverse name for cookie name: nigol_eikooc
+		$cookie_password=sha1($password);	// reverse name for cookie name:	drowssap_eikooc
+		
+		setcookie("nigol_eikooc", $cookie_login, time() + (86400 * 30), "/");
+		setcookie("drowssap_eikooc", $cookie_password, time() + (86400 * 30), "/");
+		
 
 		$login=htmlentities($login,ENT_QUOTES,"UTF-8");	
 		$password=htmlentities($password,ENT_QUOTES,"UTF-8");			

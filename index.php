@@ -11,6 +11,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Serwis ogłoszeniowy</title>
 </head>
 <body>
@@ -19,12 +20,12 @@
     <form action="login.php" method="post">
         Login: <br/> <input type="text" name="login"/><br/>
         Hasło: <br/> <input type="password" name="password"/><br/><br/>
-        <input type="submit" value="Zaloguj się"/>
+        <input type="submit" value="Zaloguj się"/><br/>
+        <input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
     </form>
 <?php
 	if(isset($_SESSION['login_error'])){
 		echo $_SESSION['login_error'];
 	}
-
 ?>
 </html>

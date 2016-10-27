@@ -15,14 +15,14 @@
     <title>Serwis ogłoszeniowy</title>
 </head>
 <body>
-    
+	<form action="login.php" method="post">
+		Login: <br/> <input type="text" name="login"/><br/>
+		Hasło: <br/> <input type="password" name="password"/><br/><br/>
+		<input type="submit" value="Zaloguj się"/><br/>
+		<input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
+ 	</form>
 </body>
-    <form action="login.php" method="post">
-        Login: <br/> <input type="text" name="login"/><br/>
-        Hasło: <br/> <input type="password" name="password"/><br/><br/>
-        <input type="submit" value="Zaloguj się"/><br/>
-        <input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
-    </form>
+
 <?php
 	if(isset($_SESSION['login_error'])){
 		echo $_SESSION['login_error'];

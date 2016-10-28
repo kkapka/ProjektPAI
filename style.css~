@@ -14,8 +14,7 @@ input[type=password] {
     box-sizing: border-box;
 }
 input[type=submit] {
-	background-color: #D0B18D
-colormap; 
+	background-color: #D0B18D; 
     border: 2px #4CAF50;
     color: black;
     padding: 16px 32px;
@@ -31,6 +30,32 @@ input[type=submit]:hover{
 	background-color: #4CAF50;
     color: white;
 }
-input[type=checkbox]{
+header{
+	border-radius: 5px;
+	background: #73AD21;
+	padding: 25px;
+	text-align: center;
+	font-family: Arial, Sans-serif;
+	color: whitesmoke;
+	font-size: 2em;
+	height: 50px;
+}
+footer{
+	border-radius: 10px;
+	background: #a37643;
+	color: whitesmoke;
+	font-family: Arial, Sans-serif;
+	height: 25px;
+	padding: 5px;
+}
+.nav-info{
+	text-align: center;
+	color: black;
+	border-radius: 5px;
+	background:  #cba880;
+	padding: 2px;
+	height: 20px;
+	font-family: Arial, Sans-serif;
+	color: black;
 	
 }

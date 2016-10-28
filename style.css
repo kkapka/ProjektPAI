@@ -1,6 +1,9 @@
 body {
 	background-color: #f1e0c5;
 }
+form{
+	font-family: Arial, Sans-serif;
+}
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -30,6 +33,32 @@ input[type=submit]:hover{
 	background-color: #4CAF50;
     color: white;
 }
-input[type=checkbox]{
+header{
+	border-radius: 5px;
+	background: #73AD21;
+	padding: 25px;
+	text-align: center;
+	font-family: Arial, Sans-serif;
+	color: whitesmoke;
+	font-size: 2em;
+	height: 50px;
+}
+footer{
+	border-radius: 10px;
+	background: #a37643;
+	color: whitesmoke;
+	font-family: Arial, Sans-serif;
+	height: 25px;
+	padding: 5px;
+}
+.nav-info{
+	text-align: center;
+	color: black;
+	border-radius: 5px;
+	background:  #cba880;
+	padding: 2px;
+	height: 20px;
+	font-family: Arial, Sans-serif;
+	color: black;
 	
 }

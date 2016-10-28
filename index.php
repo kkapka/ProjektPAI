@@ -16,6 +16,8 @@
     <title>Serwis ogłoszeniowy</title>
 </head>
 <body>
+	<header>Serwis ogłoszeniowy</header>
+	<nav class="nav-info">Strona logowania</nav>
 	<form action="login.php" method="post">
 		Login: <br/> <input type="text" name="login"/><br/>
 		Hasło: <br/> <input type="password" name="password"/><br/><br/>
@@ -29,4 +31,5 @@
 		echo $_SESSION['login_error'];
 	}
 ?>
+<footer>Napisane przez: Kamil Kapka</footer>
 </html>

@@ -5,16 +5,16 @@ form{
 	font-family: Arial, Sans-serif;
 }
 input[type=text] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    width: 100%;
 }
 input[type=password] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    width: 100%;
 }
 input[type=submit] {
 	background-color: #D0B18D; 
@@ -32,8 +32,9 @@ input[type=submit] {
 input[type=submit]:hover{
 	background-color: #4CAF50;
     color: white;
+    width: 100%;
 }
-header{
+.header-div{
 	border-radius: 5px;
 	background: #73AD21;
 	padding: 25px;
@@ -50,8 +51,9 @@ footer{
 	font-family: Arial, Sans-serif;
 	height: 25px;
 	padding: 5px;
+	width: 100%;
 }
-.nav-info{
+.nav-info-div{
 	text-align: center;
 	color: black;
 	border-radius: 5px;
@@ -59,6 +61,7 @@ footer{
 	padding: 2px;
 	height: 20px;
 	font-family: Arial, Sans-serif;
-	color: black;
+	display: block;
+	width: 100%;
 	
 }

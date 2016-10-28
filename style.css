@@ -51,7 +51,6 @@ footer{
 	font-family: Arial, Sans-serif;
 	height: 25px;
 	padding: 5px;
-	width: 100%;
 }
 .nav-info-div{
 	text-align: center;
@@ -62,6 +61,5 @@ footer{
 	height: 20px;
 	font-family: Arial, Sans-serif;
 	display: block;
-	width: 100%;
 	
 }

@@ -8,7 +8,7 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-
+    width: 100%;
 }
 input[type=password] {
     padding: 12px 20px;
@@ -51,7 +51,6 @@ footer{
 	font-family: Arial, Sans-serif;
 	height: 25px;
 	padding: 5px;
-	width: 100%;
 }
 .nav-info-div{
 	text-align: center;

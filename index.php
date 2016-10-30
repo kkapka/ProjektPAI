@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="flexbox-style.css">
-   	<title>Serwis ogłoszeniowy</title>
+    <title>Serwis ogłoszeniowy</title>
 </head>
 <body>
 	<div class="row">
@@ -26,46 +26,38 @@
 	
 	<div class="row">
 		<div class="col-1">
-			<div class="nav-info">Strona logowania</div>
+			<div class="bar">Strona domowa</div>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-1-3">
-				<div class="content-div">
-					<form action="login.php" method="post">
-						Login: <br/> <input type="text" name="login"/><br/>
-						Hasło: <br/> <input type="password" name="password"/><br/><br/>
-						<input type="submit" value="Zaloguj się"/><br/>
-						<input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
-						<?php
-							if(isset($_SESSION['login_error'])){
-							echo "<br/>";
-							echo $_SESSION['login_error'];
-							}
-						?>
- 					</form>
- 				</div>
+		<div class="col-1-4">
+			<div class="bar">Menu</div>
+			<ul class="left-menu-ul">
+				<li class="left-menu-li">
+					<a href="login.php">Zaloguj się</a>
+				</li>
+				<li class="left-menu-li">
+					<a href="register.php">Zarejestruj się</a>
+				</li>
+			</ul>
+
+
 		</div>
-		<div class="col-1-3">
-					<form action="login.php" method="post">
-						Login: <br/> <input type="text" name="login"/><br/>
-						Hasło: <br/> <input type="password" name="password"/><br/><br/>
-						<input type="submit" value="Zaloguj się"/><br/>
-						<input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
-						<?php
-							if(isset($_SESSION['login_error'])){
-							echo "<br/>";
-							echo $_SESSION['login_error'];
-							}
-						?>
- 					</form>			
+		<div class="col-2-3">
+			<div class="bar">Witaj!</div>
+			Tutaj znajdziesz ogłoszenia kupna/sprzedaży z całej Polski:
+			<ul>
+				<li>Kraków</li>
+				<li>Warszawa</li>
+				<li>Gdańsk</li>
+			</ul>
 		</div>
 	</div>
 	
 	<div class="row">
 		<div class="col-1">
-			<footer>Napisane przez: Kamil Kapka</footer>
+			<div class="footer-bar">Napisane przez: Kamil Kapka</div>
 		</div>
 	</div>
 </body>

@@ -1,51 +1,67 @@
 <?php
 	session_start();
 	
-	//if((!isset($_POST['login']))||(!isset($_POST['password'])){
-	//	header('Location: index.php');
-	//	exit();
-	//}	
-	
-	require_once "connect.php";
-	
-	$connection=@new mysqli($db_host,$db_user,$db_password,$db_name);
-	if($connection->connect_errno!=0) {
-		echo "Error: ".$connection->connection_errno();
-	}
-	else{
-		$login=$_POST['login'];
-		$password=$_POST['password'];
-		
-		$cookie_login=sha1($login); // reverse name for cookie name: nigol_eikooc
-		$cookie_password=sha1($password);	// reverse name for cookie name:	drowssap_eikooc
-		
-		setcookie("nigol_eikooc", $cookie_login, time() + (86400 * 30), "/");
-		setcookie("drowssap_eikooc", $cookie_password, time() + (86400 * 30), "/");
-		
-
-		$login=htmlentities($login,ENT_QUOTES,"UTF-8");	
-		$password=htmlentities($password,ENT_QUOTES,"UTF-8");			
-
-		if($result=@$connection->query(sprintf("SELECT * FROM user WHERE login_user='%s' AND password_user='%s'",
-		mysqli_real_escape_string($connection,$login),
-		mysqli_real_escape_string($connection,$password)))){
-			$count=$result->num_rows;
-			
-			if($count>0){
-				$_SESSION['logged_in']=true;
-				$record=$result->fetch_assoc();
-				$_SESSION['user']=$record['name_user']." ".$record['surname_user'];
-				$_SESSION['mail']=$record['mail_user'];
-				unset($_SESSION['login_error']);				
-				$result->free_result();
-				header("Location: dashboard.php");
-			}
-			else{
-				$_SESSION['login_error']="Zły login lub hasło";
-				header("Location: index.php");
-			}
-			
-			$connection->close();
-		}
+	if((isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true)) {
+		header("Location: dashboard.php");
+		exit();
 	}
 ?>
+
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="flexbox-style.css">
+   	<title>Strona logowania - Serwis ogłoszeniowy</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-1">
+			<div class="header">Serwis ogłoszeniowy</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-1">
+			<div class="bar">Strona logowania</div>
+		</div>
+	</div>
+
+<div class="row">
+	<div class="col-1-4">
+		<div class="bar">Menu</div>
+		<ul class="left-menu-ul">
+			<li class="left-menu-li">
+				<a href="login.php">Zaloguj się</a>
+			</li>
+			<li class="left-menu-li">
+				<a href="register.php">Zarejestruj się</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-1-3">
+				<form action="logging_in.php" method="post">
+					Login: <br/> <input type="text" name="login"/><br/>
+					Hasło: <br/> <input type="password" name="password"/><br/><br/>
+					<input type="submit" value="Zaloguj się"/><br/>
+					<input type="checkbox" name="remember_login_details">Zapamiętać login i hasło?</input>
+					<?php
+						if(isset($_SESSION['login_error'])){
+						echo "<br/>";
+						echo $_SESSION['login_error'];
+						}
+					?>
+ 				</form>
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-1">
+			<div class="footer-bar">Napisane przez: Kamil Kapka</div>
+		</div>
+	</div>
+</body>
+</html>

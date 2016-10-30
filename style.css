@@ -1,9 +1,14 @@
+/* whole website style*/
+
 body {
 	background-color: #f1e0c5;
 }
-form{
+html{
 	font-family: Arial, sans-serif;
 }
+
+/* form elements style */
+
 input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
@@ -42,7 +47,6 @@ input[type=submit]:hover{
 	background: #73AD21;
 	padding: 20px;
 	text-align: center;
-	font-family: Arial, sans-serif;
 	color: whitesmoke;
 	font-size: 2em;
 	height: 50px;
@@ -53,7 +57,6 @@ input[type=submit]:hover{
 	border-radius: 10px;
 	background: #a37643;
 	color: whitesmoke;
-	font-family: Arial, Sans-serif;
 	height: 25px;
 	padding: 5px;
 	text-align: center;
@@ -66,7 +69,6 @@ input[type=submit]:hover{
 	height: 20px;
 	text-align: center;
 	padding: 10px;
-	font-family: Arial, Sans-serif;
 	font-size: 1.25em;
 }
 /* left menu (list) style */
@@ -76,7 +78,6 @@ input[type=submit]:hover{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	font-family: Arial, sans-serif;
 	text-align: center;
 }
 
@@ -93,9 +94,13 @@ li.left-menu-li a{
 	text-decoration: none;
 }
 li.left-menu-li a:hover{
-	background: #a37643;
-	color: black;
+	background: #4CAF50;
+	color: whitesmoke;
 	border-radius: 10px;
 }
 
+/* main content style */
 
+.content{
+	margin: 10px;
+}

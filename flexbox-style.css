@@ -3,17 +3,17 @@
 .row{
 	display: flex;
 	flex-flow: row wrap;
-	margin: 0 -10px;
+	margin: 0 0px;
 }
 .row:last-child{
 	margin-bottom: 0;
 }
 [class*="col-"]{
-	padding: 15px;
+	padding: 5px;
 	width: 100%;
 }
 
-@media all and (min-width: 600px){
+@media all and (min-width: 720px){
 	/* set col widths*/
 	.col-2-3{
 		width: 66.66%;	
@@ -29,6 +29,9 @@
 	}
 	.col-1-8{
 		width: 12.5%	
+	}
+	.col-3-4{
+		width: 75%;
 	}
 
 }

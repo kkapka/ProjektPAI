@@ -6,6 +6,7 @@
 		exit();
 	}
 ?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -14,18 +15,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="flexbox-style.css">
-    <title>Serwis ogłoszeniowy</title>
+   	<title>Serwis ogłoszeniowy</title>
 </head>
 <body>
 	<div class="row">
 		<div class="col-1">
-			<div class="header-div">Serwis ogłoszeniowy</div>
+			<div class="header">Serwis ogłoszeniowy</div>
 		</div>
 	</div>
 	
 	<div class="row">
 		<div class="col-1">
-			<div class="nav-info-div">Strona logowania</div>
+			<div class="nav-info">Strona logowania</div>
 		</div>
 	</div>
 	
@@ -67,6 +68,5 @@
 			<footer>Napisane przez: Kamil Kapka</footer>
 		</div>
 	</div>
-	
 </body>
 </html>

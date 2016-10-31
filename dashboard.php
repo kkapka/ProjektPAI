@@ -1,23 +1,64 @@
 <?php
 	session_start();
-	
-	if(!isset($_SESSION['logged_in'])){
-		header("Location: index.php");
+
+	if(!(isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true)) {
+		header("Location: dashboard.php");
 		exit();
 	}
 ?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Twoja tablica</title>
+    <link rel="stylesheet" type="text/css" href="flexbox-style.css">
+    <title>Panel użytkownika</title>
 </head>
 <body>
-<?php
-	echo "Witaj ".$_SESSION['user']."! <a href=\"/logout.php\">[Wyloguj się]</a><br/>";
-	echo "Twój adres mailowy to:".$_SESSION['mail'];
-?>    
+	<div class="row">
+		<div class="col-1">
+			<div class="header">Panel użytkownika</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-1">
+			<div class="bar">Panel użytkownika</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-1-4">
+			<div class="bar">Menu</div>
+			<ul class="left-menu-ul">
+				<li class="left-menu-li">
+					<a href="index.php">Domowa</a>
+				</li>
+				<li class="left-menu-li">
+					<a href="logout.php">Wyloguj się</a>
+				</li>
+			</ul>
+
+
+		</div>
+		<div class="col-2-3">
+			<div class="bar">Witaj!</div>
+			Witaj <?php echo $_SESSION['user']; ?>
+			<ul>
+				<li>Kraków</li>
+				<li>Warszawa</li>
+				<li>Gdańsk</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-1">
+			<div class="footer-bar">Napisane przez: Kamil Kapka</div>
+		</div>
+	</div>
 </body>
 </html>

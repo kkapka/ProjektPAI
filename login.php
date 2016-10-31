@@ -35,6 +35,9 @@
 		<div class="bar">Menu</div>
 		<ul class="left-menu-ul">
 			<li class="left-menu-li">
+				<a href="index.php">Domowa</a>
+			</li>
+			<li class="left-menu-li">
 				<a href="login.php">Zaloguj się</a>
 			</li>
 			<li class="left-menu-li">

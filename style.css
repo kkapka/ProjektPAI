@@ -15,6 +15,24 @@ input[type=text] {
     box-sizing: border-box;
     width: 100%;
 }
+select{
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+input[type=number]{
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+input[type=email] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
 input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;

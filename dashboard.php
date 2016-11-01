@@ -2,7 +2,7 @@
 	session_start();
 
 	if(!(isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true)) {
-		header("Location: dashboard.php");
+		header("Location: index.php");
 		exit();
 	}
 ?>
@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="flexbox-style.css">
-    <title>Panel użytkownika</title>
+    <title>Serwis ogłoszeniowy</title>
 </head>
 <body>
 	<div class="row">

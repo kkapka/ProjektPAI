@@ -37,6 +37,9 @@
 		<div class="bar">Menu</div>
 		<ul class="left-menu-ul">
 			<li class="left-menu-li">
+				<a href="index.php">Domowa</a>
+			</li>
+			<li class="left-menu-li">
 				<a href="login.php">Zaloguj się</a>
 			</li>
 			<li class="left-menu-li">
@@ -160,8 +163,8 @@
 					<input type="submit" value="Zarejestruj się"/><br/>
 					<?php
 						if(isset($_SESSION['login_error'])){
-						echo "<br/>";
-						echo $_SESSION['login_error'];
+							echo "<br/>";
+							echo $_SESSION['login_error'];
 						}
 					?>
  				</form>

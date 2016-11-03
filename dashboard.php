@@ -38,6 +38,9 @@
 					<a href="index.php">Domowa</a>
 				</li>
 				<li class="left-menu-li">
+					<a href="add_ad.php">Dodaj artykuł</a>
+				</li>
+				<li class="left-menu-li">
 					<a href="logout.php">Wyloguj się</a>
 				</li>
 			</ul>

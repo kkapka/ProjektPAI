@@ -3,7 +3,8 @@
 	
 	require_once "connect.php";
 	
-	$connection=@new mysqli($db_host,$db_user,$db_password,$db_name);
+	$connection=getConnection();
+
 	if($connection->connect_errno!=0) {
 		echo "Error: ".$connection->connection_errno();
 	}

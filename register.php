@@ -59,17 +59,7 @@
 					Nr domu: <br/> <input type="text" name="street_nr"/><br/>
 
 					<?php
-						$connection=@new mysqli($db_host,$db_user,$db_password,$db_name);
-
-						if($connection->connect_errno!=0) {
-							echo "Error: ".$connection->connection_errno();
-                            exit();
-						}
-
-						if (!$connection->set_charset("utf8")) {
-							echo "Error loading character set utf8".$connection->error;
-							exit();
-						}
+						$connection=getConnection();
 
 						// voivodeships list
 

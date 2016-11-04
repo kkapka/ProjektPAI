@@ -2,6 +2,9 @@
 	session_start();
 
 	require_once "connect.php";
+
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -43,17 +46,7 @@
 		<div class="col-2-3">
 			<div class="bar">Najnowsze ogłoszenia:</div>
 			<?php
-			$connection=@new mysqli($db_host,$db_user,$db_password,$db_name);
-
-			if($connection->connect_errno!=0) {
-				echo "Error: ".$connection->connection_errno();
-				exit();
-			}
-
-			if (!$connection->set_charset("utf8")) {
-				echo "Error loading character set utf8".$connection->error;
-				exit();
-			}
+			$connection=getConnection();
 
 			$sql="SELECT * FROM five_newest_ads";
 			$result=$connection->query($sql);
@@ -69,6 +62,16 @@
 			else{
 				echo "Błąd!!!!";
 			}
+
+			function buildCategoryTree($parentId){
+				$connection=getConnection();
+				$sql="SELECT * FROM category WHERE parent_category='$parentId'";
+				$result=$connection->query($sql);
+
+				$connection->close();
+
+			}
+			//printCategoryTree(0);
 
 			$connection->close();
 			?>

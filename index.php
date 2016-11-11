@@ -54,9 +54,14 @@
 
 			if($row_count>0){
 				while($row=$result->fetch_assoc()){
-					echo $row["title_ad"]." Cena: ".$row["price_ad"]." zł<br/>";
-					echo $row["name_location"].",".$row["name_voivodeship"]."<br/>";
-					echo "Kategoria: ".$row["name_category"]." Data dodania: ".$row["datetime_add_ad"]."<br/><br/>";
+					echo '<table class="table-latest-ads">';
+					echo '<tr><td class="top-row-latest-ad" colspan="2">'.$row["title_ad"].'</td>';
+					echo '<tr><td class="left-column-latest-ads">Cena</td><td class="right-column-latest-ads">'.$row["price_ad"].'zł</td></tr>';
+					echo '<tr><td class="left-column-latest-ads">Lokalizacja</td><td class="right-column-latest-ads">'.$row["name_location"].','.$row["name_voivodeship"].'</td></tr>';
+					echo '<tr><td class="left-column-latest-ads">Kategoria</td><td class="right-column-latest-ads">'.$row["name_category"].'</td></tr>';
+					echo '<tr><td class="left-column-latest-ads">Data dodania</td><td class="right-column-latest-ads">'.$row["datetime_add_ad"].'</td></tr>';
+					echo '</table>';
+					echo '</br>';
 				}
 			}
 			else{

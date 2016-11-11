@@ -122,3 +122,27 @@ li.left-menu-li a:hover{
 .content{
 	margin: 10px;
 }
+
+/* Latest ads style */
+.table-latest-ads{
+	width:50%;
+	background:#ffe882;
+	border-collapse:collapse;
+}
+
+.left-column-latest-ads{
+	text-align: left;
+}
+
+.right-column-latest-ads{
+	text-align: right;
+}
+
+.top-row-latest-ad{
+	text-align: center;
+	background: #ffb259;
+	border-radius: 2px;
+}
+.table-latest-ads:hover{
+	background: #ffdd6c;
+}

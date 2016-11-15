@@ -1,10 +1,6 @@
 <?php
 	session_start();
-
 	require_once "connect.php";
-
-
-
 ?>
 
 <!DOCTYPE HTML>
@@ -41,8 +37,43 @@
 					<a href="register.php">Zarejestruj się</a>
 				</li>
 			</ul>
+			<?php
+				$connection=getConnection();
+				$result=$connection->query("SELECT * FROM category ORDER BY name_category ASC");
+				$childrenTree = array();
+				$categoryNames = array();
 
+				while($row = mysqli_fetch_array($result)){
+					list($id, $parent_id, $category) = $row;
+					$categoryNames[(string)$id] = $category;
+					$parent_id = (string)$parent_id;
+
+					if(!array_key_exists($parent_id, $childrenTree))
+						$childrenTree[$parent_id] = array();
+					$childrenTree[$parent_id][] = (string)$id;
+				}
+
+				function renderTree($parent = "0"){
+				global $categoryNames;
+				global $childrenTree;
+
+				if($parent != "0"){
+					echo '<li><a href="category.php?id=',$parent,'">',$categoryNames[$parent], "</a>\n";
+				}
+
+				$children = $childrenTree[$parent];
+					if(count($children) > 0){
+					echo "<ul>\n";
+						foreach($children as $child)
+							renderTree($child);
+						echo "</ul>\n";
+					}
+					if($parent != "0") echo "</li>\n";
+				}
+				renderTree();
+			?>
 		</div>
+
 		<div class="col-2-3">
 			<div class="bar">Najnowsze ogłoszenia:</div>
 			<?php
@@ -54,6 +85,7 @@
 
 			if($row_count>0){
 				while($row=$result->fetch_assoc()){
+					echo '<a class="href-latest-ad" href="ad.php?id='.$row["id_ad"].'">';
 					echo '<table class="table-latest-ads">';
 					echo '<tr><td class="top-row-latest-ad" colspan="2">'.$row["title_ad"].'</td>';
 					echo '<tr><td class="left-column-latest-ads">Cena</td><td class="right-column-latest-ads">'.$row["price_ad"].'zł</td></tr>';
@@ -61,6 +93,7 @@
 					echo '<tr><td class="left-column-latest-ads">Kategoria</td><td class="right-column-latest-ads">'.$row["name_category"].'</td></tr>';
 					echo '<tr><td class="left-column-latest-ads">Data dodania</td><td class="right-column-latest-ads">'.$row["datetime_add_ad"].'</td></tr>';
 					echo '</table>';
+					echo '</a>';
 					echo '</br>';
 				}
 			}
@@ -68,21 +101,10 @@
 				echo "Błąd!!!!";
 			}
 
-			function buildCategoryTree($parentId){
-				$connection=getConnection();
-				$sql="SELECT * FROM category WHERE parent_category='$parentId'";
-				$result=$connection->query($sql);
-
-				$connection->close();
-
-			}
-			//printCategoryTree(0);
-
 			$connection->close();
 			?>
 		</div>
 	</div>
-	
 	<div class="row">
 		<div class="col-1">
 			<div class="footer-bar">Napisane przez: Kamil Kapka</div>

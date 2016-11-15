@@ -146,3 +146,40 @@ li.left-menu-li a:hover{
 .table-latest-ads:hover{
 	background: #ffdd6c;
 }
+.href-latest-ad{
+	text-decoration:none;
+	color: inherit;
+}
+
+/* describes how ad content looks*/
+.detailed-ad-table{
+	width: 100%;
+}
+.detailed-ad-title{
+	text-align: center;
+	background: #ebb652;
+	height: 50px;
+}
+.detailed-ad-price-left{
+	text-align: left;
+	background: #83eb78;
+	height:25px;
+}
+.detailed-ad-price-right{
+	text-align: right;
+	background: #83eb78;
+	height:25px;
+}
+.detailed-ad-location-left{
+	text-align: left;
+	background: #b289eb;
+	height: 25px;
+}
+.detailed-ad-location-right{
+	text-align: right;
+	background: #b289eb;
+	height: 25px;
+}
+.detailed-ad-category-left{
+
+}

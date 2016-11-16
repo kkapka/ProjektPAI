@@ -5,63 +5,42 @@
 		header("Location: index.php");
 		exit();
 	}
+
+	require_once "connect.php";
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="flexbox-style.css">
-    <title>Serwis ogłoszeniowy</title>
-</head>
+
+<?php
+	require "./components/html-head.php";
+	setSiteTitle("Serwis ogłoszeniowy - Tablica");
+?>
 <body>
-	<div class="row">
-		<div class="col-1">
-			<div class="header">Panel użytkownika</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-1">
-			<div class="bar">Panel użytkownika</div>
-		</div>
-	</div>
+<?php
+	require "./components/header.php";
+
+	require "./components/top-bar.php";
+	setTopBarTitle("Tablica");
+?>
 	
 	<div class="row">
 		<div class="col-1-4">
-			<div class="bar">Menu</div>
-			<ul class="left-menu-ul">
-				<li class="left-menu-li">
-					<a href="index.php">Domowa</a>
-				</li>
-				<li class="left-menu-li">
-					<a href="add_ad.php">Dodaj artykuł</a>
-				</li>
-				<li class="left-menu-li">
-					<a href="logout.php">Wyloguj się</a>
-				</li>
-			</ul>
+			<?php
+				require "./components/left-menu.php";
 
-
+				require "./components/left-category-list.php";
+			?>
 		</div>
 		<div class="col-2-3">
-			<div class="bar">Witaj!</div>
-			Witaj <?php echo $_SESSION['user']; ?>
-			<ul>
-				<li>Kraków</li>
-				<li>Warszawa</li>
-				<li>Gdańsk</li>
-			</ul>
+			<?php
+				require "./components/dashboard-greeting.php";
+			?>
 		</div>
 	</div>
-	
-	<div class="row">
-		<div class="col-1">
-			<div class="footer-bar">Napisane przez: Kamil Kapka</div>
-		</div>
-	</div>
+
+<?php
+	require "./components/footer.php";
+?>
 </body>
 </html>

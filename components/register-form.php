@@ -16,88 +16,13 @@ echo_end;
     <?php
     $connection=getConnection();
 
-    // voivodeships list
+    include_once "list-voivodeships.php";
 
-    echo "Województwo: <br/>";
+    echo '<div id="counties"></div>';
 
-    echo '<select name="voivodeships">';
+    echo '<div id="locations"></div>';
 
-    $sql = "SELECT * FROM voivodeship ORDER BY name_voivodeship";
-    $result = $connection->query($sql);
-    $row_count=mysqli_num_rows($result);
-
-    if ($row_count > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<option value="'.$row["id_voivodeship"].'">'.$row["name_voivodeship"].'</option>';
-        }
-    } else {
-        echo '<option value="0">Brak województw</option>';
-    }
-
-    echo '</select>';
-    echo '<br/>';
-
-    // countys list
-
-    echo "Powiat: <br/>";
-
-    echo '<select name="countys">';
-
-    $sql = "SELECT * FROM county ORDER BY name_county";
-    $result = $connection->query($sql);
-    $row_count=mysqli_num_rows($result);
-
-    if ($row_count > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<option value="'.$row["id_county"].'">'.$row["name_county"].'</option>';
-        }
-    } else {
-        echo '<option value="0">Brak powiatów</option>';
-    }
-
-    echo '</select>';
-    echo '<br/>';
-
-    // locations list
-
-    echo "Miasto: <br/>";
-
-    echo '<select name="locations">';
-
-    $sql = "SELECT * FROM location ORDER BY name_location";
-    $result = $connection->query($sql);
-    $row_count=mysqli_num_rows($result);
-
-    if ($row_count > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<option value="'.$row["id_location"].'">'.$row["name_location"].'</option>';
-        }
-    } else {
-        echo '<option value="0">Brak miast</option>';
-    }
-
-    echo '</select>';
-    echo '<br/>';
-
-    //gender list
-    echo "Płeć: <br/>";
-    echo '<select name="genders">';
-
-    $sql = "SELECT * FROM gender ORDER BY name_gender";
-    $result = $connection->query($sql);
-    $row_count=mysqli_num_rows($result);
-
-    if ($row_count > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<option value="'.$row["id_gender"].'">'.$row["name_gender"].'</option>';
-        }
-    } else {
-        echo '<option value="0">Brak województw</option>';
-    }
-
-    echo '</select>';
-    echo '<br/>';
-
+    include "gender-list.php";
 
     $connection->close();
 

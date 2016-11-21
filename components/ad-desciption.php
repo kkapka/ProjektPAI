@@ -16,6 +16,10 @@
                 echo '<tr><td class="detailed-ad-location-left">Lokalizacja</td><td class="detailed-ad-location-right">'.$row["name_location"].','.$row["name_voivodeship"].'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Kategoria</td><td class="right-column-latest-ads">'.$row["name_category"].'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Data dodania</td><td class="right-column-latest-ads">'.$row["datetime_add_ad"].'</td></tr>';
+                echo '<tr><td class="left-column-latest-ads">Autor</td><td class="right-column-latest-ads">'.$row["name_user"],' ',$row["surname_user"][0],'</td></tr>';
+                echo '<tr><td class="left-column-latest-ads">Numer telefonu</td><td class="right-column-latest-ads">'.$row["telephone_number_user"].'</td></tr>';
+                echo '<tr><td class="detailed-ad-title" colspan="2">'.$row["description_ad"].'</td>';
+                echo '<tr><td class="left-column-latest-ads">Liczba wyświetleń</td><td class="right-column-latest-ads">'.$row["view_counter_ad"].'</td></tr>';
                 echo '</table>';
             }
         }

@@ -1,7 +1,7 @@
 <?php
     echo<<<echo_end
 <form action="registering_in.php" method="post">
-    Login: <br/> <input type="text" name="login"/><br/>
+    Login: <br/> <input type="text" name="login" onblur="validateLogin(this)" autocomplete="off" required/><br/>
     Hasło: <br/> <input type="password" name="password"/><br/>
     Powtórz hasło: <br/> <input type="password" name="password"/>
     Email: <br/><input type="email" name="mail"/>

@@ -1,14 +1,7 @@
 <?php
-	session_start();
+include_once "./connect.php";
 
-	if(!(isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true)) {
-		header("Location: index.php");
-		exit();
-	}
-
-	require_once "connect.php";
 ?>
-
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -21,7 +14,8 @@
 	require "./components/header.php";
 
 	require "./components/top-bar.php";
-	setTopBarTitle("Tablica");
+
+	setTopBarTitle("Witaj ");
 ?>
 	
 	<div class="row">
@@ -35,12 +29,24 @@
 		<div class="col-2-3">
 			<?php
 				require "./components/dashboard-greeting.php";
+                include_once "./components/cookie-check.php";
+                $connection=getConnection();
+                $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+                $result=mysqli_query($connection,$query);
+                $row=mysqli_fetch_assoc($result);
+
+                $id_user=$row['id_user_session'];
+                $query="SELECT name_user, surname_user FROM user WHERE id_user='$id_user'";
+                $result=mysqli_query($connection,$query);
+                $row=mysqli_fetch_assoc($result);
+                echo "Witaj ",$row['name_user']," ",$row['surname_user'];
 			?>
 		</div>
 	</div>
 
 <?php
 	require "./components/footer.php";
+
 ?>
 </body>
 </html>

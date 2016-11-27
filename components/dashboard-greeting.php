@@ -1,7 +1,7 @@
 <?php
-echo '<div class="bar">Witaj!</div>';
-echo Witaj,' ',$_SESSION['user'];
-echo<<<echo_end
+    echo '<div class="bar">Witaj!</div>';
+    echo "Witaj";
+    echo<<<echo_end
 <ul>
     <li>Kraków</li>
     <li>Warszawa</li>

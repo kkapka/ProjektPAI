@@ -1,11 +1,9 @@
 <?php
-	session_start();
+	include_once "connect.php";
 
-	require_once "connect.php";
-
-	if((isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true)) {
-		header("Location: dashboard.php");
-		exit();
+	if(isset($_COOKIE['id'])){
+		header("location: dashboard.php");
+		exit;
 	}
 ?>
 

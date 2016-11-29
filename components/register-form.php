@@ -1,9 +1,7 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
     echo<<<echo_end
 <form action="registering_in.php" method="post">
-    Login: <br/> <input type="text" name="login" /><br/>
+    Login: <br/> <input type="text" name="login"/><br/>
     Hasło: <br/> <input type="password" name="password"/><br/>
     Powtórz hasło: <br/> <input type="password" name="password"/>
     Email: <br/><input type="email" name="mail"/>

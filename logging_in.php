@@ -7,11 +7,21 @@
     foreach ($_POST as $k=>$v){
         $_POST[$k]=mysqli_real_escape_string($connection,$v);
     }
-    $login=$_POST['login'];
-    $password=$_POST['password'];
 
-    $login=htmlentities($login,ENT_QUOTES,"UTF-8");
-    $password=htmlentities($password,ENT_QUOTES,"UTF-8");
+    $login_pattern='/^[a-zA-Z0-9]{5,20}$/';
+    $password_pattern='/^[a-zA-Z0-9]{5,20}$/';
+
+    $login=$_POST['login'];
+    if(!preg_match($login_pattern,$login)){
+        echo "Wprowadziłeś login w błędnym formacie!";
+        exit;
+    }
+
+    $password=$_POST['password'];
+    if(!preg_match($login_pattern,$password)){
+        echo "Wprowadziłeś hasło w błędnym formacie!";
+        exit;
+    }
 
 if(isset($login)){
         $connection=getConnection();

@@ -5,7 +5,6 @@
     $row_count=mysqli_num_rows($result);
 ?>
     Województwo: <br/>
-    <form>
         <select id="list-voivodeships" onchange="printCounties()">
             <option value="">Wybierz województwo</option>
 <?php
@@ -23,7 +22,6 @@
 ?>
 
         </select>
-    </form>
     <br/>
 <?php
     $connection->close();

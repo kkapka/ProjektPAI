@@ -43,17 +43,3 @@ function printLocations() {
         xmlhttp.send();
     }
 }
-
-function validateLogin(field){
-    alert("Upośledzeńcu wpisuj dobry login!");
-    var regex=/^[a-zA-Z0-9]{5,15}$/;
-    var ctrl=document.getElementById(field);
-
-    if(regex.test(ctrl.value)){
-       return true;
-    }
-    else{
-        alert("Upośledzeńcu wpisuj dobry login!");
-        return false;
-    }
-}

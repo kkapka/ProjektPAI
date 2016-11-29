@@ -3,10 +3,10 @@
 	include_once "connect.php";
 
     $connection=getConnection();
+
     foreach ($_POST as $k=>$v){
         $_POST[$k]=mysqli_real_escape_string($connection,$v);
     }
-
     $login=$_POST['login'];
     $password=$_POST['password'];
 

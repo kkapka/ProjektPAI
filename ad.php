@@ -1,9 +1,6 @@
 <?php
-	session_start();
 
-	require_once "connect.php";
-
-
+	include_once "connect.php";
 
 ?>
 
@@ -38,7 +35,7 @@
 </div>
 
 <?php
-    require "./components/footer.php";
+    include_once "./components/footer.php";
 ?>
 </body>
 </html>

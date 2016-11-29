@@ -1,8 +1,4 @@
 <?php
-
-    //gender list
-    include_once "../connect.php";
-
     echo "Płeć: <br/>";
     echo '<select name="genders">';
     echo '<option value="">Wybierz płeć</option>';

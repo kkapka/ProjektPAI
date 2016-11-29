@@ -2,10 +2,6 @@
 
     require_once "../connect.php";
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
     $voivodeship_id=intval($_GET["voivodeship_id"]);
     $connection=getConnection();
     $sql="SELECT DISTINCT id_county,name_county FROM location INNER JOIN county ON id_county_location=id_county WHERE id_voivodeship_location=$voivodeship_id ORDER BY name_county ASC";

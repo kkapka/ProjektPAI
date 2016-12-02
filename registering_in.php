@@ -1,12 +1,32 @@
 <?php
-    include_once "connect.php";
 
-    if(isset($_COOKIE['id'])){
-        header("location: dashboard.php");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+    header("Cache-Control: post-check=0, pre-check=0, max-age=0", false);
+    header("Pragma: no-cache");
+
+    include_once "connect.php";
+    $connection=getConnection();
+
+    if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
+    ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
+        header("location: index.php");
         exit;
     }
 
-    $connection=getConnection();
+    if(isset($_COOKIE['id'])){
+        $query="SELECT id_session FROM session WHERE token_session='$_COOKIE[id]' AND DATE_ADD(login_time_session, INTERVAL 1 HOUR)>NOW()";
+        $result=mysqli_query($connection,$query);
+        $count=mysqli_num_rows($result);
+
+        if($count>0){
+            header("location: dashboard.php");
+            exit;
+        }
+        else{
+            header("location: index.php");
+            exit;
+        }
+    }
 
     if($connection->connect_errno!=0) {
         echo "Error: ".$connection->connection_errno();
@@ -173,6 +193,7 @@
         intval($gender),
         intval($phone_nr)
         );
+    $connection->query("start transaction");
 
     if($connection->query($sql_location)){
         if($connection->query($sql_last_id_in_address)){
@@ -190,5 +211,7 @@
     else{
         echo "Błąd tworzenia adresu";
     }
+
+    $connection->query("commit");
 
 ?>

@@ -1,27 +1,55 @@
 <?php
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+    header("Cache-Control: post-check=0, pre-check=0, max-age=0", false);
+    header("Pragma: no-cache");
 
 	include_once "connect.php";
 
     $connection=getConnection();
 
+    if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password']))){
+        header("location: index.php");
+        exit;
+    }
+
+    if(isset($_COOKIE['id'])){
+        $query="SELECT id_session FROM session WHERE token_session='$_COOKIE[id]' AND DATE_ADD(login_time_session, INTERVAL 1 HOUR)>NOW()";
+        $result=mysqli_query($connection,$query);
+        $count=mysqli_num_rows($result);
+
+        if($count>0){
+            header("location: dashboard.php");
+            exit;
+        }
+        else{
+            header("location: index.php");
+            exit;
+        }
+    }
+
     foreach ($_POST as $k=>$v){
         $_POST[$k]=mysqli_real_escape_string($connection,$v);
     }
 
-    $login_pattern='/^[a-zA-Z0-9]{5,20}$/';
-    $password_pattern='/^[a-zA-Z0-9]{5,20}$/';
+    /*login validation----------------------------------------------------*/
+    $login_pattern='/^[\p{L}\p{N}_]{5,20}$/u';
 
     $login=$_POST['login'];
     if(!preg_match($login_pattern,$login)){
         echo "Wprowadziłeś login w błędnym formacie!";
         exit;
     }
+    /*--------------------------------------------------------------------*/
 
+    /*password validation-------------------------------------------------*/
     $password=$_POST['password'];
+    $password_pattern='/^[^;\'" -]{5,20}$/u';
+
     if(!preg_match($login_pattern,$password)){
         echo "Wprowadziłeś hasło w błędnym formacie!";
         exit;
     }
+    /*--------------------------------------------------------------------*/
 
 if(isset($login)){
         $connection=getConnection();
@@ -45,7 +73,7 @@ if(isset($login)){
                 mysqli_query($connection,$query);
 
                 if(!mysqli_errno($connection)){
-                    setcookie("id",$token,time()+60*60*24,'/');
+                    setcookie("id",$token,time()+60*60,'/');
                     echo "Zalogowano pomyślnie";
                     header("location: dashboard.php");
 

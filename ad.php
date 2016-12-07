@@ -1,7 +1,5 @@
 <?php
-
-	include_once "connect.php";
-
+    include_once "./components/important_includes.php";
 ?>
 
 <!DOCTYPE HTML>

@@ -1,5 +1,5 @@
 <?php
-    require_once "connect.php";
+    include_once "connect.php";
 
     if(isset($_COOKIE['id'])){
         $connection=getConnection();

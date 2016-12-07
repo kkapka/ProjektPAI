@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	require_once "connect.php";
+	include_once "./components/generate_token.php";
 ?>
 
 <!DOCTYPE HTML>

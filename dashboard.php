@@ -5,6 +5,11 @@ header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: post-check=0, pre-check=0, max-age=0", false);
 header("Pragma: no-cache");
 
+include_once "./components/generate_token.php";
+
+if(!isset($_COOKIE['id'])){
+	header("location: index.php");
+}
 ?>
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -37,13 +42,21 @@ header("Pragma: no-cache");
                 $connection=getConnection();
                 $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
                 $result=mysqli_query($connection,$query);
-                $row=mysqli_fetch_assoc($result);
+				$num_rows=mysqli_num_rows($result);
 
-                $id_user=$row['id_user_session'];
-                $query="SELECT name_user, surname_user FROM user WHERE id_user='$id_user'";
-                $result=mysqli_query($connection,$query);
-                $row=mysqli_fetch_assoc($result);
-                echo "Witaj ",$row['name_user']," ",$row['surname_user'];
+				if($num_rows>0){
+					$row=mysqli_fetch_assoc($result);
+					$id_user=$row['id_user_session'];
+					$query="SELECT name_user, surname_user FROM user WHERE id_user='$id_user'";
+					$result=mysqli_query($connection,$query);
+					$row=mysqli_fetch_assoc($result);
+					$num_rows=mysqli_num_rows($result);
+					if($num_rows>0){
+						echo "Witaj ",$row['name_user']," ",$row['surname_user'];
+					}
+				}
+
+
 			?>
 		</div>
 	</div>

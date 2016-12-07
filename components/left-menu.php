@@ -4,7 +4,6 @@
             <a href="index.php">Domowa</a>
 		</li>
         <?php
-
             if(!isset($_COOKIE['id'])){
                 echo<<<echo_end
                     <li class="left-menu-li">

@@ -7,6 +7,16 @@
     include_once "connect.php";
     $connection=getConnection();
 
+    function generateSalt(){
+        $seed = str_split('abcdefghijklmnopqrstuvwxyz'
+            .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            .'0123456789');
+        shuffle($seed);
+        $rand = '';
+        foreach (array_rand($seed, 10) as $k) $rand .= $seed[$k];
+        return $rand;
+    }
+
     if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
     ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
         header("location: index.php");
@@ -183,7 +193,10 @@
     $sql_location="INSERT INTO address(id_address,location_address,street_address,street_number_address) VALUES(NULL,'$location','$street','$street_nr')";
     $sql_last_id_in_address="SET @last_id_in_address = LAST_INSERT_ID()";
 
-    $sql_user=sprintf("CALL add_user('%s','%s','%s',%d,'%s','%s',%d,%d,@last_id_in_address)",
+    $salt=generateSalt();
+    $password=sha1($password.$salt);
+
+    $sql_user=sprintf("CALL add_user('%s','%s','%s',%d,'%s','%s',%d,%d,@last_id_in_address,'%s')",
         mysqli_real_escape_string($connection,$login),
         mysqli_real_escape_string($connection,$password),
         mysqli_real_escape_string($connection,$mail),
@@ -191,7 +204,8 @@
         mysqli_real_escape_string($connection,$name),
         mysqli_real_escape_string($connection,$surname),
         intval($gender),
-        intval($phone_nr)
+        intval($phone_nr),
+        $salt
         );
     $connection->query("start transaction");
 

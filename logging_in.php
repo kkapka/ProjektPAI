@@ -5,6 +5,15 @@
 
 	include_once "connect.php";
 
+    function getSalt($login){
+        $connection=getConnection();
+        if($result=mysqli_query($connection,"SELECT user_salt FROM user WHERE login_user='$login'")){
+            if($row=mysqli_fetch_assoc($result)){
+                return $row['user_salt'];
+            }
+        }
+    }
+
     $connection=getConnection();
 
     if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password']))){
@@ -53,6 +62,9 @@
 
 if(isset($login)){
         $connection=getConnection();
+
+        $password=sha1($_POST['password'].getSalt($login));
+
         $query="SELECT id_user,login_user,password_user FROM user WHERE login_user='$login' AND password_user='$password'";
 
         if($result=mysqli_query($connection,$query)){
@@ -60,7 +72,8 @@ if(isset($login)){
             $row_count=mysqli_num_rows($result);
 
             if($row_count>0){
-                $token = md5(rand(-10000,10000) . microtime()) . md5(crc32(microtime()) . $_SERVER['REMOTE_ADDR']);
+                $token = sha1(rand(-10000,10000) . microtime()) . sha1(crc32(microtime()) . $_SERVER['REMOTE_ADDR']);
+                echo $token;
                 $row=mysqli_fetch_assoc($result);
                 $id_user=$row["id_user"];
                 $query="DELETE FROM session WHERE id_user_session=$id_user";

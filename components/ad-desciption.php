@@ -27,15 +27,5 @@
             echo "Brak ogłoszenia o takim numerze";
         }
 
-        function buildCategoryTree($parentId){
-            $connection=getConnection();
-            $sql="SELECT * FROM category WHERE parent_category='$parentId'";
-            $result=$connection->query($sql);
-
-            $connection->close();
-
-        }
-        //printCategoryTree(0);
-
         $connection->close();
 ?>

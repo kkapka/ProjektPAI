@@ -19,7 +19,7 @@
 
     if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
     ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
-        header("location: index.php");
+        header("location: register.php");
         exit;
     }
 
@@ -227,5 +227,4 @@
     }
 
     $connection->query("commit");
-
 ?>

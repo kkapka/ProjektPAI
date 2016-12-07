@@ -1,5 +1,9 @@
 <?php
 	include_once "./components/important_includes.php";
+
+	if(!isset($_COOKIE['id'])){
+		header("location: index.php");
+	}
 ?>
 
 <!DOCTYPE HTML>

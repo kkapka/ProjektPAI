@@ -30,6 +30,9 @@ echo_end;
                 if($row['permission_user_type']>=100){
                     echo<<<echo_end
                         <li class="left-menu-li">
+                            <a href="dashboard.php">Panel użytkownika</a>
+                        </li>
+                        <li class="left-menu-li">
                             <a href="add_ad.php">Dodaj ogłoszenie</a>
                         </li>
                        <li class="left-menu-li">

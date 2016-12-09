@@ -3,10 +3,53 @@
     $connection=getConnection();
 
     $ad_title=$_POST['ad-title'];
+    $ad_title=htmlspecialchars($ad_title, ENT_QUOTES, 'UTF-8');
+    $ad_title=mysqli_real_escape_string($connection,$ad_title);
+    $ad_title_pattern="/^.{1,255}$/u";
+
+    if(!preg_match($ad_title_pattern,$ad_title)){
+        echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
+        exit;
+    }
+
     $ad_price=$_POST['ad-price'];
-    $ad_category=$_POST['ad-category'];
-    $ad_location=$_POST['ad-location'];
-    $ad_content=$_POST['ad-content'];
+    $ad_price_pattern="/^[0-9]{1,10}$/";
+
+    if(!preg_match($ad_price_pattern,$ad_price)){
+        echo "Wprowadziłeś nieprawidłową cenę!";
+        exit;
+    }
+
+    $ad_category=$_POST['category-list'];
+    $ad_category_pattern="/^[0-9]{1,10}$/";
+
+
+    $ad_location_pattern="/^[0-9]{1,10}$/";
+    $ad_location=$_POST['list-locations'];
+
+    if(!preg_match($ad_location_pattern,$ad_location)){
+        echo "Wybrałeś nieprawidłową lokalizację!";
+        exit;
+    }
+
+    $query="SELECT id_location FROM location WHERE id_location=$ad_location";
+    $result=mysqli_query($connection,$query);
+    $row_count=mysqli_num_rows($result);
+
+    if($row_count<1){
+        echo "Wybrana lokalizacja nie istnieje !";
+        exit;
+    }
+
+    $ad_content=$_POST['ad-title'];
+    $ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
+    $ad_content=mysqli_real_escape_string($connection,$ad_title);
+    $ad_content_pattern="/^.{1,255}$/u";
+
+    if(!preg_match($ad_content_pattern,$ad_content)){
+        echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
+        exit;
+    }
 
     $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
     $result=mysqli_query($connection,$query);

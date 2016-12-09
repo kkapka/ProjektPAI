@@ -1,4 +1,4 @@
-<?php
+<?php /* @formatter:off */
 
     header("Cache-Control: no-store, no-cache, must-revalidate");
     header("Cache-Control: post-check=0, pre-check=0, max-age=0", false);
@@ -39,15 +39,15 @@
     }
 
     if($connection->connect_errno!=0) {
-        echo "Error: ".$connection->connection_errno();
-            exit();
+        echo "Error: " . $connection->connection_errno();
+        exit();
     }
 
     /*login validation----------------------------------------------------*/
-    $login_pattern='/^[\p{L}\p{N}_]{5,20}$/u';
+    $login_pattern = '/^[\p{L}\p{N}_]{5,20}$/u';
     $login=$_POST['login'];
 
-    if(!preg_match($login_pattern,$login)){
+    if(!preg_match($login_pattern,$login)) {
         echo "Wprowadziłeś login w błędnym formacie!";
         exit;
     }
@@ -56,7 +56,7 @@
     $result=mysqli_query($connection,$query);
     $row_count=mysqli_num_rows($result);
 
-    if($row_count>0){
+    if($row_count>0) {
         echo "Użytkownik o podanym loginie już istnieje !";
         exit;
     }

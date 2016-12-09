@@ -137,6 +137,7 @@ li.left-menu-li a:hover{
 	width:50%;
 	background:#ffe882;
 	border-collapse:collapse;
+	word-wrap: break-word;
 }
 
 .left-column-latest-ads{

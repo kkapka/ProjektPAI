@@ -60,7 +60,7 @@ if($count>0){
             } else {
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
 
-                    $photo_name='./'.$generated_folder_name.'/'.basename($_FILES["fileToUpload"]["name"][$i]);
+                    $photo_name=$generated_folder_name.'/'.basename($_FILES["fileToUpload"]["name"][$i]);
                     $query="INSERT INTO photo (id_photo,location_photo) VALUES (NULL,'$photo_name')";
                     $result=mysqli_query($connection,$query);
 

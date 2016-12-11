@@ -21,6 +21,17 @@
                 echo '<tr><td class="detailed-ad-title" colspan="2">'.$row["description_ad"].'</td>';
                 echo '<tr><td class="left-column-latest-ads">Liczba wyświetleń</td><td class="right-column-latest-ads">'.$row["view_counter_ad"].'</td></tr>';
                 echo '</table>';
+
+                $connection=getConnection();
+                $query="SELECT location_photo FROM photo INNER JOIN gallery ON id_photo=id_photo_gallery WHERE id_ad_gallery=$id_ad";
+                $result=mysqli_query($connection,$query);
+
+                while($row=mysqli_fetch_assoc($result)){
+                    echo '<img src="'.'./uploads/'.$row['location_photo'].'"></br>';
+                }
+
+                mysqli_close($connection);
+
             }
         }
         else{

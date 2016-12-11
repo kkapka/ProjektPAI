@@ -1,11 +1,20 @@
 <?php
+session_start();
+
 include_once "./show_errors.php";
+include_once "./connect.php";
 
 function generateFolderName(){
     return md5(rand(-10000,10000).microtime());
 }
 
-$target_dir = "./uploads/".generateFolderName()."/";
+global $connection;
+global $generated_folder_name;
+
+$connection=getConnection();
+
+$generated_folder_name=generateFolderName();
+$target_dir = "./uploads/".$generated_folder_name."/";
 
 mkdir($target_dir,0775);
 
@@ -50,6 +59,16 @@ if($count>0){
 
             } else {
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
+
+                    $photo_name='./'.$generated_folder_name.'/'.basename($_FILES["fileToUpload"]["name"][$i]);
+                    $query="INSERT INTO photo (id_photo,location_photo) VALUES (NULL,'$photo_name')";
+                    $result=mysqli_query($connection,$query);
+
+                    $last_inserted_photo_id=mysqli_insert_id($connection);
+
+                    $query="INSERT INTO gallery (id_ad_gallery,id_photo_gallery) VALUES ($_SESSION[ad_id],$last_inserted_photo_id)";
+                    $result=mysqli_query($connection,$query);
+
                     echo "The file ". basename( $_FILES["fileToUpload"]["name"][$i]). " has been uploaded.";
                 } else {
                     echo "Sorry, there was an error uploading your file.";
@@ -57,5 +76,10 @@ if($count>0){
             }
         }
     }
+
+    mysqli_close($connection);
+    session_unset();
+    session_destroy();
+
 }
 ?>

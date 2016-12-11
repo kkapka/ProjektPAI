@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     include_once "./components/important_includes.php";
     $connection=getConnection();
 
@@ -41,9 +43,9 @@
         exit;
     }
 
-    $ad_content=$_POST['ad-title'];
+    $ad_content=$_POST['ad-content'];
     $ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
-    $ad_content=mysqli_real_escape_string($connection,$ad_title);
+    $ad_content=mysqli_real_escape_string($connection,$ad_content);
     $ad_content_pattern="/^.{1,255}$/u";
 
     if(!preg_match($ad_content_pattern,$ad_content)){
@@ -66,6 +68,9 @@
               DATE_ADD(SYSDATE(), INTERVAL 14 DAY),$ad_price)";
 
     if($result=mysqli_query($connection,$query)){
+        $last_inserted_id=mysqli_insert_id($connection);
+        $_SESSION['ad_id']=$last_inserted_id;
+
         echo "Dodano ogłoszenie do bazy";
     }
     else{

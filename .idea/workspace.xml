@@ -2,560 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ea7e44-2477-40c7-af07-b49c0d4f8384" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/COPYING.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/about.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/config/config.inc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/docs/DVWA_v1.3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/docs/pdf.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/css/help.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/css/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/css/source.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/RandomStorm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/dollar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/login_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/spanner.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/images/warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/includes/DBMS/MySQL.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/includes/DBMS/PGSQL.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/includes/dvwaPage.inc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/includes/dvwaPhpIds.inc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/dvwa/js/dvwaPage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/examples/cakephp/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/examples/cakephp/ids.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/examples/cakephp/intrusion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/examples/example.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching_Database.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching_File.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching_Interface.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching_Memcached.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Caching_Session.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Converter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Event.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Filter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Filter_Storage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Filter_Storage_Abstract.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Init.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Log_Composite.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Log_Database.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Log_Email.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Log_File.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Log_Interface.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Monitor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/IDS_Report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---Database.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---Factory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---File.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---Interface.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---Memcached.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Caching---Session.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Converter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Event.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Filter---Filter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Filter---Storage---Abstract.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Filter---Storage.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Filter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Init.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Log---Composite.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Log---Database.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Log---Email.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Log---File.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Log---Interface.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Monitor.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/PHPIDS/_Report.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/blank.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/classtrees_PHPIDS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/elementindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/elementindex_PHPIDS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/errors.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/li_PHPIDS.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/media/banner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/media/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/docs/phpdocumentor/packages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/Database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/Factory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/File.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/Interface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/Memcached.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Caching/Session.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Config/Config.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Converter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Filter/Storage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Init.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Log/Composite.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Log/Database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Log/Email.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Log/File.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Log/Interface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Monitor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/Report.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/default_filter.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/default_filter.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.auto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.func.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.includes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.kses.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.path.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier.safe-includes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrCollections.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/AlphaValue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Background.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/BackgroundPosition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Border.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Color.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Composite.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/DenyElementDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Font.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/FontFamily.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/ImportantDecorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Length.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/ListStyle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Multiple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Number.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/Percentage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/TextDecoration.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/CSS/URI.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/Enum.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/Bool.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/Color.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/FrameTarget.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/ID.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/Length.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/LinkTypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/MultiLength.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/Nmtokens.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/HTML/Pixels.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/Integer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/Lang.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/Switch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/Text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI/Email.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI/Email/SimpleCheck.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI/Host.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI/IPv4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrDef/URI/IPv6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Background.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/BdoDir.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/BgColor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/BoolToCSS.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Border.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/EnumToCSS.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/ImgRequired.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/ImgSpace.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Input.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Lang.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Length.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Name.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/SafeEmbed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/SafeObject.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/SafeParam.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/ScriptRequired.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTransform/Textarea.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrTypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/AttrValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/CSSDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Chameleon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Custom.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Empty.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Optional.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Required.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/StrictBlockquote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ChildDef/Table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigDef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigDef/Directive.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigDef/DirectiveAlias.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigDef/Namespace.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Builder/ConfigSchema.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Builder/Xml.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Interchange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Interchange/Directive.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Interchange/Id.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Interchange/Namespace.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/InterchangeBuilder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/Validator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/ValidatorAtom.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.AllowedFrameTargets.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.AllowedRel.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.AllowedRev.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.DefaultImageAlt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.DefaultInvalidImage.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.DefaultInvalidImageAlt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.DefaultTextDir.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.EnableID.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.IDBlacklist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.IDBlacklistRegexp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.IDPrefix.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.IDPrefixLocal.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Attr.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.AutoParagraph.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.Custom.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.DisplayLinkURI.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.Linkify.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.PurifierLinkify.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.RemoveEmpty.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormatParam.PurifierLinkifyDocURL.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/AutoFormatParam.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.AllowImportant.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.AllowTricky.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.AllowedProperties.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.DefinitionRev.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.MaxImgLength.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.Proprietary.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/CSS.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Cache.DefinitionImpl.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Cache.SerializerPath.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Cache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.AggressivelyFixLt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.CollectErrors.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.ColorKeywords.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.ConvertDocumentToFragment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.DirectLexLineNumberSyncInterval.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.Encoding.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EscapeInvalidChildren.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EscapeInvalidTags.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EscapeNonASCIICharacters.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.HiddenElements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.Language.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.LexerImpl.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.MaintainLineNumbers.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.RemoveInvalidImg.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.RemoveScriptContents.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.Custom.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.ExtractStyleBlocks.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.YouTube.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/FilterParam.ExtractStyleBlocksEscaping.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/FilterParam.ExtractStyleBlocksScope.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/FilterParam.ExtractStyleBlocksTidyImpl.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/FilterParam.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Allowed.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedAttributes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedElements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedModules.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.BlockWrapper.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.CoreModules.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.CustomDoctype.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.DefinitionID.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.DefinitionRev.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Doctype.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.ForbiddenAttributes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.ForbiddenElements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.MaxImgLength.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Parent.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Proprietary.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.SafeEmbed.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.SafeObject.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Strict.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyAdd.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyLevel.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyRemove.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Trusted.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.XHTML.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Output.CommentScriptContents.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Output.Newline.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Output.SortAttr.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Output.TidyFormat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Output.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Test.ForceNoIconv.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.AllowedSchemes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.Base.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DefaultScheme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DefinitionID.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DefinitionRev.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.Disable.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DisableExternal.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DisableExternalResources.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.DisableResources.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.Host.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.HostBlacklist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.MakeAbsolute.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.Munge.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.MungeResources.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ConfigSchema/schema/info.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ContentSets.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Context.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Definition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Decorator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Decorator/Cleanup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Decorator/Memory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Decorator/Template.php.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Null.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Serializer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCache/Serializer/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DefinitionCacheFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Doctype.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/DoctypeRegistry.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ElementDef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Encoder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/EntityLookup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/EntityLookup/entities.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/EntityParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ErrorCollector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/ErrorStruct.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Filter/ExtractStyleBlocks.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Filter/YouTube.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Generator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Bdo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/CommonAttributes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Forms.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Hypertext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Image.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Legacy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Name.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/NonXMLCommonAttributes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Object.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Presentation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Proprietary.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Ruby.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/SafeEmbed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/SafeObject.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Scripting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/StyleAttribute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tables.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Target.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/Name.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/Proprietary.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/Strict.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/Transitional.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/XHTML.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/XHTMLAndHTML4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModule/XMLCommonAttributes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/HTMLModuleManager.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/IDAccumulator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/AutoParagraph.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/DisplayLinkURI.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/Linkify.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/PurifierLinkify.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/RemoveEmpty.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Injector/SafeObject.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Language.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Language/classes/en-x-test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Language/messages/en-x-test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Language/messages/en-x-testmini.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Language/messages/en.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/LanguageFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Length.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Lexer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Lexer/DOMLex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Lexer/DirectLex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Lexer/PEARSax3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Lexer/PH5P.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/PercentEncoder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/CSSDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/ConfigForm.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/ConfigForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/ConfigForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/HTMLDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/Composite.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/Core.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/FixNesting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/MakeWellFormed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/RemoveForeignElements.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Strategy/ValidateAttributes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/StringHash.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/StringHashParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/TagTransform.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/TagTransform/Font.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/TagTransform/Simple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/Comment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/Empty.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/End.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/Start.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/Tag.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Token/Text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/TokenFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URI.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIDefinition.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter/DisableExternal.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter/DisableExternalResources.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter/HostBlacklist.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter/MakeAbsolute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIFilter/Munge.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/ftp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/http.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/https.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/mailto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/news.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URIScheme/nntp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/URISchemeRegistry.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/UnitConverter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/VarParser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/VarParser/Flexible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/VarParser/Native.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/lib/IDS/vendors/htmlpurifier/HTMLPurifier/VarParserException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/CachingTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/EventTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/ExceptionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/FilterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/InitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/MonitorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/IDS/ReportTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/allTests.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Caching.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Caching_Factory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Caching_File.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Caching_Interface.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Caching_Session.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Converter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Event.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Filter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Filter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Filter_Storage.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Init.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Monitor.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/Report.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/butter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/chameleon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/close12_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/container-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/container.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/glass.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/scarlet_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/snow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/phpids/0.6/tests/coverage/yahoo-dom-event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/external/recaptcha/recaptchalib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/flags/fi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/uploads/dvwa_email.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/users/1337.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/users/admin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/users/gordonb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/users/pablo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/hackable/users/smithy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/ids_log.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/instructions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/logout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/php.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/phpinfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/security.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/setup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/brute/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/captcha/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/csrf/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/exec/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/file1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/file2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/file3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/file4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/include.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/fi/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/session-input.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/cookie-input.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/sqli_blind/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/upload/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/view_help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/view_source.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/view_source_all.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_r/source/medium.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/help/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/source/high.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/source/impossible.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/source/low.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hack/vulnerabilities/xss_s/source/medium.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/add_ad_form.php" afterPath="$PROJECT_DIR$/components/add_ad_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/html-head.php" afterPath="$PROJECT_DIR$/components/html-head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_photos.php" afterPath="$PROJECT_DIR$/upload_photos.php" />
     </list>
     <ignored path="ProjektPAI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -576,108 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list-voivodeships.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/list-voivodeships.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-              <folding>
-                <marker date="1480283824979" expanded="true" signature="49:105" ph="SELECT id_vo... voivodeship" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register-form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/register-form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_ad.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_ad.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_ad.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adding_ad.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adding_ad.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-              <folding>
-                <marker date="1481294102654" expanded="true" signature="948:999" ph="SELECT id_lo... location" />
-                <marker date="1481294102654" expanded="true" signature="1561:1631" ph="SELECT id_us... session" />
-                <marker date="1481294102654" expanded="true" signature="1561:1781" ph="SELECT id_us... session" />
-                <marker date="1481294102654" expanded="true" signature="1859:2191" ph="INSERT INTO ad... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_ad_form.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/add_ad_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_photos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload_photos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logging_in.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging_in.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="139" column="26" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html-head.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/html-head.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -707,7 +60,6 @@
         <option value="$PROJECT_DIR$/zad2.css" />
         <option value="$PROJECT_DIR$/zad2.html" />
         <option value="$PROJECT_DIR$/kartkowka_1.php" />
-        <option value="$PROJECT_DIR$/functions.js" />
         <option value="$PROJECT_DIR$/components/gender-list.php" />
         <option value="$PROJECT_DIR$/components/list-voivodeships.php" />
         <option value="$PROJECT_DIR$/components/list-counties.php" />
@@ -737,9 +89,10 @@
         <option value="$PROJECT_DIR$/registering_in.php" />
         <option value="$PROJECT_DIR$/components/test.php" />
         <option value="$PROJECT_DIR$/components/category-list.php" />
-        <option value="$PROJECT_DIR$/adding_ad.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/components/html-head.php" />
+        <option value="$PROJECT_DIR$/functions.js" />
+        <option value="$PROJECT_DIR$/adding_ad.php" />
         <option value="$PROJECT_DIR$/upload_photos.php" />
         <option value="$PROJECT_DIR$/components/add_ad_form.php" />
       </list>
@@ -773,7 +126,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -786,30 +139,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjektPAI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjektPAI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjektPAI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -952,7 +282,15 @@
       <workItem from="1481299383480" duration="2294000" />
       <workItem from="1481303422013" duration="13000" />
       <workItem from="1481304981344" duration="3000" />
-      <workItem from="1481305000657" duration="9528000" />
+      <workItem from="1481305000657" duration="9697000" />
+      <workItem from="1481366567842" duration="2496000" />
+      <workItem from="1481387644722" duration="3279000" />
+      <workItem from="1481455951496" duration="8646000" />
+      <workItem from="1481472056882" duration="2368000" />
+      <workItem from="1481474518182" duration="2201000" />
+      <workItem from="1481477301428" duration="3478000" />
+      <workItem from="1481486189547" duration="2936000" />
+      <workItem from="1481489180641" duration="1929000" />
     </task>
     <task id="LOCAL-00001" summary="making field validation">
       <created>1479737895699</created>
@@ -965,13 +303,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269042000" />
+    <option name="totallyTimeSpent" value="296544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16156352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1093,13 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/generate_token.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/ad-desciption.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1111,20 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1188,9 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="82" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="82" />
-          <folding>
-            <marker date="1480277130682" expanded="true" signature="282:471" ph="SELECT id_us... session" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,10 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding>
-            <marker date="1481149242629" expanded="true" signature="634:704" ph="SELECT id_us... session" />
-            <marker date="1481149242629" expanded="true" signature="890:993" ph="SELECT permi... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,17 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding>
-            <marker date="1481134963628" expanded="true" signature="64:113" ph="SELECT * FRO... category" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/login-form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,9 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="29" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="33" />
-          <folding>
-            <marker date="1481293496498" expanded="true" signature="63:112" ph="SELECT * FRO... category" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,9 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding>
-            <marker date="1480283824979" expanded="true" signature="49:105" ph="SELECT id_vo... voivodeship" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1255,45 +548,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adding_ad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-          <folding>
-            <marker date="1481294102654" expanded="true" signature="948:999" ph="SELECT id_lo... location" />
-            <marker date="1481294102654" expanded="true" signature="1561:1631" ph="SELECT id_us... session" />
-            <marker date="1481294102654" expanded="true" signature="1561:1781" ph="SELECT id_us... session" />
-            <marker date="1481294102654" expanded="true" signature="1859:2191" ph="INSERT INTO ad... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jQuery-File-Upload-9.14.1/README.md" />
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/components/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="139" column="26" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_ad.php">
+    <entry file="file://$PROJECT_DIR$/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/html-head.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="139" column="26" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1301,15 +591,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging_in.php">
+    <entry file="file://$PROJECT_DIR$/adding_ad.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="600">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/login-form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/generate_token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1323,8 +625,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/add_ad_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        <state relative-caret-position="795">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_ad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>

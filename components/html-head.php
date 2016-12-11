@@ -9,7 +9,7 @@ function setSiteTitle($name){
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="flexbox-style.css">
     <script src="functions.js"></script>
-    
+    <script src="../jquery-3.1.1.min.js"></script>
     <title>$name</title>
 </head>
 

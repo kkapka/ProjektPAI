@@ -30,6 +30,7 @@
                 $query="SELECT location_photo FROM photo INNER JOIN gallery ON id_photo=id_photo_gallery WHERE id_ad_gallery=$id_ad";
                 $result=mysqli_query($connection,$query);
 
+                echo '<div class="img-container">';
                 while($row=mysqli_fetch_assoc($result)){
                     //echo '<img src="'.'./uploads/'.$row['location_photo'].'"></br>';
                     echo '<a href="'.'./uploads/'.$row['location_photo']. '" data-lightbox="user-gallery">'.
@@ -38,21 +39,7 @@
                     echo " ";
                     $i++;
                 }
-
-                echo<<<end_echo
-<script>
-
-    $('#aniimated-thumbnials').lightGallery({
-        thumbnail:true,
-        animateThumb: false,
-        showThumbByDefault: false
-    }); 
-</script>
-
-
-
-end_echo;
-
+                echo '</div>';
 
                 mysqli_close($connection);
 

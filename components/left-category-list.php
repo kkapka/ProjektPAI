@@ -46,7 +46,7 @@ function renderTree($parent = "0"){
             echo ",",implode(",",$allChildren);
         }
 
-        echo '">',$categoryNames[$parent], "</a>\n";
+        echo '&page=1">',$categoryNames[$parent], "</a>\n";
     }
 
     $children = $childrenTree[$parent];

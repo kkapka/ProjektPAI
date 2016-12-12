@@ -193,3 +193,13 @@ li.left-menu-li a:hover{
 .detailed-ad-category-left{
 
 }
+
+img {
+	height: 180px;
+	width: 180px;
+	object-fit: contain;
+}
+.img-container{
+	margin-left: 30%;
+	display: block;
+}

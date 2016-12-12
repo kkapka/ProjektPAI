@@ -4,7 +4,7 @@
     <list default="true" id="b0ea7e44-2477-40c7-af07-b49c0d4f8384" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/ad-desciption.php" afterPath="$PROJECT_DIR$/components/ad-desciption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_photos.php" afterPath="$PROJECT_DIR$/upload_photos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/html-head.php" afterPath="$PROJECT_DIR$/components/html-head.php" />
     </list>
     <ignored path="ProjektPAI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +38,7 @@
       <file leaf-file-name="upload_photos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/upload_photos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="930">
               <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding>
                 <marker date="1481497819738" expanded="true" signature="2050:2121" ph="INSERT INTO photo... " />
@@ -61,13 +61,25 @@
       <file leaf-file-name="ad-desciption.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/ad-desciption.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="131">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding>
-                <marker date="1481497973990" expanded="true" signature="148:186" ph="SELECT * FRO... detailed_ad" />
-                <marker date="1481497973990" expanded="true" signature="1836:1937" ph="SELECT locat... photo" />
-                <marker date="1481497973990" expanded="true" signature="1836:1938" ph="SELECT locat... photo" />
+                <marker date="1481504855918" expanded="true" signature="148:186" ph="SELECT * FRO... detailed_ad" />
+                <marker date="1481504855918" expanded="true" signature="1958:2059" ph="SELECT locat... photo" />
+                <marker date="1481504855918" expanded="true" signature="1958:2060" ph="SELECT locat... photo" />
+                <marker date="1481504855918" expanded="true" signature="2652:2805" ph="..." />
+                <marker date="1481504855918" expanded="true" signature="2699:2793" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="html-head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/html-head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,12 +136,12 @@
         <option value="$PROJECT_DIR$/components/test.php" />
         <option value="$PROJECT_DIR$/components/category-list.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/components/html-head.php" />
         <option value="$PROJECT_DIR$/functions.js" />
         <option value="$PROJECT_DIR$/add_ad.php" />
         <option value="$PROJECT_DIR$/components/add_ad_form.php" />
         <option value="$PROJECT_DIR$/adding_ad.php" />
         <option value="$PROJECT_DIR$/upload_photos.php" />
+        <option value="$PROJECT_DIR$/components/html-head.php" />
         <option value="$PROJECT_DIR$/components/ad-desciption.php" />
       </list>
     </option>
@@ -146,9 +158,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="59" />
     <option name="y" value="52" />
-    <option name="width" value="728" />
+    <option name="width" value="718" />
     <option name="height" value="848" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -333,7 +345,8 @@
       <workItem from="1481496678598" duration="355000" />
       <workItem from="1481497137469" duration="14000" />
       <workItem from="1481497201647" duration="622000" />
-      <workItem from="1481497932690" duration="152000" />
+      <workItem from="1481497932690" duration="418000" />
+      <workItem from="1481499771947" duration="4088000" />
     </task>
     <task id="LOCAL-00001" summary="making field validation">
       <created>1479737895699</created>
@@ -346,10 +359,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300901000" />
+    <option name="totallyTimeSpent" value="305255000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="52" width="728" height="848" extended-state="4" />
+    <frame x="59" y="52" width="718" height="848" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -394,7 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///run/user/1000/gvfs/sftp:host=torus.uck.pk.edu.pl/home/inf-14/kamilkapka/public_html/zad3.php" />
     <entry file="file://$PROJECT_DIR$/test/zad2.php" />
     <entry file="file://$USER_HOME$/Desktop/dane_hosting_pomocniczy">
       <provider selected="true" editor-type-id="text-editor">
@@ -595,13 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/html-head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -669,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/upload_photos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="930">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <marker date="1481497819738" expanded="true" signature="2050:2121" ph="INSERT INTO photo... " />
@@ -678,14 +683,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/html-head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lightbox2-master/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/ad-desciption.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="131">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
-            <marker date="1481497973990" expanded="true" signature="148:186" ph="SELECT * FRO... detailed_ad" />
-            <marker date="1481497973990" expanded="true" signature="1836:1937" ph="SELECT locat... photo" />
-            <marker date="1481497973990" expanded="true" signature="1836:1938" ph="SELECT locat... photo" />
+            <marker date="1481504855918" expanded="true" signature="148:186" ph="SELECT * FRO... detailed_ad" />
+            <marker date="1481504855918" expanded="true" signature="1958:2059" ph="SELECT locat... photo" />
+            <marker date="1481504855918" expanded="true" signature="1958:2060" ph="SELECT locat... photo" />
+            <marker date="1481504855918" expanded="true" signature="2652:2805" ph="..." />
+            <marker date="1481504855918" expanded="true" signature="2699:2793" ph="{...}" />
           </folding>
         </state>
       </provider>

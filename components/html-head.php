@@ -11,9 +11,11 @@ function setSiteTitle($name){
     <script src="functions.js"></script>
     <script src="../jquery-3.1.1.min.js"></script>
     <title>$name</title>
+    <link href="../lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
 </head>
 
 echo_end;
 
 }
 ?>
+

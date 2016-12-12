@@ -8,7 +8,11 @@
         $result=$connection->query($sql);
         $row_count=mysqli_num_rows($result);
 
+        echo '<script src="../lightbox2-master/dist/js/lightbox.js"></script>';
+
         if($row_count>0){
+            global $i;
+            $i=1;
             while($row=$result->fetch_assoc()){
                 echo '<table class="detailed-ad-table">';
                 echo '<tr><td class="detailed-ad-title" colspan="2">'.$row["title_ad"].'</td>';
@@ -27,8 +31,28 @@
                 $result=mysqli_query($connection,$query);
 
                 while($row=mysqli_fetch_assoc($result)){
-                    echo '<img src="'.'./uploads/'.$row['location_photo'].'"></br>';
+                    //echo '<img src="'.'./uploads/'.$row['location_photo'].'"></br>';
+                    echo '<a href="'.'./uploads/'.$row['location_photo']. '" data-lightbox="user-gallery">'.
+                            '<img src="'.'./uploads/'.$row['location_photo'].'" width="180" height="180" alt="Image Title">'
+                        .'</a>';
+                    echo " ";
+                    $i++;
                 }
+
+                echo<<<end_echo
+<script>
+
+    $('#aniimated-thumbnials').lightGallery({
+        thumbnail:true,
+        animateThumb: false,
+        showThumbByDefault: false
+    }); 
+</script>
+
+
+
+end_echo;
+
 
                 mysqli_close($connection);
 

@@ -1,5 +1,7 @@
 <?php
-include_once "important_includes.php";
+session_start();
+
+include_once "./components/important_includes.php";
 
 if(!isset($_COOKIE['id'])){
     header("location: ../index.php");
@@ -15,7 +17,7 @@ else{
         if($row_count>0){
             $row=mysqli_fetch_assoc($result);
 
-            $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad FROM ad WHERE author_ad='$row[id_user_session]'";
+            $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad='$row[id_user_session]'";
 
             if($result=mysqli_query($connection,$query)){
                 $row_count=mysqli_num_rows($result);
@@ -31,7 +33,7 @@ else{
                         echo '<tr>'.'<td>'.$row['title_ad'].'</td>'.'<td>'.$row['datetime_add_ad'].'</td>'.'<td>'.$row['datetime_end_ad'].'</td>'.
                             '<td>'.'<a href="'.'./ad.php?id='.$row['id_ad'].'">'.'Podgląd'.'</a>'.'</td>'.
                             '<td>'.'<a href="'.'./edit-ad.php?id='.$row['id_ad'].'">'.'Edytuj'.'</a>'.'</td>'.
-                            '<td>'.'<a href="'.'./delete-ad.php?id='.$row['id_ad'].'"'.'onclick="return confirmAdDelete();"'.'>'.'Usuń'.'</a>'.'</td>'.
+                            '<td>'.'<a href="'.'./components/delete-ad.php'.'?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'"'.'onclick="return confirmAdDelete();"'.'>'.'Usuń'.'</a>'.'</td>'.
                             '</tr>';
                     }
 

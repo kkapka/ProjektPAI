@@ -3,9 +3,9 @@
 
     function getSalt($login){
         $connection=getConnection();
-        if($result=mysqli_query($connection,"SELECT user_salt FROM user WHERE login_user='$login'")){
+        if($result=mysqli_query($connection,"SELECT salt_user FROM user WHERE login_user='$login'")){
             if($row=mysqli_fetch_assoc($result)){
-                return $row['user_salt'];
+                return $row['salt_user'];
             }
         }
     }

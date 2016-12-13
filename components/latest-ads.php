@@ -5,11 +5,10 @@ echo '<div class="bar">Najnowsze ogłoszenia:</div>';
 $connection=getConnection();
 
 $sql="SELECT * FROM five_newest_ads";
-$result=$connection->query($sql);
+$result=mysqli_query($connection,$sql);
 $row_count=mysqli_num_rows($result);
-
 if($row_count>0){
-    while($row=$result->fetch_assoc()){
+    while($row=mysqli_fetch_assoc($result)){
         echo '<a class="href-latest-ad" href="ad.php?id='.$row["id_ad"].'">';
         echo '<table class="table-latest-ads">';
         echo '<tr><td class="top-row-latest-ad" colspan="2">'.$row["title_ad"].'</td>';
@@ -25,7 +24,6 @@ if($row_count>0){
 else{
     echo "Nie znaleziono żadnych ogłoszeń";
 }
-
 $connection->close();
 
 ?>

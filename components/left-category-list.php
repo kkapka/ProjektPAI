@@ -2,7 +2,7 @@
 
 $connection=getConnection();
 $result=$connection->query("SELECT * FROM category ORDER BY name_category ASC");
-
+$childrenTree;
 $childrenTree = array();
 $categoryNames = array();
 $allChildren=array();
@@ -20,43 +20,49 @@ function getAllChildren($parent){
     global $childrenTree;
     global $allChildren;
 
-    foreach ($childrenTree[$parent] as $value){
+    if(!empty($childrenTree[$parent])){
+        foreach ($childrenTree[$parent] as $value){
 
-        if(!in_array($value,$allChildren)){
-            $allChildren[]=$value;
-        }
+            if(!in_array($value,$allChildren)){
+                $allChildren[]=$value;
+            }
 
-        if($childrenTree[$parent]>0){
-            getAllChildren($value);
+            if($childrenTree[$parent]>0){
+                getAllChildren($value);
+            }
         }
     }
 }
 
 function renderTree($parent = "0"){
     global $categoryNames;
-    global $childrenTree;
     global $allChildren;
+    global $childrenTree;
 
     if($parent != "0"){
         echo '<li><a href="category.php?id=',$parent;
 
-        if(count($childrenTree[$parent])>0){
-            $allChildren=array();
-            getAllChildren($parent);
-            echo ",",implode(",",$allChildren);
+        if(!empty($childrenTree[$parent])){
+            if(count($childrenTree[$parent])>0){
+                $allChildren=array();
+                getAllChildren($parent);
+                echo ",",implode(",",$allChildren);
+            }
         }
 
         echo '&page=1">',$categoryNames[$parent], "</a>\n";
     }
 
-    $children = $childrenTree[$parent];
-    if(count($children) > 0){
-        echo "<ul>\n";
-        foreach($children as $child)
-            renderTree($child);
-        echo "</ul>\n";
+    if(!empty($childrenTree[$parent])){
+        $children = $childrenTree[$parent];
+        if(count($children) > 0){
+            echo "<ul>\n";
+            foreach($children as $child)
+                renderTree($child);
+            echo "</ul>\n";
+        }
+        if($parent != "0") echo "</li>\n";
     }
-    if($parent != "0") echo "</li>\n";
 }
 
 renderTree();

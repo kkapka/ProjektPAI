@@ -1,5 +1,4 @@
 <?php
-
         echo '<div class="bar">Najnowsze ogłoszenia:</div>';
         $connection=getConnection();
         $id_ad=$_GET["id"];
@@ -48,6 +47,4 @@
         else{
             echo "Brak ogłoszenia o takim numerze";
         }
-
-        $connection->close();
 ?>

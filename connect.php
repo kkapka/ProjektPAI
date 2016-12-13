@@ -1,14 +1,9 @@
 <?php
-	$db_host="localhost";
-	$db_user="root";
-	$db_password="wyciekpamieci666";
-	$db_name="online_classifieds";
-
     function getConnection(){
 
         $db_host="localhost";
         $db_user="root";
-        $db_password="wyciekpamieci666";
+        $db_password="";
         $db_name="online_classifieds";
 
         $connection=@new mysqli($db_host,$db_user,$db_password,$db_name);

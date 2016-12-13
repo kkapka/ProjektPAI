@@ -36,6 +36,7 @@
 			<?php
 				include_once "./components/dashboard-greeting.php";
                 include_once "./components/cookie-check.php";
+                include_once "./components/dashboard-content.php";
 			?>
 		</div>
 	</div>

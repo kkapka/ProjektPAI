@@ -1,6 +1,6 @@
 <?php
 
-    require_once "../connect.php";
+    include_once "../connect.php";
 
     $voivodeship_id=intval($_GET["voivodeship_id"]);
     $connection=getConnection();

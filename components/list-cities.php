@@ -1,6 +1,6 @@
     Miasto: <br/>
 
-    <select name="list-locations">
+    <select id="list-locations" name="list-locations">
 <?php
     require_once "../connect.php";
 

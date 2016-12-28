@@ -1,5 +1,4 @@
 /* whole website style*/
-
 body {
 	background-color: #f1e0c5;
 }
@@ -77,6 +76,12 @@ textarea{
 	color: whitesmoke;
 	font-size: 2em;
 	height: 50px;
+}
+
+@media screen and (max-width: 363px) {
+	.header{
+		font-size: 1.6em;
+	}
 }
 /* bar style classes  */
 

@@ -32,7 +32,7 @@ function renderListTree($parent = "0"){
     }
 }
 echo "Kategoria: </br>";
-echo '<select name="category-list">';
+echo '<select name="category-list" id="5">';
 echo '<option value="">Wybierz kategorię</option>';
 renderListTree();
 echo '</select>';

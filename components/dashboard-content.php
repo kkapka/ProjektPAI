@@ -32,7 +32,7 @@ else{
                     while($row=mysqli_fetch_assoc($result)){
                         echo '<tr>'.'<td>'.$row['title_ad'].'</td>'.'<td>'.$row['datetime_add_ad'].'</td>'.'<td>'.$row['datetime_end_ad'].'</td>'.
                             '<td>'.'<a href="'.'./ad.php?id='.$row['id_ad'].'">'.'Podgląd'.'</a>'.'</td>'.
-                            '<td>'.'<a href="'.'./edit-ad.php?id='.$row['id_ad'].'">'.'Edytuj'.'</a>'.'</td>'.
+                            '<td>'.'<a href="'.'./edit-ad-form.php?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'">'.'Edytuj'.'</a>'.'</td>'.
                             '<td>'.'<a href="'.'./components/delete-ad.php'.'?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'"'.'onclick="return confirmAdDelete();"'.'>'.'Usuń'.'</a>'.'</td>'.
                             '</tr>';
                     }

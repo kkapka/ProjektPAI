@@ -1,5 +1,5 @@
-function printCounties() {
-    var select = document.getElementById("list-voivodeships");
+function printCounties(callback) {
+    /*var select = document.getElementById("list-voivodeships");
     id=select.options[select.selectedIndex].value;
     if (id == "") {
         return;
@@ -18,11 +18,25 @@ function printCounties() {
         };
         xmlhttp.open("GET","./components/list-counties.php?voivodeship_id="+id,true);
         xmlhttp.send();
-    }
+    }*/
+
+    var id=$("#list-voivodeships").val();
+
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: "./components/list-counties.php",
+        data: {voivodeship_id:id},
+        success: function (response) {
+            $("#counties").html(response);
+            //alert(response);
+            callback();
+        }
+    })
 }
 
 function printLocations() {
-    var select = document.getElementById("list-counties");
+    /*var select = document.getElementById("list-counties");
     id=select.options[select.selectedIndex].value;
     if (id == "") {
         return;
@@ -41,5 +55,18 @@ function printLocations() {
         };
         xmlhttp.open("GET","./components/list-cities.php?county_id="+id,true);
         xmlhttp.send();
-    }
+    }*/
+
+    var id=$("#list-counties").val();
+
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: "./components/list-cities.php",
+        data: {county_id:id},
+        success: function (response) {
+            $("#locations").html(response);
+            callback();
+        }
+    })
 }

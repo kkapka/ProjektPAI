@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartkówka JS</title>
+</head>
+<body>
+<script>
+    function calka_oznaczona(){
+        try{
+            var x1=parseFloat(document.getElementById("x1").value);
+            var x2=parseFloat(document.getElementById("x2").value);
+
+            var n=10000;
+
+            if(isNaN(x1) || isNaN(x2)){
+                throw "Podałeś nieprawidłową liczbę";
+            }
+
+            dx=x2-x1;
+            var s=0;
+
+            for(var i=1;i<=n;i++){
+                s+=Math.sin(x1+Math.random()*dx);
+            }
+
+            s = dx * s / n;
+            t = Math.floor(s * 1000) / 1000;
+
+            alert(t);
+        }
+        catch(err) {
+            alert(err);
+        }
+    }
+
+    function ciag_fareya(){
+        try{
+            var n=parseInt(document.getElementById("N").value);
+
+            if(isNaN(n)){
+                throw "Podałeś nieprawidłowy wyraz ciągu";
+            }
+
+            var a=0;
+            var b=1;
+            var c=1;
+            var d=n;
+
+            var ciag_fareya="";
+            while(c<=n){
+                var k=parseInt((n+b)/d);
+                var temp_a=a;
+                var temp_b=b;
+                var temp_c=c;
+                var temp_d=d;
+                a=c;
+                b=d;
+                c=k*temp_c-temp_a;
+                d=k*temp_d-temp_b;
+                ciag_fareya+=a+"/"+b+" ";
+            }
+            alert(ciag_fareya);
+        }
+        catch(err){
+            alert(err);
+        }
+    }
+</script>
+
+Obliczanie całki metodą monte carlo
+<form >
+    <input type="text" id="x1">
+    <input type="text" id="x2">
+    <input type="submit" onclick="calka_oznaczona()">
+</form>
+</br>
+Ciąg fareya
+<form>
+    <input type="text" id="N">
+    <input type="submit" onclick="ciag_fareya()">
+</form>
+<div id="wyniki_ciagu_fareya"></div>
+</body>
+</html>

@@ -44,11 +44,10 @@ else{
                                 $row=mysqli_fetch_assoc($result);
                                 $permission=$row['permission_user_type'];
 
-                                if(($ad_author==$user_id) || ($permission>=110)){
-                                    $query="DELETE FROM ad WHERE id_ad=$ad_id";
+                                if(($ad_author==$user_id) || ($permission>110)){
+                                    $query="DELETE FROM ad WHERE id_ad=$ad_id AND author_ad=$ad_author";
                                     if($result=mysqli_query($connection,$query)){
                                         $query="SELECT location_photo FROM photo JOIN gallery ON id_photo_gallery=id_photo WHERE id_ad_gallery=$ad_id";
-                                        echo $query;
                                         if($result=mysqli_query($connection,$query)){
                                             if($row=mysqli_fetch_assoc($result)){
                                                 $folder_name=explode('/',$row['location_photo']);

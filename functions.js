@@ -29,8 +29,6 @@ function printCounties(callback) {
         data: {voivodeship_id:id},
         success: function (response) {
             $("#counties").html(response);
-            //alert(response);
-            callback();
         }
     })
 }
@@ -66,7 +64,6 @@ function printLocations() {
         data: {county_id:id},
         success: function (response) {
             $("#locations").html(response);
-            callback();
         }
     })
 }

@@ -1,6 +1,5 @@
 <?php
 include_once "./components/important_includes.php";
-include "./show_errors.php";
 
 if(!isset($_COOKIE['id'])){
     header("location: index.php");
@@ -12,7 +11,7 @@ if(!isset($_COOKIE['id'])){
 
 <?php
 require "./components/html-head.php";
-setSiteTitle("Serwis ogłoszeniowy - Strona główna");
+setSiteTitle("Serwis ogłoszeniowy - Tablica");
 ?>
 
 <body>
@@ -21,7 +20,8 @@ setSiteTitle("Serwis ogłoszeniowy - Strona główna");
 require "./components/header.php";
 
 require "./components/top-bar.php";
-setTopBarTitle("Edytuj artykuł");
+
+setTopBarTitle("Zarządzaj użytkownikami");
 ?>
 
 <div class="row">
@@ -32,16 +32,18 @@ setTopBarTitle("Edytuj artykuł");
         require "./components/left-category-list.php";
         ?>
     </div>
-
     <div class="col-2-3">
         <?php
-            include_once "./edit-ad.php";
+        include_once "./components/dashboard-greeting.php";
+        include_once "./components/cookie-check.php";
+        include_once "./components/dashboard-content.php";
         ?>
     </div>
 </div>
 
 <?php
-    include_once "./components/footer.php";
+require "./components/footer.php";
+
 ?>
 </body>
 </html>

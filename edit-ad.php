@@ -88,8 +88,8 @@ if(isset($_COOKIE['id'])){
                                     $query="DELETE FROM gallery WHERE id_ad_gallery=$ad_id";
                                     if($result=mysqli_query($connection,$query)){
                                         //print_r(glob('.././uploads/'.$folder_name[0].'/*'));
-                                        array_map('unlink',glob('.././uploads/'.$folder_name[0].'/*'));
-                                        rmdir('.././uploads/'.$folder_name[0].'/');
+                                        array_map('unlink',glob('./uploads/'.$folder_name[0].'/*'));
+                                        rmdir('./uploads/'.$folder_name[0].'/');
                                         //echo "13";
                                         return true;
                                     }
@@ -102,56 +102,55 @@ if(isset($_COOKIE['id'])){
                         }
                     ?>
                     <script>
-                        document.getElementById("1").value = '<?php echo $title_ad;?>';
-                        document.getElementById("2").value = '<?php echo $price_ad;?>';
-                        document.getElementById("3").value = '<?php echo $content_ad;?>';
-                        document.getElementById("5").value = '<?php echo $category_ad;?>';
+                        $(document).ready(function () {
+                            document.getElementById("1").value = '<?php echo $title_ad;?>';
+                            document.getElementById("2").value = '<?php echo $price_ad;?>';
+                            document.getElementById("3").value = '<?php echo $content_ad;?>';
+                            document.getElementById("5").value = '<?php echo $category_ad;?>';
 
-                        $("#list-voivodeships").val('<?php echo $voivodeship_ad;?>').change();
-                        $("#list-counties").val('<?php echo $county_ad;?>').change();
-                        $("#list-locations").val('<?php echo $location_ad;?>').change();
+                            $("#list-voivodeships").val('<?php echo $voivodeship_ad;?>').change();
+                            $("#list-counties").val('<?php echo $county_ad;?>').change();
+                            $("#list-locations").val('<?php echo $location_ad;?>').change();
 
-                        $("form#edit-ad-details-form").submit(function (event) {
-                            $.ajax({
-                                type: "POST",
-                                url: 'editting-ad.php',
-                                data: $("#edit-ad-details-form").serialize(),
+                            $("form#edit-ad-details-form").submit(function (event) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'editting-ad.php',
+                                    data: $("#edit-ad-details-form").serialize(),
 
-                                success: function(data)
-                                {
-                                    if(data=="Edycja ogłoszenia przebiegła pomyślnie"){
-                                        var x='<?php deleteOldFiles();?>';
+                                    success: function(data)
+                                    {
+                                        if(data=="Edycja ogłoszenia przebiegła pomyślnie"){
+                                            var x='<?php deleteOldFiles();?>';
 
-
-                                        var ajaxData = new FormData();
-                                        ajaxData.append( 'action','edit-upload-photos');
-
-
-                                        $.each($("input[type=file]"), function(i, obj) {
-                                            $.each(obj.files,function(j, file){
-                                                ajaxData.append('fileToUpload['+i+']', file);
-                                            })
-                                        });
-
-                                        $.ajax({
-                                            url: 'upload_photos.php',
-                                            data: ajaxData,
-                                            cache: false,
-                                            contentType: false,
-                                            processData: false,
-                                            type: 'POST',
-                                            dataType:'json'
-                                        });
+                                            var ajaxData = new FormData();
+                                            ajaxData.append( 'action','edit-upload-photos');
 
 
+                                            $.each($("input[type=file]"), function(i, obj) {
+                                                $.each(obj.files,function(j, file){
+                                                    ajaxData.append('fileToUpload['+i+']', file);
+                                                })
+                                            });
 
+                                            $.ajax({
+                                                url: 'upload_photos.php',
+                                                data: ajaxData,
+                                                cache: false,
+                                                contentType: false,
+                                                processData: false,
+                                                type: 'POST',
+                                                dataType:'json'
+                                            });
+                                        }
+                                        alert(data);
                                     }
-                                    alert(data);
-                                }
-                            });
+                                });
 
-                            event.preventDefault();
-                        })
+                                event.preventDefault();
+                            })
+                        });
+
                     </script>
 <?php
 

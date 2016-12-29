@@ -16,8 +16,22 @@ else{
 
         if($row_count>0){
             $row=mysqli_fetch_assoc($result);
+            $id_user=$row['id_user_session'];
 
-            $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad='$row[id_user_session]'";
+            $query="SELECT permission_user_type FROM user JOIN user_type ON id_user_type=type_user WHERE id_user=$id_user";
+
+            $tmp_result=mysqli_query($connection,$query);
+            $tmp_row=mysqli_fetch_assoc($tmp_result);
+
+            $permission_type=$tmp_row['permission_user_type'];
+
+
+            if($permission_type>=110){
+                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad";
+            }
+            else {
+                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad=$row[id_user_session]";
+            }
 
             if($result=mysqli_query($connection,$query)){
                 $row_count=mysqli_num_rows($result);

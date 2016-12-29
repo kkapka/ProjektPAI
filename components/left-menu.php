@@ -35,6 +35,9 @@ echo_end;
                         <li class="left-menu-li">
                             <a href="add_ad.php">Dodaj ogłoszenie</a>
                         </li>
+                        <li class="left-menu-li">
+                            <a href="account-details.php">Zmień dane osobowe</a>
+                        </li>
                        <li class="left-menu-li">
                             <a href="logout.php">Wyloguj się</a>
                         </li>

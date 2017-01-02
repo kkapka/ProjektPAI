@@ -50,7 +50,7 @@ function renderTree($parent = "0"){
             }
         }
 
-        echo '&page=1">',$categoryNames[$parent], "</a>\n";
+        echo '&amp;page=1">',$categoryNames[$parent], "</a>\n";
     }
 
     if(!empty($childrenTree[$parent])){

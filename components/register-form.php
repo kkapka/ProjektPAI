@@ -3,7 +3,7 @@
 <form action="registering_in.php" method="post">
     Login: <br/> <input type="text" name="login"/><br/>
     Hasło: <br/> <input type="password" name="password"/><br/>
-    Powtórz hasło: <br/> <input type="password" name="password"/>
+    Powtórz hasło: <br/> <input type="password" name="password2"/>
     Email: <br/><input type="email" name="mail"/>
     Imię: <br/> <input type="text" name="name"/><br/>
     Nazwisko: <br/> <input type="text" name="surname"/><br/>

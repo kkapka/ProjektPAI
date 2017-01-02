@@ -127,9 +127,15 @@ if(isset($_COOKIE['id'])){
                                             ajaxData.append( 'action','edit-upload-photos');
 
 
+                                            var k=0;
                                             $.each($("input[type=file]"), function(i, obj) {
+
                                                 $.each(obj.files,function(j, file){
-                                                    ajaxData.append('fileToUpload['+i+']', file);
+                                                    ajaxData.append('fileToUpload['+k+']', file);
+
+                                                    if(file.name!=""){
+                                                        k=k+1;
+                                                    }
                                                 })
                                             });
 
@@ -140,10 +146,11 @@ if(isset($_COOKIE['id'])){
                                                 contentType: false,
                                                 processData: false,
                                                 type: 'POST',
-                                                dataType:'json'
+                                                success: function(data){
+                                                    alert(data);
+                                                }
                                             });
                                         }
-                                        alert(data);
                                     }
                                 });
 

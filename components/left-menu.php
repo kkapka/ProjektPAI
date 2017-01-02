@@ -42,6 +42,14 @@ echo_end;
                             <a href="logout.php">Wyloguj się</a>
                         </li>
 echo_end;
+                    if($row['permission_user_type']==111){
+                        echo<<<echo_end
+                        <li class="left-menu-li">
+                            <a href="users-management.php">Zarządzaj użytkownikami</a>
+                        </li>
+
+echo_end;
+                    }
 
                 }
             }

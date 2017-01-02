@@ -1,4 +1,4 @@
-<form name="upload-photos" method="post" enctype="multipart/form-data">
+<form name="upload-photos" id="upload-photos" method="post" enctype="multipart/form-data">
     Wybierz zdjęcia(max. 5, rozmiar do 500kB): </br></br>
     <input type="file" name="fileToUpload[]" >
     <input type="file" name="fileToUpload[]" >
@@ -29,6 +29,7 @@
 
 <script>
     $("form#ad-details-form").submit(function (event) {
+        event.preventDefault();
         $.ajax({
             type: "POST",
             url: 'adding_ad.php',
@@ -38,11 +39,16 @@
             {
                 if(data=="Dodano ogłoszenie do bazy"){
                     var ajaxData = new FormData();
-                    //ajaxData.append( 'action','upload-photos');
 
+                    var k=0;
                     $.each($("input[type=file]"), function(i, obj) {
+
                         $.each(obj.files,function(j, file){
-                            ajaxData.append('fileToUpload['+i+']', file);
+                            ajaxData.append('fileToUpload['+k+']', file);
+
+                            if(file.name!=""){
+                                k=k+1;
+                            }
                         })
                     });
 
@@ -53,15 +59,14 @@
                         contentType: false,
                         processData: false,
                         type: 'POST',
-                        dataType:'json'
+                        success: function(data){
+                            alert(data);
+                        }
                     });
-
 
                 }
                 alert(data);
             }
         });
-
-        event.preventDefault();
     })
 </script>

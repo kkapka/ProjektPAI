@@ -30,32 +30,32 @@ if($count>0){
             if(isset($_POST["submit"])) {
                 $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
                 if($check !== false) {
-                    echo "File is an image - " . $check["mime"] . ".";
+                    echo "Plik jest zdjęciem - " . $check["mime"] . "\n";
                     $uploadOk = 1;
                 } else {
-                    echo "File is not an image.";
+                    echo "Plik nie jest zdjęciem !\n";
                     $uploadOk = 0;
                 }
             }
 
             if (file_exists($target_file)) {
-                echo "Sorry, file already exists.";
+                echo "Plik już istnieje !\n";
                 $uploadOk = 0;
             }
 
             if ($_FILES["fileToUpload"]["size"][$i] > 500000) {
-                echo "Sorry, your file is too large.";
+                echo "Twój plik jest za duży !\n";
                 $uploadOk = 0;
             }
 
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ) {
-                echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                echo "Tylko pliki JPG, JPEG, PNG & GIF są dozwolone !\n";
                 $uploadOk = 0;
             }
 
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+                echo "Twój plik nie został wgrany\n";
 
             } else {
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
@@ -69,9 +69,9 @@ if($count>0){
                     $query="INSERT INTO gallery (id_ad_gallery,id_photo_gallery) VALUES ($_SESSION[ad_id],$last_inserted_photo_id)";
                     $result=mysqli_query($connection,$query);
 
-                    echo "The file ". basename( $_FILES["fileToUpload"]["name"][$i]). " has been uploaded.";
+                    echo "Plik ". basename( $_FILES["fileToUpload"]["name"][$i]). " został wgrany\n";
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    echo "Wystąpił błąd podczas wgrywania twojego pliku !\n";
                 }
             }
         }

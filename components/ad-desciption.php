@@ -1,7 +1,7 @@
 <?php
         echo '<div class="bar">Najnowsze ogłoszenia:</div>';
         $connection=getConnection();
-        $id_ad=$_GET["id"];
+        $id_ad=intval($_GET["id"]);
 
         $sql="SELECT * FROM detailed_ad WHERE id_ad=$id_ad";
         $result=$connection->query($sql);
@@ -10,6 +10,11 @@
         echo '<script src="../lightbox2-master/dist/js/lightbox.js"></script>';
 
         if($row_count>0){
+
+            $connection=getConnection();
+            $query="UPDATE ad SET view_counter_ad=view_counter_ad+1 WHERE id_ad=$id_ad";
+            mysqli_query($connection,$query);
+
             global $i;
             $i=1;
             while($row=$result->fetch_assoc()){

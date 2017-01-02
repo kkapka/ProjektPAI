@@ -3,7 +3,7 @@ session_start();
 
 include_once "./components/important_includes.php";
 
-if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
+if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
         ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
     header("location: register.php");
     exit;
@@ -27,6 +27,12 @@ $password=$_POST['password'];
 if(!preg_match($password_pattern,$password)){
     echo "Wprowadziłeś hasło w błędnym formacie!";
     exit;
+}
+else{
+    if($password!=$_POST['password2']){
+        echo "Hasła są różne!";
+        exit;
+    }
 }
 /*--------------------------------------------------------------------*/
 

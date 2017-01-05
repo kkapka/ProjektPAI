@@ -16,7 +16,6 @@ echo '<button onclick="deleteUser(getSelectedOption())">Usuń użytkownika</butt
 
 <script>
     function deleteUser(userId) {
-        alert(userId);
 
         $.ajax({
             url: "./components/delete-user.php",

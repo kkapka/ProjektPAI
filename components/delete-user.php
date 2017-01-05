@@ -40,7 +40,7 @@ while($row=mysqli_fetch_assoc($result)){
 }
 
 $query="DELETE FROM user WHERE id_user=$user_id";
-echo $query;
+
 if(mysqli_query($connection,$query)){
     echo "Usunięto użytkownika";
 }

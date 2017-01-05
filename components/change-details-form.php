@@ -63,17 +63,21 @@ echo_end;
         $("#list-counties").val('<?php echo $row['id_county_location'];?>').change();
         $("#list-locations").val('<?php echo $row['id_location'];?>');
 
-    });
+        $("#details-change-form").on("submit",function (event) {
+            event.preventDefault();
 
-    function sendEditRequest() {
-        $.ajax({
-                type: "GET",
+            $.ajax({
+                type: "POST",
                 url: "change-details.php",
                 data: $("#details-change-form").serialize(),
-            success: function (data) {
-                alert(data);
-            }
-        })
+                success: function (data) {
+                    alert(data);
+                }
+            })
+        });
 
-    }
+    });
+
+
+
 </script>

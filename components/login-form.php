@@ -6,3 +6,11 @@
     </br><br/>
     <input type="submit" value="Zaloguj się"/><br/>
 </form>
+<?php
+session_start();
+
+if(isset($_SESSION['login-error-info'])){
+    echo $_SESSION['login-error-info'];
+}
+session_unset();
+?>

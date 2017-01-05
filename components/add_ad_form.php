@@ -52,17 +52,19 @@
                         })
                     });
 
-                    $.ajax({
-                        url: 'upload_photos.php',
-                        data: ajaxData,
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        type: 'POST',
-                        success: function(data){
-                            alert(data);
-                        }
-                    });
+                    if(k>0){
+                        $.ajax({
+                            url: 'upload_photos.php',
+                            data: ajaxData,
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            type: 'POST',
+                            success: function(data){
+                                alert(data);
+                            }
+                        });
+                    }
 
                 }
                 alert(data);

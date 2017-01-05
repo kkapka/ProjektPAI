@@ -143,6 +143,7 @@ li.left-menu-li a:hover{
 	background:#ffe882;
 	border-collapse:collapse;
 	word-wrap: break-word;
+	display: inline-block;
 }
 
 .left-column-latest-ads{

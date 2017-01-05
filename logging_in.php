@@ -1,4 +1,5 @@
 <?php
+session_start();
     include_once "./components/important_includes.php";
 
     function getSalt($login){
@@ -41,7 +42,10 @@
 
     $login=$_POST['login'];
     if(!preg_match($login_pattern,$login)){
-        echo "Wprowadziłeś login w błędnym formacie!";
+        /*echo "Wprowadziłeś login w błędnym formacie!";
+        exit;*/
+        $_SESSION['login-error-info']="Wprowadziłeś login w błędnym formacie!";
+        header("location: login.php");
         exit;
     }
     /*--------------------------------------------------------------------*/
@@ -51,9 +55,13 @@
     $password_pattern='/^[^;\'" -]{5,20}$/u';
 
     if(!preg_match($login_pattern,$password)){
-        echo "Wprowadziłeś hasło w błędnym formacie!";
+        //echo "Wprowadziłeś hasło w błędnym formacie!";
+
+        $_SESSION['login-error-info']="Wprowadziłeś hasło w błędnym formacie!";
+        header("location: login.php");
         exit;
     }
+
     /*--------------------------------------------------------------------*/
 
 if(isset($login)){
@@ -92,7 +100,10 @@ if(isset($login)){
                 }
             }
             else{
-                echo "Nie znaleziono użytkownika";
+                //echo "Nie znaleziono użytkownika";
+                $_SESSION['login-error-info']="Nie znaleziono użytkownika";
+                header("location: login.php");
+                exit;
             }
         }
         else{

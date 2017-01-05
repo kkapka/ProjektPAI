@@ -1,6 +1,6 @@
 <?php
     echo<<<echo_end
-<form action="registering_in.php" method="post">
+<form action="registering_in.php" method="post" id="registration-form">
     Login: <br/> <input type="text" name="login"/><br/>
     Hasło: <br/> <input type="password" name="password"/><br/>
     Powtórz hasło: <br/> <input type="password" name="password2"/>
@@ -31,3 +31,23 @@ echo_end;
 
 echo_end;
 ?>
+<script>
+$(document).ready(function () {
+    $("#registration-form").on("submit",function (event) {
+        event.preventDefault();
+
+        $.ajax({
+            url: 'registering_in.php',
+            type: 'POST',
+            data: $("#registration-form").serialize(),
+            success: function(data){
+                alert(data);
+                if(data=="Dodano użytkownika"){
+                    window.location.href='login.php';
+                }
+            }
+        })
+    });
+});
+
+</script>

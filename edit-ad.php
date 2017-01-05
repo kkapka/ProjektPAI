@@ -120,6 +120,7 @@ if(isset($_COOKIE['id'])){
 
                                     success: function(data)
                                     {
+                                        alert(data);
                                         if(data=="Edycja ogłoszenia przebiegła pomyślnie"){
                                             var x='<?php deleteOldFiles();?>';
 
@@ -139,17 +140,19 @@ if(isset($_COOKIE['id'])){
                                                 })
                                             });
 
-                                            $.ajax({
-                                                url: 'upload_photos.php',
-                                                data: ajaxData,
-                                                cache: false,
-                                                contentType: false,
-                                                processData: false,
-                                                type: 'POST',
-                                                success: function(data){
-                                                    alert(data);
-                                                }
-                                            });
+                                            if(k>0){
+                                                $.ajax({
+                                                    url: 'upload_photos.php',
+                                                    data: ajaxData,
+                                                    cache: false,
+                                                    contentType: false,
+                                                    processData: false,
+                                                    type: 'POST',
+                                                    success: function(data){
+                                                        alert(data);
+                                                    }
+                                                });
+                                            }
                                         }
                                     }
                                 });

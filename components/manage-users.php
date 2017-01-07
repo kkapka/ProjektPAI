@@ -23,6 +23,9 @@ echo '<button onclick="deleteUser(getSelectedOption())">Usuń użytkownika</butt
             data:{user_id:userId},
             success: function (data) {
                 alert(data);
+                if(data=="Usunięto użytkownika"){
+                    window.location.href="users-management.php";
+                }
             }
         })
     }

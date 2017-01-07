@@ -17,7 +17,7 @@
         }
 
         echo "</br>";
-        echo "Co chcesz dzisiaj zrobić ?";
+        echo "Zarządzaj ogłoszeniami</br></br>";
     }
 ?>
 

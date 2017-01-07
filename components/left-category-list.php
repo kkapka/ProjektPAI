@@ -34,7 +34,7 @@ function getAllChildren($parent){
     }
 }
 
-function renderTree($parent = "0"){
+function renderTree($parent = "0",$counter=0){
     global $categoryNames;
     global $allChildren;
     global $childrenTree;
@@ -50,23 +50,24 @@ function renderTree($parent = "0"){
             }
         }
 
-        echo '&amp;page=1">',$categoryNames[$parent], "</a>\n";
+        echo '&amp;page=1">',$categoryNames[$parent], "</a>";
     }
 
     if(!empty($childrenTree[$parent])){
         $children = $childrenTree[$parent];
         if(count($children) > 0){
-            echo "<ul>\n";
+            echo "<ul>";
             foreach($children as $child)
-                renderTree($child);
-            echo "</ul>\n";
+                renderTree($child,$counter++);
+            echo "</ul>";
         }
         if($parent != "0") echo "</li>\n";
     }
 }
-
+echo '<div class="bar">Kategorie</div>';
+echo '<div class="nestedsidemenu">';
 renderTree();
-
+echo '</div>';
 $connection->close();
 
 ?>

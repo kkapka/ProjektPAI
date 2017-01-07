@@ -1,6 +1,33 @@
 <?php
 session_start();
 
+/* Paging init */
+global $adsLimit;
+global $start;
+global $page;
+
+$adsLimit=10;
+
+if(isset($_GET['page'])){
+    $page=intval($_GET['page']);
+}
+
+if(!isset($_GET['page'])){
+    $page=1;
+}
+
+if($page==NULL){
+    $page=1;
+}
+
+if($page==1){
+    $start=0;
+}
+else{
+    $start=$adsLimit*($page-1);
+}
+/*  */
+
 include_once "./components/important_includes.php";
 
 if(!isset($_COOKIE['id'])){
@@ -27,10 +54,12 @@ else{
 
 
             if($permission_type>=110){
-                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad";
+                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad LIMIT $adsLimit OFFSET $start";
+                $query2="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad";
             }
             else {
-                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad=$row[id_user_session]";
+                $query="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad=$row[id_user_session] LIMIT $adsLimit OFFSET $start";
+                $query2="SELECT id_ad,title_ad,datetime_add_ad,datetime_end_ad,author_ad FROM ad WHERE author_ad=$row[id_user_session]";
             }
 
             if($result=mysqli_query($connection,$query)){
@@ -50,8 +79,20 @@ else{
                             '<td>'.'<a href="'.'./components/delete-ad.php'.'?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'"'.'onclick="return confirmAdDelete();"'.'>'.'Usuń'.'</a>'.'</td>'.
                             '</tr>';
                     }
+                    $row_count=mysqli_num_rows(mysqli_query($connection,$query2));
+
+                    $numberOfPages=ceil($row_count/$adsLimit);
+
 
                     echo '</table>';
+                    echo '<ul id="pagina">';
+                    /*for($i=1;$i<=$numberOfPages;$i++){
+                        echo<<<echo_end
+    <li><a href="dashboard.php?page=$i">$i</a></li>
+echo_end;
+
+                    }*/
+                    echo '</ul>';
 
                 }
             }
@@ -60,6 +101,18 @@ else{
 }
 ?>
 <script>
+    $(function() {
+        $("#pagina").pagination({
+            items: '<?php echo $row_count; ?>',
+            itemsOnPage: 10,
+            cssStyle: 'light-theme',
+            hrefTextPrefix: "?page=",
+            currentPage: '<?php echo $page;?>',
+            nextText: 'Dalej',
+            prevText: 'Wróć'
+        });
+    });
+
     function confirmAdDelete() {
         var text='Czy usunąć ten artykuł ?';
         var result=confirm(text);

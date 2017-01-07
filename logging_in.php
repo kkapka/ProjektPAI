@@ -37,39 +37,42 @@ session_start();
         $_POST[$k]=mysqli_real_escape_string($connection,$v);
     }
 
-    /*login validation----------------------------------------------------*/
-    $login_pattern='/^[\p{L}\p{N}_]{5,20}$/u';
+    try{
+        /*login validation----------------------------------------------------*/
+        $login_pattern='/^[\p{L}\p{N}_]{5,20}$/u';
 
-    $login=$_POST['login'];
-    if(!preg_match($login_pattern,$login)){
-        /*echo "Wprowadziłeś login w błędnym formacie!";
-        exit;*/
-        $_SESSION['login-error-info']="Wprowadziłeś login w błędnym formacie!";
+        $login=$_POST['login'];
+        if(!preg_match($login_pattern,$login)){
+            /*echo "Wprowadziłeś login w błędnym formacie!";
+            exit;*/
+             throw new Exception("Wprowadziłeś login w błędnym formacie!");
+        }
+        /*--------------------------------------------------------------------*/
+
+        /*password validation-------------------------------------------------*/
+        $password=$_POST['password'];
+        $password_pattern='/^[^;\'" -]{5,20}$/u';
+
+        if(!preg_match($login_pattern,$password)){
+            //echo "Wprowadziłeś hasło w błędnym formacie!";
+            throw new Exception("Wprowadziłeś hasło w błędnym formacie!");
+        }
+
+        /*--------------------------------------------------------------------*/
+    }
+    catch(Exception $e){
+
+        $_SESSION['login-error-info']=$e->getMessage();
         header("location: login.php");
         exit;
     }
-    /*--------------------------------------------------------------------*/
-
-    /*password validation-------------------------------------------------*/
-    $password=$_POST['password'];
-    $password_pattern='/^[^;\'" -]{5,20}$/u';
-
-    if(!preg_match($login_pattern,$password)){
-        //echo "Wprowadziłeś hasło w błędnym formacie!";
-
-        $_SESSION['login-error-info']="Wprowadziłeś hasło w błędnym formacie!";
-        header("location: login.php");
-        exit;
-    }
-
-    /*--------------------------------------------------------------------*/
 
 if(isset($login)){
         $connection=getConnection();
 
         $password=sha1($_POST['password'].getSalt($login));
 
-        $query="SELECT id_user,login_user,password_user FROM user WHERE login_user='$login' AND password_user='$password'";
+        $query="SELECT * FROM user WHERE login_user='$login' AND password_user='$password'";
 
         if($result=mysqli_query($connection,$query)){
 
@@ -77,8 +80,19 @@ if(isset($login)){
 
             if($row_count>0){
                 $token = sha1(rand(-10000,10000) . microtime()) . sha1(crc32(microtime()) . $_SERVER['REMOTE_ADDR']);
-                echo $token;
                 $row=mysqli_fetch_assoc($result);
+
+                $bad_login_limit=3;
+                $lockout_time=60*10;
+                if(($row['failed_login_count_user']>=$bad_login_limit) && (time()-strtotime($row['first_failed_login_user'])<$lockout_time)){
+                    //echo "Jesteś zablokowany! Odczekaj kilka minut";
+                    //exit;
+
+                    $_SESSION['login-error-info']="Jesteś zablokowany! Musisz poczekać 10 minut na kolejną próbę zalogowania";
+                    header("location: login.php");
+                    exit;
+                }
+
                 $id_user=$row["id_user"];
                 $query="DELETE FROM session WHERE id_user_session=$id_user";
                 mysqli_query($connection,$query);
@@ -101,9 +115,42 @@ if(isset($login)){
             }
             else{
                 //echo "Nie znaleziono użytkownika";
-                $_SESSION['login-error-info']="Nie znaleziono użytkownika";
-                header("location: login.php");
-                exit;
+                $bad_login_limit=3;
+                $lockout_time=60*10;
+                $query="SELECT first_failed_login_user, failed_login_count_user FROM user WHERE login_user='$login'";
+
+                $result=mysqli_query($connection,$query);
+                $row_count=mysqli_num_rows($result);
+                if($row_count>0){
+
+                    $row=mysqli_fetch_assoc($result);
+
+                    if(($row['failed_login_count_user']>=$bad_login_limit) && (time()-strtotime($row['first_failed_login_user'])<$lockout_time)){
+                        //echo "Jesteś zablokowany! Odczekaj kilka minut";
+                        //exit;
+
+                        $_SESSION['login-error-info']="Jesteś zablokowany! Musisz poczekać 10 minut na kolejną próbę zalogowania";
+                        header("location: login.php");
+                        exit;
+                    }else{
+                        if(time()-strtotime($row['first_failed_login_user'])>$lockout_time){
+                            $query="UPDATE user SET first_failed_login_user=SYSDATE(), failed_login_count_user=1 WHERE login_user='$login'";
+                            mysqli_query($connection,$query);
+                    }
+                        else{
+                            $query="UPDATE user SET failed_login_count_user=failed_login_count_user+1 WHERE login_user='$login'";
+                            mysqli_query($connection,$query);
+                        }
+                    }
+                    $_SESSION['login-error-info']="Nie znaleziono użytkownika";
+                    header("location: login.php");
+                    exit;
+                }
+                else{
+                    $_SESSION['login-error-info']="Nie znaleziono użytkownika";
+                    header("location: login.php");
+                    exit;
+                }
             }
         }
         else{

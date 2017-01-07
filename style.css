@@ -4,6 +4,7 @@ body {
 }
 html{
 	font-family: Arial, sans-serif;
+
 }
 
 /* form elements style */
@@ -102,6 +103,7 @@ textarea{
 	text-align: center;
 	padding: 10px;
 	font-size: 1.25em;
+	margin: 2px;
 }
 /* left menu (list) style */
 
@@ -139,7 +141,7 @@ li.left-menu-li a:hover{
 
 /* Latest ads style */
 .table-latest-ads{
-	width:50%;
+	width:100%;
 	background:#ffe882;
 	border-collapse:collapse;
 	word-wrap: break-word;
@@ -148,16 +150,19 @@ li.left-menu-li a:hover{
 
 .left-column-latest-ads{
 	text-align: left;
+	width: 100%;
 }
 
 .right-column-latest-ads{
 	text-align: right;
+	width: 100%;
 }
 
 .top-row-latest-ad{
 	text-align: center;
 	background: #ffb259;
 	border-radius: 2px;
+	width: 100%;
 }
 .table-latest-ads:hover{
 	background: #ffdd6c;

@@ -9,6 +9,10 @@ $adsLimit=5;
 
 $page=intval($_GET['page']);
 
+if($page==NULL){
+    $page=1;
+}
+
 if($page==1){
     $start=0;
 }
@@ -24,6 +28,10 @@ $_GET['id']=mysqli_real_escape_string($connection,$_GET['id']);
 $query="";
 
 $childrenCategory=explode(",",$_GET["id"]);
+foreach ($childrenCategory as $k=>$v){
+    $childrenCategory[$k]=intval($v);
+}
+$childrenCategory=array_values(array_filter($childrenCategory));
 $childrenCategoryCount=count($childrenCategory);
 
 for($i=0;$i<$childrenCategoryCount;$i++){
@@ -36,6 +44,7 @@ $result=mysqli_query($connection,$query);
 if($result){
     $row_count=mysqli_num_rows($result);
 
+    $numberOfAds=$row_count;
     $numberOfPages=ceil($row_count/$adsLimit);
 
     $query=$query."ORDER BY datetime_add_ad DESC "."LIMIT $adsLimit OFFSET $start";
@@ -61,7 +70,9 @@ if($result){
         }
     }
 
-    echo '<ul>';
+    $hrefTextPrefix="?id=$_GET[id]&page=";
+
+    echo '<ul id="pagina">';
     for($i=1;$i<=$numberOfPages;$i++){
         echo<<<echo_end
     <li><a href="category.php?id=$_GET[id]&page=$i">$i</a></li>
@@ -73,3 +84,16 @@ echo_end;
 }
 
 ?>
+<script>
+    $(function() {
+        $("#pagina").pagination({
+            items: '<?php echo $numberOfAds; ?>',
+            itemsOnPage: 10,
+            cssStyle: 'light-theme',
+            hrefTextPrefix: '<?php echo $hrefTextPrefix;?>',
+            currentPage: '<?php echo $page;?>',
+            nextText: 'Dalej',
+            prevText: 'Wróć'
+        });
+    });
+</script>

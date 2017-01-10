@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-29 03:19:15
+Date: 2017-01-10 01:02:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,24 +30,20 @@ CREATE TABLE `ad` (
   `datetime_add_ad` datetime NOT NULL,
   `datetime_end_ad` datetime NOT NULL,
   `price_ad` decimal(10,0) unsigned NOT NULL,
-  `thumbnail_ad` int(10) unsigned DEFAULT NULL,
-  `gallery_ad` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id_ad`),
-  KEY `thumbnail_ad_FK` (`thumbnail_ad`),
   KEY `author_ad_FK` (`author_ad`),
   KEY `location_ad_FK` (`location_ad`),
   KEY `category_ad_FK` (`category_ad`),
   CONSTRAINT `author_ad_FK` FOREIGN KEY (`author_ad`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `category_ad_FK` FOREIGN KEY (`category_ad`) REFERENCES `category` (`id_category`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `location_ad_FK` FOREIGN KEY (`location_ad`) REFERENCES `location` (`id_location`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `thumbnail_ad_FK` FOREIGN KEY (`thumbnail_ad`) REFERENCES `photo` (`id_photo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+  CONSTRAINT `location_ad_FK` FOREIGN KEY (`location_ad`) REFERENCES `location` (`id_location`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=238 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ad
 -- ----------------------------
-INSERT INTO `ad` VALUES ('20', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', null, null);
-INSERT INTO `ad` VALUES ('22', 'sas', 'sds', '0', '16', '12', '459', '2016-12-28 21:57:13', '2017-01-11 21:57:13', '12', null, null);
+INSERT INTO `ad` VALUES ('234', 'asas', 'qw', '0', '37', '12', '536', '2017-01-09 22:37:03', '2017-01-23 22:37:03', '12');
+INSERT INTO `ad` VALUES ('235', 'asasa', 'qwqw', '0', '37', '12', '172', '2017-01-09 22:41:07', '2017-01-23 22:41:07', '1223');
 
 -- ----------------------------
 -- Table structure for `address`
@@ -61,7 +57,7 @@ CREATE TABLE `address` (
   PRIMARY KEY (`id_address`),
   KEY `location_address_FK` (`location_address`),
   CONSTRAINT `location_address_FK` FOREIGN KEY (`location_address`) REFERENCES `location` (`id_location`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of address
@@ -97,6 +93,63 @@ INSERT INTO `address` VALUES ('28', '172', 'interia', 'interia');
 INSERT INTO `address` VALUES ('29', '389', 'Piastowska', '76');
 INSERT INTO `address` VALUES ('30', '172', 'd', 's');
 INSERT INTO `address` VALUES ('31', '667', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('32', '365', 'a', 'a');
+INSERT INTO `address` VALUES ('33', '526', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('34', '84', 'a', 'a');
+INSERT INTO `address` VALUES ('35', '84', 'julia', 'julia');
+INSERT INTO `address` VALUES ('36', '14', 's', '2');
+INSERT INTO `address` VALUES ('37', '794', 'kk', '12');
+INSERT INTO `address` VALUES ('38', '84', 'a', 'a');
+INSERT INTO `address` VALUES ('39', '470', '12', '12');
+INSERT INTO `address` VALUES ('40', '84', 'asia123', 'asia123');
+INSERT INTO `address` VALUES ('41', '332', 'kakak', 'kakak');
+INSERT INTO `address` VALUES ('42', '526', 'kkkkkk', 'kkkkkk');
+INSERT INTO `address` VALUES ('43', '84', 'qqqqqq', 'qqqqqq');
+INSERT INTO `address` VALUES ('44', '647', 'ppppp', 'ppppp');
+INSERT INTO `address` VALUES ('45', '526', 'uuuuu', 'uuuuu');
+INSERT INTO `address` VALUES ('46', '761', 'uuuop', 'uuuop');
+INSERT INTO `address` VALUES ('47', '337', 'qqwwe', 'qqwwe');
+INSERT INTO `address` VALUES ('48', '681', 'qwerty', 'qwerty');
+INSERT INTO `address` VALUES ('49', '366', 'trfbgyhj', 'trfbgyhj');
+INSERT INTO `address` VALUES ('50', '84', 'zxcera', 'zxcera');
+INSERT INTO `address` VALUES ('51', '487', '<noscript>', '<noscript>');
+INSERT INTO `address` VALUES ('52', '487', '<noscript>', '<noscript>');
+INSERT INTO `address` VALUES ('53', '487', '<noscript>', '<noscript>');
+INSERT INTO `address` VALUES ('54', '84', 'oidfkdsjskdl', 'oidfkdsjsk');
+INSERT INTO `address` VALUES ('55', '84', 'oidfkdsjskdl', 'oidfkdsjsk');
+INSERT INTO `address` VALUES ('56', '84', 'kkoewjrke', 'kkoewjrke');
+INSERT INTO `address` VALUES ('57', '913', 'lfregjergj', 'lfregjergj');
+INSERT INTO `address` VALUES ('58', '715', 'rtgfgd', 'rtgfgd');
+INSERT INTO `address` VALUES ('59', '894', 'dfgdfgfgd', 'dfgdfgfgd');
+INSERT INTO `address` VALUES ('60', '667', 'retggdfg', 'retggdfg');
+INSERT INTO `address` VALUES ('61', '355', 'saa', 'as');
+INSERT INTO `address` VALUES ('62', '84', 'admin', 'admin');
+INSERT INTO `address` VALUES ('63', '366', 'zosia', 'zosia');
+INSERT INTO `address` VALUES ('64', '667', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('65', '365', 'a', 'a');
+INSERT INTO `address` VALUES ('66', '671', '1', '1');
+INSERT INTO `address` VALUES ('67', '671', 'qw', 'wqw');
+INSERT INTO `address` VALUES ('68', '470', 's', 's');
+INSERT INTO `address` VALUES ('69', '84', 'kasia', '69');
+INSERT INTO `address` VALUES ('70', '84', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('71', '172', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('72', '366', 'aa', 'aa');
+INSERT INTO `address` VALUES ('73', '366', 'a', 'a');
+INSERT INTO `address` VALUES ('74', '172', 'weronika', 'weronika');
+INSERT INTO `address` VALUES ('75', '310', '12', '12');
+INSERT INTO `address` VALUES ('76', '470', 'wiktoria', 'wiktoria');
+INSERT INTO `address` VALUES ('77', '172', 'dominika', 'dominika');
+INSERT INTO `address` VALUES ('78', '172', 'weronika', 'weronika');
+INSERT INTO `address` VALUES ('79', '624', '1', '1');
+INSERT INTO `address` VALUES ('80', '366', 'qw', '12');
+INSERT INTO `address` VALUES ('81', '172', '12', '12');
+INSERT INTO `address` VALUES ('82', '172', 'katerena', 'katerena');
+INSERT INTO `address` VALUES ('83', '172', 'kasia', 'kasia');
+INSERT INTO `address` VALUES ('85', '460', 'as', 'as');
+INSERT INTO `address` VALUES ('87', '172', 'a', 'a');
+INSERT INTO `address` VALUES ('88', '172', 'a', 'a');
+INSERT INTO `address` VALUES ('89', '172', 'a', 'a');
+INSERT INTO `address` VALUES ('90', '172', 'a', 'a');
 
 -- ----------------------------
 -- Table structure for `ad_archive`
@@ -112,190 +165,830 @@ CREATE TABLE `ad_archive` (
   `location_ad_archive` int(10) unsigned NOT NULL,
   `datetime_add_ad_archive` datetime NOT NULL,
   `datetime_end_ad_archive` datetime NOT NULL,
-  `gallery_ad_archive` int(10) unsigned DEFAULT NULL,
   `price_ad_archive` decimal(10,0) unsigned NOT NULL,
   `id_ad_ad_archive` int(10) unsigned NOT NULL,
   `operation_date_ad_archive` datetime NOT NULL,
   `operation_type_ad_archive` char(1) NOT NULL,
-  `thumbnail_ad_archive` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_ad_archive`)
-) ENGINE=InnoDB AUTO_INCREMENT=171 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=822 DEFAULT CHARSET=utf8
 /*!50100 PARTITION BY RANGE (id_ad_archive)
-(PARTITION p0 VALUES LESS THAN (200) ENGINE = InnoDB) */;
+(PARTITION p0 VALUES LESS THAN (10000) ENGINE = InnoDB) */;
 
 -- ----------------------------
 -- Records of ad_archive
 -- ----------------------------
-INSERT INTO `ad_archive` VALUES ('1', 'Galaxy S5 Nowy', 'Witam! Mam do sprzedania najnowszy telefon marki samsung galaxy S5. (Wersja bez dynamitu w środku)', '0', '1', '3', '716', '2016-10-22 23:54:10', '2016-11-06 23:54:16', null, '1400', '1', '2016-11-04 00:55:00', 'u', null);
-INSERT INTO `ad_archive` VALUES ('2', 'Laptop Lenovo G71', 'Sprzedam laptop w bardzo dobrym stanie', '0', '6', '2', '201', '2016-10-31 18:18:05', '2016-11-30 18:18:22', null, '0', '5', '2016-11-04 00:55:04', 'u', null);
-INSERT INTO `ad_archive` VALUES ('3', 'Niebo', 'ewew', '0', '14', '14', '284', '2016-12-13 18:06:14', '2016-12-27 18:06:14', null, '123', '2', '2016-12-13 21:33:55', 'd', null);
-INSERT INTO `ad_archive` VALUES ('4', '&lt;noscript&gt;', '&lt;noscript&gt;', '0', '14', '12', '172', '2016-12-13 18:44:19', '2016-12-27 18:44:19', null, '12', '5', '2016-12-13 21:34:01', 'd', null);
-INSERT INTO `ad_archive` VALUES ('5', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:26', '2016-12-27 21:35:26', null, '1', '6', '2016-12-13 21:35:43', 'd', null);
-INSERT INTO `ad_archive` VALUES ('6', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:27', '2016-12-27 21:35:27', null, '1', '7', '2016-12-13 21:35:45', 'd', null);
-INSERT INTO `ad_archive` VALUES ('7', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:29', '2016-12-27 21:35:29', null, '1', '8', '2016-12-13 21:35:47', 'd', null);
-INSERT INTO `ad_archive` VALUES ('8', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:30', '2016-12-27 21:35:30', null, '1', '9', '2016-12-13 21:35:48', 'd', null);
-INSERT INTO `ad_archive` VALUES ('9', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:31', '2016-12-27 21:35:31', null, '1', '10', '2016-12-13 21:35:50', 'd', null);
-INSERT INTO `ad_archive` VALUES ('10', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:32', '2016-12-27 21:35:32', null, '1', '11', '2016-12-13 21:35:59', 'd', null);
-INSERT INTO `ad_archive` VALUES ('11', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:33', '2016-12-27 21:35:33', null, '1', '12', '2016-12-13 21:36:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('12', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:33', '2016-12-27 21:35:33', null, '1', '13', '2016-12-13 21:36:14', 'd', null);
-INSERT INTO `ad_archive` VALUES ('13', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:34', '2016-12-27 21:35:34', null, '1', '14', '2016-12-13 21:36:18', 'd', null);
-INSERT INTO `ad_archive` VALUES ('14', 'auto', 'qwer', '0', '15', '12', '84', '2016-12-13 14:03:50', '2016-12-27 14:03:50', null, '123', '1', '2016-12-13 21:36:31', 'd', null);
-INSERT INTO `ad_archive` VALUES ('15', 'sprzedam rower', '123', '0', '16', '12', '532', '2016-12-13 18:41:03', '2016-12-27 18:41:03', null, '12', '3', '2016-12-13 21:36:31', 'd', null);
-INSERT INTO `ad_archive` VALUES ('16', 'as', 'dsds', '0', '16', '13', '82', '2016-12-13 18:43:50', '2016-12-27 18:43:50', null, '12', '4', '2016-12-13 21:36:31', 'd', null);
-INSERT INTO `ad_archive` VALUES ('17', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:29', '2016-12-27 21:38:29', null, '12', '15', '2016-12-13 21:39:27', 'd', null);
-INSERT INTO `ad_archive` VALUES ('18', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:31', '2016-12-27 21:38:31', null, '12', '16', '2016-12-13 21:39:29', 'd', null);
-INSERT INTO `ad_archive` VALUES ('19', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:32', '2016-12-27 21:38:32', null, '12', '17', '2016-12-13 21:39:30', 'd', null);
-INSERT INTO `ad_archive` VALUES ('20', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:33', '2016-12-27 21:38:33', null, '12', '18', '2016-12-13 21:39:32', 'd', null);
-INSERT INTO `ad_archive` VALUES ('21', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:34', '2016-12-27 21:38:34', null, '12', '19', '2016-12-13 21:39:33', 'd', null);
-INSERT INTO `ad_archive` VALUES ('22', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:35', '2016-12-27 21:38:35', null, '12', '20', '2016-12-13 21:39:34', 'd', null);
-INSERT INTO `ad_archive` VALUES ('23', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:36', '2016-12-27 21:38:36', null, '12', '21', '2016-12-13 21:39:36', 'd', null);
-INSERT INTO `ad_archive` VALUES ('24', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:36', '2016-12-27 21:38:36', null, '12', '22', '2016-12-13 21:39:37', 'd', null);
-INSERT INTO `ad_archive` VALUES ('25', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:37', '2016-12-27 21:38:37', null, '12', '23', '2016-12-13 21:39:38', 'd', null);
-INSERT INTO `ad_archive` VALUES ('26', 'q', 'sasa', '0', '14', '12', '57', '2016-12-13 21:41:37', '2016-12-27 21:41:37', null, '1', '24', '2016-12-13 21:58:49', 'd', null);
-INSERT INTO `ad_archive` VALUES ('27', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:08', '2016-12-27 21:59:08', null, '123', '28', '2016-12-13 21:59:31', 'd', null);
-INSERT INTO `ad_archive` VALUES ('28', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:07', '2016-12-27 21:59:07', null, '123', '27', '2016-12-13 21:59:33', 'd', null);
-INSERT INTO `ad_archive` VALUES ('29', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:06', '2016-12-27 21:59:06', null, '123', '26', '2016-12-13 22:00:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('30', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:03', '2016-12-27 21:59:03', null, '123', '25', '2016-12-13 22:03:33', 'd', null);
-INSERT INTO `ad_archive` VALUES ('31', 'a', 'sdsd', '0', '14', '14', '761', '2016-12-13 22:04:35', '2016-12-27 22:04:35', null, '1', '29', '2016-12-13 22:05:38', 'd', null);
-INSERT INTO `ad_archive` VALUES ('32', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:33', '2016-12-27 22:08:33', null, '1', '30', '2016-12-13 22:08:52', 'd', null);
-INSERT INTO `ad_archive` VALUES ('33', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:41', '2016-12-27 22:08:41', null, '1', '37', '2016-12-13 22:20:54', 'd', null);
-INSERT INTO `ad_archive` VALUES ('34', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:39', '2016-12-27 22:08:39', null, '1', '36', '2016-12-13 22:21:55', 'd', null);
-INSERT INTO `ad_archive` VALUES ('35', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:38', '2016-12-27 22:08:38', null, '1', '35', '2016-12-13 22:25:01', 'd', null);
-INSERT INTO `ad_archive` VALUES ('36', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:37', '2016-12-27 22:08:37', null, '1', '34', '2016-12-13 22:25:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('37', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:34', '2016-12-27 22:08:34', null, '1', '31', '2016-12-13 22:26:52', 'd', null);
-INSERT INTO `ad_archive` VALUES ('38', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:35', '2016-12-27 22:08:35', null, '1', '32', '2016-12-13 22:26:55', 'd', null);
-INSERT INTO `ad_archive` VALUES ('39', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:36', '2016-12-27 22:08:36', null, '1', '33', '2016-12-13 22:26:59', 'd', null);
-INSERT INTO `ad_archive` VALUES ('40', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:39', '2016-12-27 22:27:39', null, '1', '42', '2016-12-13 22:27:58', 'd', null);
-INSERT INTO `ad_archive` VALUES ('41', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:38', '2016-12-27 22:27:38', null, '1', '41', '2016-12-13 22:29:34', 'd', null);
-INSERT INTO `ad_archive` VALUES ('42', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:37', '2016-12-27 22:27:37', null, '1', '40', '2016-12-13 22:30:21', 'd', null);
-INSERT INTO `ad_archive` VALUES ('43', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:35', '2016-12-27 22:27:35', null, '1', '39', '2016-12-13 22:31:01', 'd', null);
-INSERT INTO `ad_archive` VALUES ('44', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:34', '2016-12-27 22:27:34', null, '1', '38', '2016-12-13 22:35:57', 'd', null);
-INSERT INTO `ad_archive` VALUES ('45', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:31', '2016-12-27 22:38:31', null, '111', '48', '2016-12-13 22:39:42', 'd', null);
-INSERT INTO `ad_archive` VALUES ('46', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:30', '2016-12-27 22:38:30', null, '111', '47', '2016-12-13 22:39:51', 'd', null);
-INSERT INTO `ad_archive` VALUES ('47', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:19', '2016-12-27 22:38:19', null, '111', '43', '2016-12-13 22:42:04', 'd', null);
-INSERT INTO `ad_archive` VALUES ('48', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:20', '2016-12-27 22:38:20', null, '111', '44', '2016-12-13 22:42:08', 'd', null);
-INSERT INTO `ad_archive` VALUES ('49', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:21', '2016-12-27 22:38:21', null, '111', '45', '2016-12-13 22:42:14', 'd', null);
-INSERT INTO `ad_archive` VALUES ('50', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:29', '2016-12-27 22:38:29', null, '111', '46', '2016-12-13 22:42:20', 'd', null);
-INSERT INTO `ad_archive` VALUES ('51', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:50:21', '2016-12-27 22:50:21', null, '1', '55', '2016-12-13 22:52:22', 'd', null);
-INSERT INTO `ad_archive` VALUES ('52', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:50:19', '2016-12-27 22:50:19', null, '1', '54', '2016-12-13 22:52:42', 'd', null);
-INSERT INTO `ad_archive` VALUES ('53', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:52', '2016-12-27 22:49:52', null, '1', '53', '2016-12-13 22:53:26', 'd', null);
-INSERT INTO `ad_archive` VALUES ('54', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:50', '2016-12-27 22:49:50', null, '1', '52', '2016-12-13 22:56:46', 'd', null);
-INSERT INTO `ad_archive` VALUES ('55', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:41', '2016-12-27 22:49:41', null, '1', '49', '2016-12-13 22:59:17', 'd', null);
-INSERT INTO `ad_archive` VALUES ('56', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:42', '2016-12-27 22:49:42', null, '1', '50', '2016-12-13 22:59:17', 'd', null);
-INSERT INTO `ad_archive` VALUES ('57', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:43', '2016-12-27 22:49:43', null, '1', '51', '2016-12-13 22:59:17', 'd', null);
-INSERT INTO `ad_archive` VALUES ('58', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:12', '2016-12-27 23:02:12', null, '1', '60', '2016-12-13 23:03:07', 'd', null);
-INSERT INTO `ad_archive` VALUES ('59', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:11', '2016-12-27 23:02:11', null, '1', '59', '2016-12-13 23:05:21', 'd', null);
-INSERT INTO `ad_archive` VALUES ('60', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:10', '2016-12-27 23:02:10', null, '1', '58', '2016-12-13 23:07:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('61', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:09', '2016-12-27 23:02:09', null, '1', '57', '2016-12-13 23:07:40', 'd', null);
-INSERT INTO `ad_archive` VALUES ('62', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:08', '2016-12-27 23:02:08', null, '1', '56', '2016-12-13 23:08:05', 'd', null);
-INSERT INTO `ad_archive` VALUES ('63', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:10:01', '2016-12-27 23:10:01', null, '12', '70', '2016-12-13 23:10:09', 'd', null);
-INSERT INTO `ad_archive` VALUES ('64', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:10:00', '2016-12-27 23:10:00', null, '12', '69', '2016-12-13 23:10:45', 'd', null);
-INSERT INTO `ad_archive` VALUES ('65', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:59', '2016-12-27 23:09:59', null, '12', '68', '2016-12-13 23:11:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('66', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:58', '2016-12-27 23:09:58', null, '12', '67', '2016-12-13 23:11:44', 'd', null);
-INSERT INTO `ad_archive` VALUES ('67', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:57', '2016-12-27 23:09:57', null, '12', '66', '2016-12-13 23:14:23', 'd', null);
-INSERT INTO `ad_archive` VALUES ('68', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:56', '2016-12-27 23:09:56', null, '12', '65', '2016-12-13 23:15:47', 'd', null);
-INSERT INTO `ad_archive` VALUES ('69', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:55', '2016-12-27 23:09:55', null, '12', '64', '2016-12-13 23:18:55', 'd', null);
-INSERT INTO `ad_archive` VALUES ('70', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:51', '2016-12-27 23:09:51', null, '12', '61', '2016-12-13 23:21:29', 'd', null);
-INSERT INTO `ad_archive` VALUES ('71', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:54', '2016-12-27 23:09:54', null, '12', '63', '2016-12-13 23:22:36', 'd', null);
-INSERT INTO `ad_archive` VALUES ('72', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:52', '2016-12-27 23:09:52', null, '12', '62', '2016-12-13 23:25:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('73', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:50', '2016-12-27 23:26:50', null, '123', '79', '2016-12-13 23:27:00', 'd', null);
-INSERT INTO `ad_archive` VALUES ('74', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:38', '2016-12-27 23:26:38', null, '123', '71', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('75', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:40', '2016-12-27 23:26:40', null, '123', '72', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('76', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:42', '2016-12-27 23:26:42', null, '123', '73', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('77', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:43', '2016-12-27 23:26:43', null, '123', '74', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('78', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:45', '2016-12-27 23:26:45', null, '123', '75', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('79', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:47', '2016-12-27 23:26:47', null, '123', '76', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('80', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:48', '2016-12-27 23:26:48', null, '123', '77', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('81', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:49', '2016-12-27 23:26:49', null, '123', '78', '2016-12-13 23:27:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('82', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:06', '2016-12-27 23:29:06', null, '1', '87', '2016-12-13 23:29:44', 'd', null);
-INSERT INTO `ad_archive` VALUES ('83', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:05', '2016-12-27 23:29:05', null, '1', '86', '2016-12-13 23:29:55', 'd', null);
-INSERT INTO `ad_archive` VALUES ('84', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:04', '2016-12-27 23:29:04', null, '1', '85', '2016-12-13 23:30:00', 'd', null);
-INSERT INTO `ad_archive` VALUES ('85', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:03', '2016-12-27 23:29:03', null, '1', '84', '2016-12-13 23:30:03', 'd', null);
-INSERT INTO `ad_archive` VALUES ('86', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:02', '2016-12-27 23:29:02', null, '1', '83', '2016-12-13 23:30:07', 'd', null);
-INSERT INTO `ad_archive` VALUES ('87', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:00', '2016-12-27 23:29:00', null, '1', '82', '2016-12-13 23:30:12', 'd', null);
-INSERT INTO `ad_archive` VALUES ('88', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:28:58', '2016-12-27 23:28:58', null, '1', '81', '2016-12-13 23:30:19', 'd', null);
-INSERT INTO `ad_archive` VALUES ('89', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:28:57', '2016-12-27 23:28:57', null, '1', '80', '2016-12-13 23:30:24', 'd', null);
-INSERT INTO `ad_archive` VALUES ('90', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:52', '2016-12-27 23:31:52', null, '12', '106', '2016-12-13 23:32:21', 'd', null);
-INSERT INTO `ad_archive` VALUES ('91', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:48', '2016-12-27 23:31:48', null, '12', '105', '2016-12-13 23:33:06', 'd', null);
-INSERT INTO `ad_archive` VALUES ('92', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:46', '2016-12-27 23:31:46', null, '12', '104', '2016-12-13 23:34:45', 'd', null);
-INSERT INTO `ad_archive` VALUES ('93', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:45', '2016-12-27 23:31:45', null, '12', '103', '2016-12-13 23:34:47', 'd', null);
-INSERT INTO `ad_archive` VALUES ('94', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:43', '2016-12-27 23:31:43', null, '12', '102', '2016-12-13 23:34:49', 'd', null);
-INSERT INTO `ad_archive` VALUES ('95', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:42', '2016-12-27 23:31:42', null, '12', '101', '2016-12-13 23:34:51', 'd', null);
-INSERT INTO `ad_archive` VALUES ('96', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:40', '2016-12-27 23:31:40', null, '12', '100', '2016-12-13 23:34:52', 'd', null);
-INSERT INTO `ad_archive` VALUES ('97', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:39', '2016-12-27 23:31:39', null, '12', '99', '2016-12-13 23:34:54', 'd', null);
-INSERT INTO `ad_archive` VALUES ('98', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:37', '2016-12-27 23:31:37', null, '12', '98', '2016-12-13 23:34:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('99', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:35', '2016-12-27 23:31:35', null, '12', '97', '2016-12-13 23:34:57', 'd', null);
-INSERT INTO `ad_archive` VALUES ('100', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:33', '2016-12-27 23:31:33', null, '12', '96', '2016-12-13 23:34:59', 'd', null);
-INSERT INTO `ad_archive` VALUES ('101', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:32', '2016-12-27 23:31:32', null, '12', '95', '2016-12-13 23:35:01', 'd', null);
-INSERT INTO `ad_archive` VALUES ('102', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:30', '2016-12-27 23:31:30', null, '12', '94', '2016-12-13 23:35:03', 'd', null);
-INSERT INTO `ad_archive` VALUES ('103', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:28', '2016-12-27 23:31:28', null, '12', '93', '2016-12-13 23:35:05', 'd', null);
-INSERT INTO `ad_archive` VALUES ('104', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:26', '2016-12-27 23:31:26', null, '12', '92', '2016-12-13 23:35:07', 'd', null);
-INSERT INTO `ad_archive` VALUES ('105', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:23', '2016-12-27 23:31:23', null, '12', '91', '2016-12-13 23:35:08', 'd', null);
-INSERT INTO `ad_archive` VALUES ('106', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:21', '2016-12-27 23:31:21', null, '12', '90', '2016-12-13 23:35:10', 'd', null);
-INSERT INTO `ad_archive` VALUES ('107', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:17', '2016-12-27 23:31:17', null, '12', '89', '2016-12-13 23:35:12', 'd', null);
-INSERT INTO `ad_archive` VALUES ('108', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:14', '2016-12-27 23:31:14', null, '12', '88', '2016-12-13 23:35:14', 'd', null);
-INSERT INTO `ad_archive` VALUES ('109', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:40', '2016-12-27 23:36:40', null, '12', '110', '2016-12-13 23:37:11', 'd', null);
-INSERT INTO `ad_archive` VALUES ('110', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:39', '2016-12-27 23:36:39', null, '12', '109', '2016-12-13 23:37:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('111', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:37', '2016-12-27 23:36:37', null, '12', '108', '2016-12-13 23:37:17', 'd', null);
-INSERT INTO `ad_archive` VALUES ('112', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:34', '2016-12-27 23:36:34', null, '12', '107', '2016-12-13 23:37:20', 'd', null);
-INSERT INTO `ad_archive` VALUES ('113', 'cześć witek', 'rererere', '0', '14', '14', '693', '2016-12-15 11:36:30', '2016-12-29 11:36:30', null, '123', '1', '2016-12-15 11:59:17', 'd', null);
-INSERT INTO `ad_archive` VALUES ('114', 'jjk', 'jjkhkj', '0', '14', '13', '321', '2016-12-15 15:07:34', '2016-12-29 15:07:34', null, '111', '4', '2016-12-15 15:07:53', 'd', null);
-INSERT INTO `ad_archive` VALUES ('115', 'jjk', 'jjkhkj', '0', '14', '13', '321', '2016-12-15 15:07:31', '2016-12-29 15:07:31', null, '111', '3', '2016-12-15 15:07:56', 'd', null);
-INSERT INTO `ad_archive` VALUES ('116', 'cześć witek', 'rererere', '0', '14', '14', '693', '2016-12-15 11:36:39', '2016-12-29 11:36:39', null, '123', '2', '2016-12-15 15:07:57', 'd', null);
-INSERT INTO `ad_archive` VALUES ('117', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:40', '2016-12-31 14:37:40', null, '123', '1', '2016-12-19 14:49:23', 'd', null);
-INSERT INTO `ad_archive` VALUES ('118', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:41', '2016-12-31 14:37:41', null, '123', '2', '2016-12-20 08:40:03', 'd', null);
-INSERT INTO `ad_archive` VALUES ('119', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:42', '2016-12-31 14:37:42', null, '123', '3', '2016-12-20 08:40:06', 'd', null);
-INSERT INTO `ad_archive` VALUES ('120', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:23', '2017-01-02 16:57:23', null, '11', '4', '2016-12-20 08:40:08', 'd', null);
-INSERT INTO `ad_archive` VALUES ('121', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:24', '2017-01-02 16:57:24', null, '11', '5', '2016-12-20 08:40:10', 'd', null);
-INSERT INTO `ad_archive` VALUES ('122', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:25', '2017-01-02 16:57:25', null, '11', '6', '2016-12-20 08:40:13', 'd', null);
-INSERT INTO `ad_archive` VALUES ('123', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:25', '2017-01-02 16:57:25', null, '11', '7', '2016-12-27 16:13:20', 'd', null);
-INSERT INTO `ad_archive` VALUES ('124', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:26', '2017-01-02 16:57:26', null, '11', '8', '2016-12-28 01:08:00', 'd', null);
-INSERT INTO `ad_archive` VALUES ('125', 'ooo', 'ssds', '0', '14', '12', '389', '2016-12-21 19:06:30', '2017-01-04 19:06:30', null, '12', '9', '2016-12-28 01:08:03', 'd', null);
-INSERT INTO `ad_archive` VALUES ('126', 'Sprzedam AUDI', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', null, '15000', '13', '2016-12-28 12:36:57', 'u', null);
-INSERT INTO `ad_archive` VALUES ('127', 'Sprzedam MERCA', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', null, '15000', '13', '2016-12-28 12:37:18', 'u', null);
-INSERT INTO `ad_archive` VALUES ('128', 'Sprzedam MERCA', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', null, '200000', '13', '2016-12-28 12:39:23', 'u', null);
-INSERT INTO `ad_archive` VALUES ('129', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asa', '0', '14', '12', '332', '2016-12-27 13:07:06', '2017-01-10 13:07:06', null, '12', '10', '2016-12-28 12:41:28', 'u', null);
-INSERT INTO `ad_archive` VALUES ('130', 'Sprzedam rower', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', null, '1200', '12', '2016-12-28 12:44:33', 'u', null);
-INSERT INTO `ad_archive` VALUES ('131', 'Sprzedam mazdę', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', null, '5000', '14', '2016-12-28 13:59:30', 'u', null);
-INSERT INTO `ad_archive` VALUES ('132', 'Sprzedam mazdę', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', null, '5000', '14', '2016-12-28 14:00:22', 'u', null);
-INSERT INTO `ad_archive` VALUES ('133', 'Sprzedam mazdę!@$%$#@!E#@!?&quot;&gt;::', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', null, '5000', '14', '2016-12-28 14:00:45', 'u', null);
-INSERT INTO `ad_archive` VALUES ('134', 'sprzedam bazę danych', 'dsd', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', null, '150', '15', '2016-12-28 14:41:09', 'u', null);
-INSERT INTO `ad_archive` VALUES ('135', 'sprzedam bazę danych', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', null, '150', '15', '2016-12-28 14:42:47', 'u', null);
-INSERT INTO `ad_archive` VALUES ('136', 'sprzedam bazę danychv', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', null, '150', '15', '2016-12-28 14:44:12', 'u', null);
-INSERT INTO `ad_archive` VALUES ('137', 'sas', 'dsd', '0', '14', '12', '366', '2016-12-28 14:45:17', '2017-01-11 14:45:17', null, '12', '16', '2016-12-28 14:46:58', 'u', null);
-INSERT INTO `ad_archive` VALUES ('138', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asa', '0', '14', '15', '332', '2016-12-27 13:07:06', '2017-01-10 13:07:06', null, '12', '10', '2016-12-28 14:59:29', 'd', null);
-INSERT INTO `ad_archive` VALUES ('139', 'aa', 'sd', '0', '14', '13', '423', '2016-12-28 00:56:18', '2017-01-11 00:56:18', null, '12', '11', '2016-12-28 14:59:32', 'd', null);
-INSERT INTO `ad_archive` VALUES ('140', 'Sprzedam MERCA', 'Sprzedam merca', '0', '14', '16', '815', '2016-12-28 12:26:00', '2017-01-11 12:26:00', null, '20', '13', '2016-12-28 15:00:03', 'u', null);
-INSERT INTO `ad_archive` VALUES ('141', 'Sprzedam rower i krowę', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', null, '1200', '12', '2016-12-28 15:03:21', 'u', null);
-INSERT INTO `ad_archive` VALUES ('142', 'sprzedam bazę danychv', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', null, '150', '15', '2016-12-28 15:07:43', 'u', null);
-INSERT INTO `ad_archive` VALUES ('143', 'Sprzedam rower i krowę', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', null, '1200', '12', '2016-12-28 15:12:24', 'd', null);
-INSERT INTO `ad_archive` VALUES ('144', 'Sprzedam MERCAeee', 'Sprzedam merca', '0', '14', '16', '815', '2016-12-28 12:26:00', '2017-01-11 12:26:00', null, '20', '13', '2016-12-28 15:12:26', 'd', null);
-INSERT INTO `ad_archive` VALUES ('145', 'Nie sprzedam mazdy', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', null, '5000', '14', '2016-12-28 15:12:29', 'd', null);
-INSERT INTO `ad_archive` VALUES ('146', 'sprzedam bazę danych', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', null, '150', '15', '2016-12-28 15:12:31', 'd', null);
-INSERT INTO `ad_archive` VALUES ('147', 'sas', 'dsd', '0', '14', '12', '366', '2016-12-28 14:45:17', '2017-01-11 14:45:17', null, '12', '16', '2016-12-28 15:12:33', 'd', null);
-INSERT INTO `ad_archive` VALUES ('148', 'Sprzedam wzór taylora', 'bla bla bla\r\n', '0', '14', '12', '762', '2016-12-28 15:13:01', '2017-01-11 15:13:01', null, '0', '17', '2016-12-28 15:29:43', 'd', null);
-INSERT INTO `ad_archive` VALUES ('149', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', null, '1212', '18', '2016-12-28 15:31:03', 'u', null);
-INSERT INTO `ad_archive` VALUES ('150', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', null, '1212', '18', '2016-12-28 15:31:37', 'u', null);
-INSERT INTO `ad_archive` VALUES ('151', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', null, '1212', '18', '2016-12-28 15:34:03', 'd', null);
-INSERT INTO `ad_archive` VALUES ('152', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 15:40:21', 'u', null);
-INSERT INTO `ad_archive` VALUES ('153', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 15:42:55', 'u', null);
-INSERT INTO `ad_archive` VALUES ('154', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 15:48:14', 'u', null);
-INSERT INTO `ad_archive` VALUES ('155', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 15:52:52', 'u', null);
-INSERT INTO `ad_archive` VALUES ('156', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:00:22', 'u', null);
-INSERT INTO `ad_archive` VALUES ('157', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:01:31', 'u', null);
-INSERT INTO `ad_archive` VALUES ('158', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:07:51', 'u', null);
-INSERT INTO `ad_archive` VALUES ('159', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:08:22', 'u', null);
-INSERT INTO `ad_archive` VALUES ('160', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:09:00', 'u', null);
-INSERT INTO `ad_archive` VALUES ('161', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:09:16', 'u', null);
-INSERT INTO `ad_archive` VALUES ('162', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:10:25', 'u', null);
-INSERT INTO `ad_archive` VALUES ('163', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', null, '12', '19', '2016-12-28 16:10:50', 'd', null);
-INSERT INTO `ad_archive` VALUES ('164', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', null, '123', '20', '2016-12-28 16:24:47', 'u', null);
-INSERT INTO `ad_archive` VALUES ('165', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', null, '123', '20', '2016-12-28 16:33:38', 'u', null);
-INSERT INTO `ad_archive` VALUES ('166', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', null, '123', '20', '2016-12-28 16:35:14', 'u', null);
-INSERT INTO `ad_archive` VALUES ('167', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', null, '123', '20', '2016-12-28 17:24:02', 'u', null);
-INSERT INTO `ad_archive` VALUES ('168', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', null, '123', '20', '2016-12-28 21:20:20', 'u', null);
-INSERT INTO `ad_archive` VALUES ('169', 'buaha', 'sdsd', '0', '16', '12', '84', '2016-12-28 21:40:39', '2017-01-11 21:40:39', null, '132', '21', '2016-12-28 21:49:55', 'u', null);
-INSERT INTO `ad_archive` VALUES ('170', 'ahahaa', 'sdsd', '0', '16', '12', '84', '2016-12-28 21:40:39', '2017-01-11 21:40:39', null, '132', '21', '2016-12-28 21:50:04', 'd', null);
+INSERT INTO `ad_archive` VALUES ('1', 'Galaxy S5 Nowy', 'Witam! Mam do sprzedania najnowszy telefon marki samsung galaxy S5. (Wersja bez dynamitu w środku)', '0', '1', '3', '716', '2016-10-22 23:54:10', '2016-11-06 23:54:16', '1400', '1', '2016-11-04 00:55:00', 'u');
+INSERT INTO `ad_archive` VALUES ('2', 'Laptop Lenovo G71', 'Sprzedam laptop w bardzo dobrym stanie', '0', '6', '2', '201', '2016-10-31 18:18:05', '2016-11-30 18:18:22', '0', '5', '2016-11-04 00:55:04', 'u');
+INSERT INTO `ad_archive` VALUES ('3', 'Niebo', 'ewew', '0', '14', '14', '284', '2016-12-13 18:06:14', '2016-12-27 18:06:14', '123', '2', '2016-12-13 21:33:55', 'd');
+INSERT INTO `ad_archive` VALUES ('4', '&lt;noscript&gt;', '&lt;noscript&gt;', '0', '14', '12', '172', '2016-12-13 18:44:19', '2016-12-27 18:44:19', '12', '5', '2016-12-13 21:34:01', 'd');
+INSERT INTO `ad_archive` VALUES ('5', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:26', '2016-12-27 21:35:26', '1', '6', '2016-12-13 21:35:43', 'd');
+INSERT INTO `ad_archive` VALUES ('6', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:27', '2016-12-27 21:35:27', '1', '7', '2016-12-13 21:35:45', 'd');
+INSERT INTO `ad_archive` VALUES ('7', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:29', '2016-12-27 21:35:29', '1', '8', '2016-12-13 21:35:47', 'd');
+INSERT INTO `ad_archive` VALUES ('8', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:30', '2016-12-27 21:35:30', '1', '9', '2016-12-13 21:35:48', 'd');
+INSERT INTO `ad_archive` VALUES ('9', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:31', '2016-12-27 21:35:31', '1', '10', '2016-12-13 21:35:50', 'd');
+INSERT INTO `ad_archive` VALUES ('10', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:32', '2016-12-27 21:35:32', '1', '11', '2016-12-13 21:35:59', 'd');
+INSERT INTO `ad_archive` VALUES ('11', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:33', '2016-12-27 21:35:33', '1', '12', '2016-12-13 21:36:13', 'd');
+INSERT INTO `ad_archive` VALUES ('12', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:33', '2016-12-27 21:35:33', '1', '13', '2016-12-13 21:36:14', 'd');
+INSERT INTO `ad_archive` VALUES ('13', 'a', 'sasas', '0', '14', '12', '366', '2016-12-13 21:35:34', '2016-12-27 21:35:34', '1', '14', '2016-12-13 21:36:18', 'd');
+INSERT INTO `ad_archive` VALUES ('14', 'auto', 'qwer', '0', '15', '12', '84', '2016-12-13 14:03:50', '2016-12-27 14:03:50', '123', '1', '2016-12-13 21:36:31', 'd');
+INSERT INTO `ad_archive` VALUES ('15', 'sprzedam rower', '123', '0', '16', '12', '532', '2016-12-13 18:41:03', '2016-12-27 18:41:03', '12', '3', '2016-12-13 21:36:31', 'd');
+INSERT INTO `ad_archive` VALUES ('16', 'as', 'dsds', '0', '16', '13', '82', '2016-12-13 18:43:50', '2016-12-27 18:43:50', '12', '4', '2016-12-13 21:36:31', 'd');
+INSERT INTO `ad_archive` VALUES ('17', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:29', '2016-12-27 21:38:29', '12', '15', '2016-12-13 21:39:27', 'd');
+INSERT INTO `ad_archive` VALUES ('18', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:31', '2016-12-27 21:38:31', '12', '16', '2016-12-13 21:39:29', 'd');
+INSERT INTO `ad_archive` VALUES ('19', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:32', '2016-12-27 21:38:32', '12', '17', '2016-12-13 21:39:30', 'd');
+INSERT INTO `ad_archive` VALUES ('20', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:33', '2016-12-27 21:38:33', '12', '18', '2016-12-13 21:39:32', 'd');
+INSERT INTO `ad_archive` VALUES ('21', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:34', '2016-12-27 21:38:34', '12', '19', '2016-12-13 21:39:33', 'd');
+INSERT INTO `ad_archive` VALUES ('22', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:35', '2016-12-27 21:38:35', '12', '20', '2016-12-13 21:39:34', 'd');
+INSERT INTO `ad_archive` VALUES ('23', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:36', '2016-12-27 21:38:36', '12', '21', '2016-12-13 21:39:36', 'd');
+INSERT INTO `ad_archive` VALUES ('24', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:36', '2016-12-27 21:38:36', '12', '22', '2016-12-13 21:39:37', 'd');
+INSERT INTO `ad_archive` VALUES ('25', 'dynia', 'elektroniczna dynia', '0', '14', '14', '84', '2016-12-13 21:38:37', '2016-12-27 21:38:37', '12', '23', '2016-12-13 21:39:38', 'd');
+INSERT INTO `ad_archive` VALUES ('26', 'q', 'sasa', '0', '14', '12', '57', '2016-12-13 21:41:37', '2016-12-27 21:41:37', '1', '24', '2016-12-13 21:58:49', 'd');
+INSERT INTO `ad_archive` VALUES ('27', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:08', '2016-12-27 21:59:08', '123', '28', '2016-12-13 21:59:31', 'd');
+INSERT INTO `ad_archive` VALUES ('28', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:07', '2016-12-27 21:59:07', '123', '27', '2016-12-13 21:59:33', 'd');
+INSERT INTO `ad_archive` VALUES ('29', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:06', '2016-12-27 21:59:06', '123', '26', '2016-12-13 22:00:13', 'd');
+INSERT INTO `ad_archive` VALUES ('30', 'a', 'dsds', '0', '14', '16', '98', '2016-12-13 21:59:03', '2016-12-27 21:59:03', '123', '25', '2016-12-13 22:03:33', 'd');
+INSERT INTO `ad_archive` VALUES ('31', 'a', 'sdsd', '0', '14', '14', '761', '2016-12-13 22:04:35', '2016-12-27 22:04:35', '1', '29', '2016-12-13 22:05:38', 'd');
+INSERT INTO `ad_archive` VALUES ('32', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:33', '2016-12-27 22:08:33', '1', '30', '2016-12-13 22:08:52', 'd');
+INSERT INTO `ad_archive` VALUES ('33', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:41', '2016-12-27 22:08:41', '1', '37', '2016-12-13 22:20:54', 'd');
+INSERT INTO `ad_archive` VALUES ('34', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:39', '2016-12-27 22:08:39', '1', '36', '2016-12-13 22:21:55', 'd');
+INSERT INTO `ad_archive` VALUES ('35', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:38', '2016-12-27 22:08:38', '1', '35', '2016-12-13 22:25:01', 'd');
+INSERT INTO `ad_archive` VALUES ('36', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:37', '2016-12-27 22:08:37', '1', '34', '2016-12-13 22:25:56', 'd');
+INSERT INTO `ad_archive` VALUES ('37', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:34', '2016-12-27 22:08:34', '1', '31', '2016-12-13 22:26:52', 'd');
+INSERT INTO `ad_archive` VALUES ('38', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:35', '2016-12-27 22:08:35', '1', '32', '2016-12-13 22:26:55', 'd');
+INSERT INTO `ad_archive` VALUES ('39', 'a', 'asa', '0', '14', '14', '84', '2016-12-13 22:08:36', '2016-12-27 22:08:36', '1', '33', '2016-12-13 22:26:59', 'd');
+INSERT INTO `ad_archive` VALUES ('40', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:39', '2016-12-27 22:27:39', '1', '42', '2016-12-13 22:27:58', 'd');
+INSERT INTO `ad_archive` VALUES ('41', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:38', '2016-12-27 22:27:38', '1', '41', '2016-12-13 22:29:34', 'd');
+INSERT INTO `ad_archive` VALUES ('42', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:37', '2016-12-27 22:27:37', '1', '40', '2016-12-13 22:30:21', 'd');
+INSERT INTO `ad_archive` VALUES ('43', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:35', '2016-12-27 22:27:35', '1', '39', '2016-12-13 22:31:01', 'd');
+INSERT INTO `ad_archive` VALUES ('44', 'a', 'sds', '0', '14', '12', '172', '2016-12-13 22:27:34', '2016-12-27 22:27:34', '1', '38', '2016-12-13 22:35:57', 'd');
+INSERT INTO `ad_archive` VALUES ('45', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:31', '2016-12-27 22:38:31', '111', '48', '2016-12-13 22:39:42', 'd');
+INSERT INTO `ad_archive` VALUES ('46', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:30', '2016-12-27 22:38:30', '111', '47', '2016-12-13 22:39:51', 'd');
+INSERT INTO `ad_archive` VALUES ('47', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:19', '2016-12-27 22:38:19', '111', '43', '2016-12-13 22:42:04', 'd');
+INSERT INTO `ad_archive` VALUES ('48', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:20', '2016-12-27 22:38:20', '111', '44', '2016-12-13 22:42:08', 'd');
+INSERT INTO `ad_archive` VALUES ('49', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:21', '2016-12-27 22:38:21', '111', '45', '2016-12-13 22:42:14', 'd');
+INSERT INTO `ad_archive` VALUES ('50', 'kurwa', 'asa', '0', '14', '12', '667', '2016-12-13 22:38:29', '2016-12-27 22:38:29', '111', '46', '2016-12-13 22:42:20', 'd');
+INSERT INTO `ad_archive` VALUES ('51', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:50:21', '2016-12-27 22:50:21', '1', '55', '2016-12-13 22:52:22', 'd');
+INSERT INTO `ad_archive` VALUES ('52', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:50:19', '2016-12-27 22:50:19', '1', '54', '2016-12-13 22:52:42', 'd');
+INSERT INTO `ad_archive` VALUES ('53', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:52', '2016-12-27 22:49:52', '1', '53', '2016-12-13 22:53:26', 'd');
+INSERT INTO `ad_archive` VALUES ('54', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:50', '2016-12-27 22:49:50', '1', '52', '2016-12-13 22:56:46', 'd');
+INSERT INTO `ad_archive` VALUES ('55', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:41', '2016-12-27 22:49:41', '1', '49', '2016-12-13 22:59:17', 'd');
+INSERT INTO `ad_archive` VALUES ('56', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:42', '2016-12-27 22:49:42', '1', '50', '2016-12-13 22:59:17', 'd');
+INSERT INTO `ad_archive` VALUES ('57', 'a', 'weewe', '0', '14', '12', '332', '2016-12-13 22:49:43', '2016-12-27 22:49:43', '1', '51', '2016-12-13 22:59:17', 'd');
+INSERT INTO `ad_archive` VALUES ('58', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:12', '2016-12-27 23:02:12', '1', '60', '2016-12-13 23:03:07', 'd');
+INSERT INTO `ad_archive` VALUES ('59', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:11', '2016-12-27 23:02:11', '1', '59', '2016-12-13 23:05:21', 'd');
+INSERT INTO `ad_archive` VALUES ('60', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:10', '2016-12-27 23:02:10', '1', '58', '2016-12-13 23:07:13', 'd');
+INSERT INTO `ad_archive` VALUES ('61', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:09', '2016-12-27 23:02:09', '1', '57', '2016-12-13 23:07:40', 'd');
+INSERT INTO `ad_archive` VALUES ('62', 'jhkjh', 'sassa', '0', '14', '12', '366', '2016-12-13 23:02:08', '2016-12-27 23:02:08', '1', '56', '2016-12-13 23:08:05', 'd');
+INSERT INTO `ad_archive` VALUES ('63', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:10:01', '2016-12-27 23:10:01', '12', '70', '2016-12-13 23:10:09', 'd');
+INSERT INTO `ad_archive` VALUES ('64', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:10:00', '2016-12-27 23:10:00', '12', '69', '2016-12-13 23:10:45', 'd');
+INSERT INTO `ad_archive` VALUES ('65', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:59', '2016-12-27 23:09:59', '12', '68', '2016-12-13 23:11:13', 'd');
+INSERT INTO `ad_archive` VALUES ('66', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:58', '2016-12-27 23:09:58', '12', '67', '2016-12-13 23:11:44', 'd');
+INSERT INTO `ad_archive` VALUES ('67', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:57', '2016-12-27 23:09:57', '12', '66', '2016-12-13 23:14:23', 'd');
+INSERT INTO `ad_archive` VALUES ('68', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:56', '2016-12-27 23:09:56', '12', '65', '2016-12-13 23:15:47', 'd');
+INSERT INTO `ad_archive` VALUES ('69', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:55', '2016-12-27 23:09:55', '12', '64', '2016-12-13 23:18:55', 'd');
+INSERT INTO `ad_archive` VALUES ('70', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:51', '2016-12-27 23:09:51', '12', '61', '2016-12-13 23:21:29', 'd');
+INSERT INTO `ad_archive` VALUES ('71', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:54', '2016-12-27 23:09:54', '12', '63', '2016-12-13 23:22:36', 'd');
+INSERT INTO `ad_archive` VALUES ('72', 'as', 'sdsds', '0', '14', '12', '84', '2016-12-13 23:09:52', '2016-12-27 23:09:52', '12', '62', '2016-12-13 23:25:56', 'd');
+INSERT INTO `ad_archive` VALUES ('73', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:50', '2016-12-27 23:26:50', '123', '79', '2016-12-13 23:27:00', 'd');
+INSERT INTO `ad_archive` VALUES ('74', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:38', '2016-12-27 23:26:38', '123', '71', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('75', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:40', '2016-12-27 23:26:40', '123', '72', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('76', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:42', '2016-12-27 23:26:42', '123', '73', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('77', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:43', '2016-12-27 23:26:43', '123', '74', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('78', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:45', '2016-12-27 23:26:45', '123', '75', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('79', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:47', '2016-12-27 23:26:47', '123', '76', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('80', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:48', '2016-12-27 23:26:48', '123', '77', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('81', 'sadasda', 'sdsdds', '0', '14', '14', '459', '2016-12-13 23:26:49', '2016-12-27 23:26:49', '123', '78', '2016-12-13 23:27:56', 'd');
+INSERT INTO `ad_archive` VALUES ('82', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:06', '2016-12-27 23:29:06', '1', '87', '2016-12-13 23:29:44', 'd');
+INSERT INTO `ad_archive` VALUES ('83', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:05', '2016-12-27 23:29:05', '1', '86', '2016-12-13 23:29:55', 'd');
+INSERT INTO `ad_archive` VALUES ('84', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:04', '2016-12-27 23:29:04', '1', '85', '2016-12-13 23:30:00', 'd');
+INSERT INTO `ad_archive` VALUES ('85', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:03', '2016-12-27 23:29:03', '1', '84', '2016-12-13 23:30:03', 'd');
+INSERT INTO `ad_archive` VALUES ('86', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:02', '2016-12-27 23:29:02', '1', '83', '2016-12-13 23:30:07', 'd');
+INSERT INTO `ad_archive` VALUES ('87', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:29:00', '2016-12-27 23:29:00', '1', '82', '2016-12-13 23:30:12', 'd');
+INSERT INTO `ad_archive` VALUES ('88', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:28:58', '2016-12-27 23:28:58', '1', '81', '2016-12-13 23:30:19', 'd');
+INSERT INTO `ad_archive` VALUES ('89', 'aa', 'qwqw', '0', '14', '13', '284', '2016-12-13 23:28:57', '2016-12-27 23:28:57', '1', '80', '2016-12-13 23:30:24', 'd');
+INSERT INTO `ad_archive` VALUES ('90', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:52', '2016-12-27 23:31:52', '12', '106', '2016-12-13 23:32:21', 'd');
+INSERT INTO `ad_archive` VALUES ('91', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:48', '2016-12-27 23:31:48', '12', '105', '2016-12-13 23:33:06', 'd');
+INSERT INTO `ad_archive` VALUES ('92', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:46', '2016-12-27 23:31:46', '12', '104', '2016-12-13 23:34:45', 'd');
+INSERT INTO `ad_archive` VALUES ('93', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:45', '2016-12-27 23:31:45', '12', '103', '2016-12-13 23:34:47', 'd');
+INSERT INTO `ad_archive` VALUES ('94', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:43', '2016-12-27 23:31:43', '12', '102', '2016-12-13 23:34:49', 'd');
+INSERT INTO `ad_archive` VALUES ('95', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:42', '2016-12-27 23:31:42', '12', '101', '2016-12-13 23:34:51', 'd');
+INSERT INTO `ad_archive` VALUES ('96', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:40', '2016-12-27 23:31:40', '12', '100', '2016-12-13 23:34:52', 'd');
+INSERT INTO `ad_archive` VALUES ('97', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:39', '2016-12-27 23:31:39', '12', '99', '2016-12-13 23:34:54', 'd');
+INSERT INTO `ad_archive` VALUES ('98', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:37', '2016-12-27 23:31:37', '12', '98', '2016-12-13 23:34:56', 'd');
+INSERT INTO `ad_archive` VALUES ('99', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:35', '2016-12-27 23:31:35', '12', '97', '2016-12-13 23:34:57', 'd');
+INSERT INTO `ad_archive` VALUES ('100', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:33', '2016-12-27 23:31:33', '12', '96', '2016-12-13 23:34:59', 'd');
+INSERT INTO `ad_archive` VALUES ('101', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:32', '2016-12-27 23:31:32', '12', '95', '2016-12-13 23:35:01', 'd');
+INSERT INTO `ad_archive` VALUES ('102', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:30', '2016-12-27 23:31:30', '12', '94', '2016-12-13 23:35:03', 'd');
+INSERT INTO `ad_archive` VALUES ('103', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:28', '2016-12-27 23:31:28', '12', '93', '2016-12-13 23:35:05', 'd');
+INSERT INTO `ad_archive` VALUES ('104', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:26', '2016-12-27 23:31:26', '12', '92', '2016-12-13 23:35:07', 'd');
+INSERT INTO `ad_archive` VALUES ('105', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:23', '2016-12-27 23:31:23', '12', '91', '2016-12-13 23:35:08', 'd');
+INSERT INTO `ad_archive` VALUES ('106', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:21', '2016-12-27 23:31:21', '12', '90', '2016-12-13 23:35:10', 'd');
+INSERT INTO `ad_archive` VALUES ('107', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:17', '2016-12-27 23:31:17', '12', '89', '2016-12-13 23:35:12', 'd');
+INSERT INTO `ad_archive` VALUES ('108', 'aaa', '1212212', '0', '14', '12', '890', '2016-12-13 23:31:14', '2016-12-27 23:31:14', '12', '88', '2016-12-13 23:35:14', 'd');
+INSERT INTO `ad_archive` VALUES ('109', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:40', '2016-12-27 23:36:40', '12', '110', '2016-12-13 23:37:11', 'd');
+INSERT INTO `ad_archive` VALUES ('110', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:39', '2016-12-27 23:36:39', '12', '109', '2016-12-13 23:37:13', 'd');
+INSERT INTO `ad_archive` VALUES ('111', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:37', '2016-12-27 23:36:37', '12', '108', '2016-12-13 23:37:17', 'd');
+INSERT INTO `ad_archive` VALUES ('112', 'dyni', 'Sprzedam elektroniczną dynię.', '0', '14', '12', '815', '2016-12-13 23:36:34', '2016-12-27 23:36:34', '12', '107', '2016-12-13 23:37:20', 'd');
+INSERT INTO `ad_archive` VALUES ('113', 'cześć witek', 'rererere', '0', '14', '14', '693', '2016-12-15 11:36:30', '2016-12-29 11:36:30', '123', '1', '2016-12-15 11:59:17', 'd');
+INSERT INTO `ad_archive` VALUES ('114', 'jjk', 'jjkhkj', '0', '14', '13', '321', '2016-12-15 15:07:34', '2016-12-29 15:07:34', '111', '4', '2016-12-15 15:07:53', 'd');
+INSERT INTO `ad_archive` VALUES ('115', 'jjk', 'jjkhkj', '0', '14', '13', '321', '2016-12-15 15:07:31', '2016-12-29 15:07:31', '111', '3', '2016-12-15 15:07:56', 'd');
+INSERT INTO `ad_archive` VALUES ('116', 'cześć witek', 'rererere', '0', '14', '14', '693', '2016-12-15 11:36:39', '2016-12-29 11:36:39', '123', '2', '2016-12-15 15:07:57', 'd');
+INSERT INTO `ad_archive` VALUES ('117', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:40', '2016-12-31 14:37:40', '123', '1', '2016-12-19 14:49:23', 'd');
+INSERT INTO `ad_archive` VALUES ('118', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:41', '2016-12-31 14:37:41', '123', '2', '2016-12-20 08:40:03', 'd');
+INSERT INTO `ad_archive` VALUES ('119', 'dasdsada', 'dssddsd', '0', '14', '14', '332', '2016-12-17 14:37:42', '2016-12-31 14:37:42', '123', '3', '2016-12-20 08:40:06', 'd');
+INSERT INTO `ad_archive` VALUES ('120', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:23', '2017-01-02 16:57:23', '11', '4', '2016-12-20 08:40:08', 'd');
+INSERT INTO `ad_archive` VALUES ('121', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:24', '2017-01-02 16:57:24', '11', '5', '2016-12-20 08:40:10', 'd');
+INSERT INTO `ad_archive` VALUES ('122', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:25', '2017-01-02 16:57:25', '11', '6', '2016-12-20 08:40:13', 'd');
+INSERT INTO `ad_archive` VALUES ('123', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:25', '2017-01-02 16:57:25', '11', '7', '2016-12-27 16:13:20', 'd');
+INSERT INTO `ad_archive` VALUES ('124', 'bbb', 'sdsds', '0', '14', '12', '366', '2016-12-19 16:57:26', '2017-01-02 16:57:26', '11', '8', '2016-12-28 01:08:00', 'd');
+INSERT INTO `ad_archive` VALUES ('125', 'ooo', 'ssds', '0', '14', '12', '389', '2016-12-21 19:06:30', '2017-01-04 19:06:30', '12', '9', '2016-12-28 01:08:03', 'd');
+INSERT INTO `ad_archive` VALUES ('126', 'Sprzedam AUDI', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', '15000', '13', '2016-12-28 12:36:57', 'u');
+INSERT INTO `ad_archive` VALUES ('127', 'Sprzedam MERCA', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', '15000', '13', '2016-12-28 12:37:18', 'u');
+INSERT INTO `ad_archive` VALUES ('128', 'Sprzedam MERCA', 'Sprzedam audi', '0', '14', '16', '355', '2016-12-28 12:26:00', '2017-01-11 12:26:00', '200000', '13', '2016-12-28 12:39:23', 'u');
+INSERT INTO `ad_archive` VALUES ('129', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asa', '0', '14', '12', '332', '2016-12-27 13:07:06', '2017-01-10 13:07:06', '12', '10', '2016-12-28 12:41:28', 'u');
+INSERT INTO `ad_archive` VALUES ('130', 'Sprzedam rower', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', '1200', '12', '2016-12-28 12:44:33', 'u');
+INSERT INTO `ad_archive` VALUES ('131', 'Sprzedam mazdę', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', '5000', '14', '2016-12-28 13:59:30', 'u');
+INSERT INTO `ad_archive` VALUES ('132', 'Sprzedam mazdę', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', '5000', '14', '2016-12-28 14:00:22', 'u');
+INSERT INTO `ad_archive` VALUES ('133', 'Sprzedam mazdę!@$%$#@!E#@!?&quot;&gt;::', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', '5000', '14', '2016-12-28 14:00:45', 'u');
+INSERT INTO `ad_archive` VALUES ('134', 'sprzedam bazę danych', 'dsd', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', '150', '15', '2016-12-28 14:41:09', 'u');
+INSERT INTO `ad_archive` VALUES ('135', 'sprzedam bazę danych', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', '150', '15', '2016-12-28 14:42:47', 'u');
+INSERT INTO `ad_archive` VALUES ('136', 'sprzedam bazę danychv', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', '150', '15', '2016-12-28 14:44:12', 'u');
+INSERT INTO `ad_archive` VALUES ('137', 'sas', 'dsd', '0', '14', '12', '366', '2016-12-28 14:45:17', '2017-01-11 14:45:17', '12', '16', '2016-12-28 14:46:58', 'u');
+INSERT INTO `ad_archive` VALUES ('138', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asa', '0', '14', '15', '332', '2016-12-27 13:07:06', '2017-01-10 13:07:06', '12', '10', '2016-12-28 14:59:29', 'd');
+INSERT INTO `ad_archive` VALUES ('139', 'aa', 'sd', '0', '14', '13', '423', '2016-12-28 00:56:18', '2017-01-11 00:56:18', '12', '11', '2016-12-28 14:59:32', 'd');
+INSERT INTO `ad_archive` VALUES ('140', 'Sprzedam MERCA', 'Sprzedam merca', '0', '14', '16', '815', '2016-12-28 12:26:00', '2017-01-11 12:26:00', '20', '13', '2016-12-28 15:00:03', 'u');
+INSERT INTO `ad_archive` VALUES ('141', 'Sprzedam rower i krowę', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', '1200', '12', '2016-12-28 15:03:21', 'u');
+INSERT INTO `ad_archive` VALUES ('142', 'sprzedam bazę danychv', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', '150', '15', '2016-12-28 15:07:43', 'u');
+INSERT INTO `ad_archive` VALUES ('143', 'Sprzedam rower i krowę', 'we', '0', '14', '14', '913', '2016-12-28 12:22:48', '2017-01-11 12:22:48', '1200', '12', '2016-12-28 15:12:24', 'd');
+INSERT INTO `ad_archive` VALUES ('144', 'Sprzedam MERCAeee', 'Sprzedam merca', '0', '14', '16', '815', '2016-12-28 12:26:00', '2017-01-11 12:26:00', '20', '13', '2016-12-28 15:12:26', 'd');
+INSERT INTO `ad_archive` VALUES ('145', 'Nie sprzedam mazdy', 'sdsd', '0', '14', '12', '409', '2016-12-28 13:32:39', '2017-01-11 13:32:39', '5000', '14', '2016-12-28 15:12:29', 'd');
+INSERT INTO `ad_archive` VALUES ('146', 'sprzedam bazę danych', 'dsdasas', '0', '14', '12', '172', '2016-12-28 14:36:52', '2017-01-11 14:36:52', '150', '15', '2016-12-28 15:12:31', 'd');
+INSERT INTO `ad_archive` VALUES ('147', 'sas', 'dsd', '0', '14', '12', '366', '2016-12-28 14:45:17', '2017-01-11 14:45:17', '12', '16', '2016-12-28 15:12:33', 'd');
+INSERT INTO `ad_archive` VALUES ('148', 'Sprzedam wzór taylora', 'bla bla bla\r\n', '0', '14', '12', '762', '2016-12-28 15:13:01', '2017-01-11 15:13:01', '0', '17', '2016-12-28 15:29:43', 'd');
+INSERT INTO `ad_archive` VALUES ('149', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', '1212', '18', '2016-12-28 15:31:03', 'u');
+INSERT INTO `ad_archive` VALUES ('150', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', '1212', '18', '2016-12-28 15:31:37', 'u');
+INSERT INTO `ad_archive` VALUES ('151', 'aaaa', 'da', '0', '14', '12', '84', '2016-12-28 15:29:54', '2017-01-11 15:29:54', '1212', '18', '2016-12-28 15:34:03', 'd');
+INSERT INTO `ad_archive` VALUES ('152', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 15:40:21', 'u');
+INSERT INTO `ad_archive` VALUES ('153', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 15:42:55', 'u');
+INSERT INTO `ad_archive` VALUES ('154', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 15:48:14', 'u');
+INSERT INTO `ad_archive` VALUES ('155', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 15:52:52', 'u');
+INSERT INTO `ad_archive` VALUES ('156', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:00:22', 'u');
+INSERT INTO `ad_archive` VALUES ('157', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:01:31', 'u');
+INSERT INTO `ad_archive` VALUES ('158', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:07:51', 'u');
+INSERT INTO `ad_archive` VALUES ('159', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:08:22', 'u');
+INSERT INTO `ad_archive` VALUES ('160', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:09:00', 'u');
+INSERT INTO `ad_archive` VALUES ('161', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:09:16', 'u');
+INSERT INTO `ad_archive` VALUES ('162', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:10:25', 'u');
+INSERT INTO `ad_archive` VALUES ('163', 'a', 'sas', '0', '14', '12', '84', '2016-12-28 15:37:14', '2017-01-11 15:37:14', '12', '19', '2016-12-28 16:10:50', 'd');
+INSERT INTO `ad_archive` VALUES ('164', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2016-12-28 16:24:47', 'u');
+INSERT INTO `ad_archive` VALUES ('165', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2016-12-28 16:33:38', 'u');
+INSERT INTO `ad_archive` VALUES ('166', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2016-12-28 16:35:14', 'u');
+INSERT INTO `ad_archive` VALUES ('167', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2016-12-28 17:24:02', 'u');
+INSERT INTO `ad_archive` VALUES ('168', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2016-12-28 21:20:20', 'u');
+INSERT INTO `ad_archive` VALUES ('169', 'buaha', 'sdsd', '0', '16', '12', '84', '2016-12-28 21:40:39', '2017-01-11 21:40:39', '132', '21', '2016-12-28 21:49:55', 'u');
+INSERT INTO `ad_archive` VALUES ('170', 'ahahaa', 'sdsd', '0', '16', '12', '84', '2016-12-28 21:40:39', '2017-01-11 21:40:39', '132', '21', '2016-12-28 21:50:04', 'd');
+INSERT INTO `ad_archive` VALUES ('171', 'sas', 'sds', '0', '16', '12', '459', '2016-12-28 21:57:13', '2017-01-11 21:57:13', '12', '22', '2016-12-30 21:13:55', 'd');
+INSERT INTO `ad_archive` VALUES ('172', 'alal', 'asas', '0', '17', '12', '366', '2016-12-30 21:17:25', '2017-01-13 21:17:25', '12', '23', '2016-12-30 21:21:15', 'd');
+INSERT INTO `ad_archive` VALUES ('173', 'a', 'dsd', '0', '17', '12', '84', '2016-12-30 21:17:48', '2017-01-13 21:17:48', '12', '24', '2016-12-30 21:21:35', 'd');
+INSERT INTO `ad_archive` VALUES ('174', 'jkjsa', 'ssdsd', '0', '19', '12', '366', '2016-12-30 21:28:25', '2017-01-13 21:28:25', '12', '25', '2016-12-30 21:28:46', 'u');
+INSERT INTO `ad_archive` VALUES ('175', 'jkjsa', 'ssdsd', '0', '19', '12', '366', '2016-12-30 21:28:25', '2017-01-13 21:28:25', '12', '25', '2016-12-30 21:29:16', 'u');
+INSERT INTO `ad_archive` VALUES ('176', 'jkjsa', 'ssdsd', '0', '19', '12', '366', '2016-12-30 21:28:25', '2017-01-13 21:28:25', '12', '25', '2016-12-30 21:30:49', 'u');
+INSERT INTO `ad_archive` VALUES ('177', 'jkjsa', 'ssdsd', '0', '19', '12', '366', '2016-12-30 21:28:25', '2017-01-13 21:28:25', '12', '25', '2016-12-30 21:31:19', 'u');
+INSERT INTO `ad_archive` VALUES ('178', 'jkjsa', 'ssdsd', '0', '19', '12', '366', '2016-12-30 21:28:25', '2017-01-13 21:28:25', '12', '25', '2016-12-30 21:32:13', 'd');
+INSERT INTO `ad_archive` VALUES ('179', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:36:01', 'u');
+INSERT INTO `ad_archive` VALUES ('180', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:37:00', 'u');
+INSERT INTO `ad_archive` VALUES ('181', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:37:19', 'u');
+INSERT INTO `ad_archive` VALUES ('182', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:37:39', 'u');
+INSERT INTO `ad_archive` VALUES ('183', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:42:41', 'u');
+INSERT INTO `ad_archive` VALUES ('184', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:43:12', 'u');
+INSERT INTO `ad_archive` VALUES ('185', 'buahahaha', 'sd', '0', '20', '12', '366', '2016-12-30 21:35:29', '2017-01-13 21:35:29', '123', '26', '2016-12-30 21:44:00', 'd');
+INSERT INTO `ad_archive` VALUES ('186', 'tyr', 'gdfgdfgd', '0', '15', '14', '366', '2017-01-01 21:21:22', '2017-01-15 21:21:22', '12', '21', '2017-01-01 21:22:02', 'd');
+INSERT INTO `ad_archive` VALUES ('187', '541', '45', '0', '14', '13', '350', '2017-01-01 21:22:52', '2017-01-15 21:22:52', '4', '22', '2017-01-01 21:23:38', 'd');
+INSERT INTO `ad_archive` VALUES ('188', '541', '45', '0', '14', '13', '350', '2017-01-01 21:22:56', '2017-01-15 21:22:56', '4', '23', '2017-01-01 21:23:41', 'd');
+INSERT INTO `ad_archive` VALUES ('189', 'tretreter', 'terterter', '0', '16', '13', '474', '2017-01-01 21:24:35', '2017-01-15 21:24:35', '345', '24', '2017-01-01 21:25:02', 'u');
+INSERT INTO `ad_archive` VALUES ('190', 'tretreter', 'terterter', '0', '16', '13', '474', '2017-01-01 21:24:35', '2017-01-15 21:24:35', '345', '24', '2017-01-01 21:25:20', 'u');
+INSERT INTO `ad_archive` VALUES ('191', 'tretreter', 'terterter', '0', '16', '13', '474', '2017-01-01 21:24:35', '2017-01-15 21:24:35', '345', '24', '2017-01-01 21:25:51', 'd');
+INSERT INTO `ad_archive` VALUES ('192', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2017-01-01 21:35:20', 'u');
+INSERT INTO `ad_archive` VALUES ('193', 'kamil', 'sasa', '0', '14', '12', '332', '2016-12-28 16:14:04', '2017-01-11 16:14:04', '123', '20', '2017-01-01 21:35:44', 'd');
+INSERT INTO `ad_archive` VALUES ('194', 'asdada', 'qwqw', '0', '14', '13', '459', '2017-01-01 21:32:46', '2017-01-15 21:32:46', '12', '25', '2017-01-01 21:35:46', 'd');
+INSERT INTO `ad_archive` VALUES ('195', 'qwq', 'wqwq', '0', '14', '14', '84', '2017-01-01 21:33:34', '2017-01-15 21:33:34', '12', '26', '2017-01-01 21:35:49', 'd');
+INSERT INTO `ad_archive` VALUES ('196', 'dasd', 'dsd', '0', '14', '12', '366', '2017-01-01 21:34:33', '2017-01-15 21:34:33', '23', '27', '2017-01-01 21:35:54', 'd');
+INSERT INTO `ad_archive` VALUES ('197', 'jkljkl', 'dfss', '0', '14', '12', '624', '2017-01-01 21:36:50', '2017-01-15 21:36:50', '12', '28', '2017-01-01 21:38:26', 'u');
+INSERT INTO `ad_archive` VALUES ('198', '645654', '645', '0', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 22:57:04', 'u');
+INSERT INTO `ad_archive` VALUES ('199', '645654', '645', '0', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:02:30', 'u');
+INSERT INTO `ad_archive` VALUES ('200', '645654', '645', '1', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:30', 'u');
+INSERT INTO `ad_archive` VALUES ('201', '645654', '645', '2', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:31', 'u');
+INSERT INTO `ad_archive` VALUES ('202', '645654', '645', '3', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:31', 'u');
+INSERT INTO `ad_archive` VALUES ('203', '645654', '645', '4', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:32', 'u');
+INSERT INTO `ad_archive` VALUES ('204', '645654', '645', '5', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:32', 'u');
+INSERT INTO `ad_archive` VALUES ('205', '645654', '645', '6', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:32', 'u');
+INSERT INTO `ad_archive` VALUES ('206', '645654', '645', '7', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:32', 'u');
+INSERT INTO `ad_archive` VALUES ('207', '645654', '645', '8', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:32', 'u');
+INSERT INTO `ad_archive` VALUES ('208', '645654', '645', '9', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('209', '645654', '645', '10', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('210', '645654', '645', '11', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('211', '645654', '645', '12', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('212', '645654', '645', '13', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('213', '645654', '645', '14', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:33', 'u');
+INSERT INTO `ad_archive` VALUES ('214', '645654', '645', '15', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('215', '645654', '645', '16', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('216', '645654', '645', '17', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('217', '645654', '645', '18', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('218', '645654', '645', '19', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('219', '645654', '645', '20', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:34', 'u');
+INSERT INTO `ad_archive` VALUES ('220', '645654', '645', '21', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:35', 'u');
+INSERT INTO `ad_archive` VALUES ('221', '645654', '645', '22', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:35', 'u');
+INSERT INTO `ad_archive` VALUES ('222', '645654', '645', '23', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:35', 'u');
+INSERT INTO `ad_archive` VALUES ('223', '645654', '645', '24', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:07:35', 'u');
+INSERT INTO `ad_archive` VALUES ('224', 'rete', '645645', '0', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:38', 'u');
+INSERT INTO `ad_archive` VALUES ('225', 'rete', '645645', '1', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:41', 'u');
+INSERT INTO `ad_archive` VALUES ('226', 'rete', '645645', '2', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:42', 'u');
+INSERT INTO `ad_archive` VALUES ('227', 'rete', '645645', '3', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:42', 'u');
+INSERT INTO `ad_archive` VALUES ('228', 'rete', '645645', '4', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:42', 'u');
+INSERT INTO `ad_archive` VALUES ('229', 'rete', '645645', '5', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:43', 'u');
+INSERT INTO `ad_archive` VALUES ('230', 'rete', '645645', '6', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:44', 'u');
+INSERT INTO `ad_archive` VALUES ('231', 'rete', '645645', '7', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:44', 'u');
+INSERT INTO `ad_archive` VALUES ('232', 'rete', '645645', '8', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:45', 'u');
+INSERT INTO `ad_archive` VALUES ('233', 'rete', '645645', '9', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:45', 'u');
+INSERT INTO `ad_archive` VALUES ('234', 'rete', '645645', '10', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:45', 'u');
+INSERT INTO `ad_archive` VALUES ('235', 'rete', '645645', '11', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:45', 'u');
+INSERT INTO `ad_archive` VALUES ('236', 'rete', '645645', '12', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:46', 'u');
+INSERT INTO `ad_archive` VALUES ('237', 'rete', '645645', '13', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:46', 'u');
+INSERT INTO `ad_archive` VALUES ('238', 'rete', '645645', '14', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:47', 'u');
+INSERT INTO `ad_archive` VALUES ('239', 'rete', '645645', '15', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:47', 'u');
+INSERT INTO `ad_archive` VALUES ('240', 'rete', '645645', '16', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:47', 'u');
+INSERT INTO `ad_archive` VALUES ('241', 'rete', '645645', '17', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:47', 'u');
+INSERT INTO `ad_archive` VALUES ('242', 'rete', '645645', '18', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:48', 'u');
+INSERT INTO `ad_archive` VALUES ('243', 'rete', '645645', '19', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:48', 'u');
+INSERT INTO `ad_archive` VALUES ('244', 'rete', '645645', '20', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:48', 'u');
+INSERT INTO `ad_archive` VALUES ('245', 'rete', '645645', '21', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:48', 'u');
+INSERT INTO `ad_archive` VALUES ('246', 'rete', '645645', '22', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:48', 'u');
+INSERT INTO `ad_archive` VALUES ('247', 'rete', '645645', '23', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:49', 'u');
+INSERT INTO `ad_archive` VALUES ('248', 'rete', '645645', '24', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:49', 'u');
+INSERT INTO `ad_archive` VALUES ('249', 'rete', '645645', '25', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:49', 'u');
+INSERT INTO `ad_archive` VALUES ('250', 'rete', '645645', '26', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:49', 'u');
+INSERT INTO `ad_archive` VALUES ('251', 'rete', '645645', '27', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:50', 'u');
+INSERT INTO `ad_archive` VALUES ('252', 'rete', '645645', '28', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:50', 'u');
+INSERT INTO `ad_archive` VALUES ('253', 'rete', '645645', '29', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:50', 'u');
+INSERT INTO `ad_archive` VALUES ('254', 'rete', '645645', '30', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:51', 'u');
+INSERT INTO `ad_archive` VALUES ('255', 'rete', '645645', '31', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:51', 'u');
+INSERT INTO `ad_archive` VALUES ('256', 'rete', '645645', '32', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:52', 'u');
+INSERT INTO `ad_archive` VALUES ('257', 'rete', '645645', '33', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:53', 'u');
+INSERT INTO `ad_archive` VALUES ('258', 'rete', '645645', '34', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:53', 'u');
+INSERT INTO `ad_archive` VALUES ('259', 'rete', '645645', '35', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:53', 'u');
+INSERT INTO `ad_archive` VALUES ('260', 'rete', '645645', '36', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:53', 'u');
+INSERT INTO `ad_archive` VALUES ('261', 'rete', '645645', '37', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:53', 'u');
+INSERT INTO `ad_archive` VALUES ('262', 'rete', '645645', '38', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('263', 'rete', '645645', '39', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('264', 'rete', '645645', '40', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('265', 'rete', '645645', '41', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('266', 'rete', '645645', '42', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('267', 'rete', '645645', '43', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('268', 'rete', '645645', '44', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:54', 'u');
+INSERT INTO `ad_archive` VALUES ('269', 'rete', '645645', '45', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('270', 'rete', '645645', '46', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('271', 'rete', '645645', '47', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('272', 'rete', '645645', '48', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('273', 'rete', '645645', '49', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('274', 'rete', '645645', '50', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('275', 'rete', '645645', '51', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:55', 'u');
+INSERT INTO `ad_archive` VALUES ('276', 'rete', '645645', '52', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('277', 'rete', '645645', '53', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('278', 'rete', '645645', '54', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('279', 'rete', '645645', '55', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('280', 'rete', '645645', '56', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('281', 'rete', '645645', '57', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('282', 'rete', '645645', '58', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:56', 'u');
+INSERT INTO `ad_archive` VALUES ('283', 'rete', '645645', '59', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('284', 'rete', '645645', '60', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('285', 'rete', '645645', '61', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('286', 'rete', '645645', '62', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('287', 'rete', '645645', '63', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('288', 'rete', '645645', '64', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('289', 'rete', '645645', '65', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:57', 'u');
+INSERT INTO `ad_archive` VALUES ('290', 'rete', '645645', '66', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:07:58', 'u');
+INSERT INTO `ad_archive` VALUES ('291', '645654', '645', '25', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:08:12', 'u');
+INSERT INTO `ad_archive` VALUES ('292', 'rete', '645645', '67', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:08:42', 'u');
+INSERT INTO `ad_archive` VALUES ('293', 'rete', '645645', '68', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:08:45', 'u');
+INSERT INTO `ad_archive` VALUES ('294', 'rete', '645645', '69', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:08:45', 'u');
+INSERT INTO `ad_archive` VALUES ('295', 'rete', '645645', '70', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:08:45', 'u');
+INSERT INTO `ad_archive` VALUES ('296', 'rete', '645645', '71', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:08:46', 'u');
+INSERT INTO `ad_archive` VALUES ('297', '645654', '645', '26', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:09:36', 'u');
+INSERT INTO `ad_archive` VALUES ('298', 'saas', 'dfdfdf', '0', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:42', 'u');
+INSERT INTO `ad_archive` VALUES ('299', 'saas', 'dfdfdf', '1', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:45', 'u');
+INSERT INTO `ad_archive` VALUES ('300', 'saas', 'dfdfdf', '2', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:45', 'u');
+INSERT INTO `ad_archive` VALUES ('301', 'saas', 'dfdfdf', '3', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:45', 'u');
+INSERT INTO `ad_archive` VALUES ('302', 'saas', 'dfdfdf', '4', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:45', 'u');
+INSERT INTO `ad_archive` VALUES ('303', 'saas', 'dfdfdf', '5', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:46', 'u');
+INSERT INTO `ad_archive` VALUES ('304', 'saas', 'dfdfdf', '6', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:09:46', 'u');
+INSERT INTO `ad_archive` VALUES ('305', 'gfdgd', 'wreer', '0', '14', '14', '366', '2017-01-01 21:55:03', '2017-01-15 21:55:03', '12', '33', '2017-01-01 23:22:34', 'u');
+INSERT INTO `ad_archive` VALUES ('306', 'jkljkl', 'dfss', '0', '14', '12', '624', '2017-01-01 21:36:50', '2017-01-15 21:36:50', '12', '28', '2017-01-01 23:30:47', 'd');
+INSERT INTO `ad_archive` VALUES ('307', 'as', 'asas', '0', '14', '14', '84', '2017-01-01 21:39:10', '2017-01-15 21:39:10', '12', '29', '2017-01-01 23:30:49', 'd');
+INSERT INTO `ad_archive` VALUES ('308', 'dsadsa', 'ddff', '0', '14', '12', '366', '2017-01-01 21:40:15', '2017-01-15 21:40:15', '12', '30', '2017-01-01 23:30:52', 'd');
+INSERT INTO `ad_archive` VALUES ('309', 'dsd', 'we', '0', '14', '14', '459', '2017-01-01 21:41:44', '2017-01-15 21:41:44', '12', '31', '2017-01-01 23:30:53', 'd');
+INSERT INTO `ad_archive` VALUES ('310', 'saas', 'dfdfdf', '7', '14', '14', '366', '2017-01-01 21:54:24', '2017-01-15 21:54:24', '12', '32', '2017-01-01 23:30:55', 'd');
+INSERT INTO `ad_archive` VALUES ('311', 'gfdgd', 'wreer', '1', '14', '14', '366', '2017-01-01 21:55:03', '2017-01-15 21:55:03', '12', '33', '2017-01-01 23:30:57', 'd');
+INSERT INTO `ad_archive` VALUES ('312', '54645', '65464', '0', '14', '14', '82', '2017-01-01 22:04:28', '2017-01-15 22:04:28', '54', '34', '2017-01-01 23:30:58', 'd');
+INSERT INTO `ad_archive` VALUES ('313', 'rete', '645645', '72', '14', '16', '140', '2017-01-01 22:07:58', '2017-01-15 22:07:58', '456', '35', '2017-01-01 23:31:01', 'd');
+INSERT INTO `ad_archive` VALUES ('314', '645654', '645', '27', '14', '13', '696', '2017-01-01 22:08:19', '2017-01-15 22:08:19', '65464', '36', '2017-01-01 23:31:03', 'd');
+INSERT INTO `ad_archive` VALUES ('315', 'a', 'sas', '0', '14', '14', '459', '2017-01-01 23:33:36', '2017-01-15 23:33:36', '12', '38', '2017-01-01 23:33:41', 'u');
+INSERT INTO `ad_archive` VALUES ('316', 'a', 'sas', '1', '14', '14', '459', '2017-01-01 23:33:36', '2017-01-15 23:33:36', '12', '38', '2017-01-01 23:35:02', 'd');
+INSERT INTO `ad_archive` VALUES ('317', 'a', 'sas', '0', '14', '14', '459', '2017-01-01 23:33:35', '2017-01-15 23:33:35', '12', '37', '2017-01-01 23:35:08', 'd');
+INSERT INTO `ad_archive` VALUES ('318', 'asasasasa', 'weewe', '0', '14', '16', '738', '2017-01-02 19:06:34', '2017-01-16 19:06:34', '123123123', '1', '2017-01-02 19:06:38', 'u');
+INSERT INTO `ad_archive` VALUES ('319', 'asasasasa', 'weewe', '1', '14', '16', '738', '2017-01-02 19:06:34', '2017-01-16 19:06:34', '123123123', '1', '2017-01-02 19:06:49', 'u');
+INSERT INTO `ad_archive` VALUES ('320', 'asasasasa', 'weewe', '1', '14', '16', '738', '2017-01-02 19:06:34', '2017-01-16 19:06:34', '123123123', '1', '2017-01-02 19:06:53', 'u');
+INSERT INTO `ad_archive` VALUES ('321', 'fdsfs', '65464', '0', '14', '15', '276', '2017-01-02 19:10:30', '2017-01-16 19:10:30', '546', '2', '2017-01-02 19:10:35', 'u');
+INSERT INTO `ad_archive` VALUES ('322', '1', '111', '0', '14', '14', '743', '2017-01-02 19:20:47', '2017-01-16 19:20:47', '1', '27', '2017-01-02 19:20:53', 'u');
+INSERT INTO `ad_archive` VALUES ('323', '1', 'wqwqw', '0', '14', '12', '247', '2017-01-02 19:35:51', '2017-01-16 19:35:51', '1', '56', '2017-01-02 19:36:04', 'u');
+INSERT INTO `ad_archive` VALUES ('324', '1', '11', '0', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:37:21', 'u');
+INSERT INTO `ad_archive` VALUES ('325', '1', '11', '1', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:26', 'u');
+INSERT INTO `ad_archive` VALUES ('326', '1', '11', '2', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:27', 'u');
+INSERT INTO `ad_archive` VALUES ('327', '1', '11', '3', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:28', 'u');
+INSERT INTO `ad_archive` VALUES ('328', '1', '11', '4', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:30', 'u');
+INSERT INTO `ad_archive` VALUES ('329', '1', '11', '5', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:32', 'u');
+INSERT INTO `ad_archive` VALUES ('330', '1', '11', '6', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 19:38:32', 'u');
+INSERT INTO `ad_archive` VALUES ('331', '1', '..', '0', '14', '12', '591', '2017-01-02 19:39:00', '2017-01-16 19:39:00', '12', '58', '2017-01-02 19:39:04', 'u');
+INSERT INTO `ad_archive` VALUES ('332', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'ww', '0', '14', '13', '787', '2017-01-02 19:39:28', '2017-01-16 19:39:28', '1', '59', '2017-01-02 19:39:33', 'u');
+INSERT INTO `ad_archive` VALUES ('333', 'q', 'qwwq', '0', '14', '12', '84', '2017-01-02 19:46:35', '2017-01-16 19:46:35', '1', '60', '2017-01-02 19:58:27', 'u');
+INSERT INTO `ad_archive` VALUES ('334', 'qq', 'jhkjh', '0', '14', '14', '591', '2017-01-02 19:47:42', '2017-01-16 19:47:42', '12', '61', '2017-01-02 19:58:28', 'u');
+INSERT INTO `ad_archive` VALUES ('335', '121', 'sdadsa', '0', '14', '12', '84', '2017-01-02 19:58:49', '2017-01-16 19:58:49', '12', '62', '2017-01-02 19:59:19', 'u');
+INSERT INTO `ad_archive` VALUES ('336', '121', 'sdadsa', '1', '14', '12', '84', '2017-01-02 19:58:49', '2017-01-16 19:58:49', '12', '62', '2017-01-02 19:59:30', 'u');
+INSERT INTO `ad_archive` VALUES ('337', 'qwqw', 'qwqw', '0', '14', '12', '366', '2017-01-02 20:00:13', '2017-01-16 20:00:13', '12', '63', '2017-01-02 20:00:29', 'u');
+INSERT INTO `ad_archive` VALUES ('338', 'qwqw', 'qwqw', '1', '14', '12', '366', '2017-01-02 20:00:13', '2017-01-16 20:00:13', '12', '63', '2017-01-02 20:00:32', 'u');
+INSERT INTO `ad_archive` VALUES ('339', 'aa', 'qwqww', '0', '14', '14', '537', '2017-01-02 20:01:14', '2017-01-16 20:01:14', '1212', '64', '2017-01-02 20:01:32', 'u');
+INSERT INTO `ad_archive` VALUES ('340', 'sasdsa', 'wqwqwq', '0', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:02:38', 'u');
+INSERT INTO `ad_archive` VALUES ('341', 'asasasasa', 'weewe', '2', '14', '16', '738', '2017-01-02 19:06:34', '2017-01-16 19:06:34', '123123123', '1', '2017-01-02 20:09:11', 'd');
+INSERT INTO `ad_archive` VALUES ('342', 'fdsfs', '65464', '1', '14', '15', '276', '2017-01-02 19:10:30', '2017-01-16 19:10:30', '546', '2', '2017-01-02 20:09:13', 'd');
+INSERT INTO `ad_archive` VALUES ('343', 'd', 'sasd', '0', '14', '12', '366', '2017-01-02 19:16:05', '2017-01-16 19:16:05', '1', '3', '2017-01-02 20:09:14', 'd');
+INSERT INTO `ad_archive` VALUES ('344', 'd', 'sasd', '0', '14', '12', '366', '2017-01-02 19:16:07', '2017-01-16 19:16:07', '1', '4', '2017-01-02 20:09:15', 'd');
+INSERT INTO `ad_archive` VALUES ('345', 'd', 'sasd', '0', '14', '12', '366', '2017-01-02 19:16:07', '2017-01-16 19:16:07', '1', '5', '2017-01-02 20:09:15', 'd');
+INSERT INTO `ad_archive` VALUES ('346', 'd', 'sasd', '0', '14', '12', '366', '2017-01-02 19:16:08', '2017-01-16 19:16:08', '1', '6', '2017-01-02 20:09:18', 'd');
+INSERT INTO `ad_archive` VALUES ('347', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:06', '2017-01-16 19:18:06', '1', '7', '2017-01-02 20:09:19', 'd');
+INSERT INTO `ad_archive` VALUES ('348', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:07', '2017-01-16 19:18:07', '1', '8', '2017-01-02 20:09:20', 'd');
+INSERT INTO `ad_archive` VALUES ('349', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:08', '2017-01-16 19:18:08', '1', '9', '2017-01-02 20:09:20', 'd');
+INSERT INTO `ad_archive` VALUES ('350', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:08', '2017-01-16 19:18:08', '1', '10', '2017-01-02 20:09:21', 'd');
+INSERT INTO `ad_archive` VALUES ('351', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:08', '2017-01-16 19:18:08', '1', '11', '2017-01-02 20:09:21', 'd');
+INSERT INTO `ad_archive` VALUES ('352', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:18', '2017-01-16 19:18:18', '1', '12', '2017-01-02 20:09:24', 'd');
+INSERT INTO `ad_archive` VALUES ('353', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:19', '2017-01-16 19:18:19', '1', '13', '2017-01-02 20:09:25', 'd');
+INSERT INTO `ad_archive` VALUES ('354', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:19', '2017-01-16 19:18:19', '1', '14', '2017-01-02 20:09:26', 'd');
+INSERT INTO `ad_archive` VALUES ('355', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:20', '2017-01-16 19:18:20', '1', '15', '2017-01-02 20:09:27', 'd');
+INSERT INTO `ad_archive` VALUES ('356', '1', 're', '0', '14', '14', '537', '2017-01-02 19:18:20', '2017-01-16 19:18:20', '1', '16', '2017-01-02 20:09:28', 'd');
+INSERT INTO `ad_archive` VALUES ('357', '1', '11', '0', '14', '16', '310', '2017-01-02 19:19:05', '2017-01-16 19:19:05', '1', '17', '2017-01-02 20:09:28', 'd');
+INSERT INTO `ad_archive` VALUES ('358', '1', '11', '0', '14', '16', '310', '2017-01-02 19:19:10', '2017-01-16 19:19:10', '1', '18', '2017-01-02 20:09:29', 'd');
+INSERT INTO `ad_archive` VALUES ('359', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:52', '2017-01-16 19:19:52', '1', '19', '2017-01-02 20:09:30', 'd');
+INSERT INTO `ad_archive` VALUES ('360', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:57', '2017-01-16 19:19:57', '1', '20', '2017-01-02 20:09:31', 'd');
+INSERT INTO `ad_archive` VALUES ('361', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:57', '2017-01-16 19:19:57', '1', '21', '2017-01-02 20:09:31', 'd');
+INSERT INTO `ad_archive` VALUES ('362', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:57', '2017-01-16 19:19:57', '1', '22', '2017-01-02 20:09:32', 'd');
+INSERT INTO `ad_archive` VALUES ('363', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:58', '2017-01-16 19:19:58', '1', '23', '2017-01-02 20:09:33', 'd');
+INSERT INTO `ad_archive` VALUES ('364', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:58', '2017-01-16 19:19:58', '1', '24', '2017-01-02 20:09:35', 'd');
+INSERT INTO `ad_archive` VALUES ('365', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:58', '2017-01-16 19:19:58', '1', '25', '2017-01-02 20:09:37', 'd');
+INSERT INTO `ad_archive` VALUES ('366', '1', '546', '0', '14', '16', '396', '2017-01-02 19:19:58', '2017-01-16 19:19:58', '1', '26', '2017-01-02 20:09:38', 'd');
+INSERT INTO `ad_archive` VALUES ('367', '1', '111', '1', '14', '14', '743', '2017-01-02 19:20:47', '2017-01-16 19:20:47', '1', '27', '2017-01-02 20:09:39', 'd');
+INSERT INTO `ad_archive` VALUES ('368', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:47', '2017-01-16 19:27:47', '1', '28', '2017-01-02 20:09:39', 'd');
+INSERT INTO `ad_archive` VALUES ('369', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:49', '2017-01-16 19:27:49', '1', '29', '2017-01-02 20:09:41', 'd');
+INSERT INTO `ad_archive` VALUES ('370', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:50', '2017-01-16 19:27:50', '1', '30', '2017-01-02 20:09:42', 'd');
+INSERT INTO `ad_archive` VALUES ('371', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:50', '2017-01-16 19:27:50', '1', '31', '2017-01-02 20:09:42', 'd');
+INSERT INTO `ad_archive` VALUES ('372', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:50', '2017-01-16 19:27:50', '1', '32', '2017-01-02 20:09:44', 'd');
+INSERT INTO `ad_archive` VALUES ('373', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:51', '2017-01-16 19:27:51', '1', '33', '2017-01-02 20:09:44', 'd');
+INSERT INTO `ad_archive` VALUES ('374', '11', '111', '0', '14', '12', '366', '2017-01-02 19:27:51', '2017-01-16 19:27:51', '1', '34', '2017-01-02 20:09:45', 'd');
+INSERT INTO `ad_archive` VALUES ('375', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:24', '2017-01-16 19:28:24', '1', '35', '2017-01-02 20:09:49', 'd');
+INSERT INTO `ad_archive` VALUES ('376', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:26', '2017-01-16 19:28:26', '1', '36', '2017-01-02 20:09:49', 'd');
+INSERT INTO `ad_archive` VALUES ('377', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:26', '2017-01-16 19:28:26', '1', '37', '2017-01-02 20:09:50', 'd');
+INSERT INTO `ad_archive` VALUES ('378', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '38', '2017-01-02 20:09:51', 'd');
+INSERT INTO `ad_archive` VALUES ('379', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '39', '2017-01-02 20:09:52', 'd');
+INSERT INTO `ad_archive` VALUES ('380', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '40', '2017-01-02 20:09:53', 'd');
+INSERT INTO `ad_archive` VALUES ('381', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '41', '2017-01-02 20:09:54', 'd');
+INSERT INTO `ad_archive` VALUES ('382', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '42', '2017-01-02 20:09:55', 'd');
+INSERT INTO `ad_archive` VALUES ('383', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:28', '2017-01-16 19:28:28', '1', '43', '2017-01-02 20:09:56', 'd');
+INSERT INTO `ad_archive` VALUES ('384', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '44', '2017-01-02 20:09:57', 'd');
+INSERT INTO `ad_archive` VALUES ('385', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '45', '2017-01-02 20:09:58', 'd');
+INSERT INTO `ad_archive` VALUES ('386', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '46', '2017-01-02 20:09:59', 'd');
+INSERT INTO `ad_archive` VALUES ('387', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '47', '2017-01-02 20:10:00', 'd');
+INSERT INTO `ad_archive` VALUES ('388', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '48', '2017-01-02 20:10:02', 'd');
+INSERT INTO `ad_archive` VALUES ('389', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:29', '2017-01-16 19:28:29', '1', '49', '2017-01-02 20:10:02', 'd');
+INSERT INTO `ad_archive` VALUES ('390', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:30', '2017-01-16 19:28:30', '1', '50', '2017-01-02 20:10:03', 'd');
+INSERT INTO `ad_archive` VALUES ('391', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:30', '2017-01-16 19:28:30', '1', '51', '2017-01-02 20:10:04', 'd');
+INSERT INTO `ad_archive` VALUES ('392', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:30', '2017-01-16 19:28:30', '1', '52', '2017-01-02 20:10:05', 'd');
+INSERT INTO `ad_archive` VALUES ('393', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:30', '2017-01-16 19:28:30', '1', '53', '2017-01-02 20:10:06', 'd');
+INSERT INTO `ad_archive` VALUES ('394', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:30', '2017-01-16 19:28:30', '1', '54', '2017-01-02 20:10:07', 'd');
+INSERT INTO `ad_archive` VALUES ('395', '1', '11', '0', '14', '12', '366', '2017-01-02 19:28:31', '2017-01-16 19:28:31', '1', '55', '2017-01-02 20:10:09', 'd');
+INSERT INTO `ad_archive` VALUES ('396', '1', 'wqwqw', '1', '14', '12', '247', '2017-01-02 19:35:51', '2017-01-16 19:35:51', '1', '56', '2017-01-02 20:10:10', 'd');
+INSERT INTO `ad_archive` VALUES ('397', '1', '11', '7', '14', '12', '386', '2017-01-02 19:37:08', '2017-01-16 19:37:08', '1', '57', '2017-01-02 20:10:11', 'd');
+INSERT INTO `ad_archive` VALUES ('398', '1', '..', '1', '14', '12', '591', '2017-01-02 19:39:00', '2017-01-16 19:39:00', '12', '58', '2017-01-02 20:10:11', 'd');
+INSERT INTO `ad_archive` VALUES ('399', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'ww', '1', '14', '13', '787', '2017-01-02 19:39:28', '2017-01-16 19:39:28', '1', '59', '2017-01-02 20:10:12', 'd');
+INSERT INTO `ad_archive` VALUES ('400', 'sasdsa', 'wqwqwq', '1', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:10:16', 'u');
+INSERT INTO `ad_archive` VALUES ('401', 'sasdsa', 'wqwqwq', '2', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:10:24', 'u');
+INSERT INTO `ad_archive` VALUES ('402', 'sasdsa', 'wqwqwq', '3', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:10:34', 'u');
+INSERT INTO `ad_archive` VALUES ('403', 'sasdsa', 'wqwqwq', '3', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:10:38', 'u');
+INSERT INTO `ad_archive` VALUES ('404', 'q', 'qwwq', '1', '14', '12', '84', '2017-01-02 19:46:35', '2017-01-16 19:46:35', '1', '60', '2017-01-02 20:11:39', 'u');
+INSERT INTO `ad_archive` VALUES ('405', 'q', 'qwwq', '1', '14', '12', '84', '2017-01-02 19:46:35', '2017-01-16 19:46:35', '1', '60', '2017-01-02 20:14:29', 'u');
+INSERT INTO `ad_archive` VALUES ('406', 'qq', 'jhkjh', '1', '14', '14', '591', '2017-01-02 19:47:42', '2017-01-16 19:47:42', '12', '61', '2017-01-02 20:14:41', 'u');
+INSERT INTO `ad_archive` VALUES ('407', 'sasdsa', 'wqwqwq', '4', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:15:32', 'u');
+INSERT INTO `ad_archive` VALUES ('408', 'sasdsa', 'wqwqwq', '4', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:15:39', 'u');
+INSERT INTO `ad_archive` VALUES ('409', 'q', 'qwwq', '1', '14', '12', '84', '2017-01-02 19:46:35', '2017-01-16 19:46:35', '1', '60', '2017-01-02 20:20:27', 'd');
+INSERT INTO `ad_archive` VALUES ('410', 'qq', 'jhkjh', '2', '14', '14', '591', '2017-01-02 19:47:42', '2017-01-16 19:47:42', '12', '61', '2017-01-02 20:20:28', 'd');
+INSERT INTO `ad_archive` VALUES ('411', '121', 'sdadsa', '2', '14', '12', '84', '2017-01-02 19:58:49', '2017-01-16 19:58:49', '12', '62', '2017-01-02 20:20:29', 'd');
+INSERT INTO `ad_archive` VALUES ('412', 'qwqw', 'qwqw', '2', '14', '12', '366', '2017-01-02 20:00:13', '2017-01-16 20:00:13', '12', '63', '2017-01-02 20:20:30', 'd');
+INSERT INTO `ad_archive` VALUES ('413', 'aa', 'qwqww', '1', '14', '14', '537', '2017-01-02 20:01:14', '2017-01-16 20:01:14', '1212', '64', '2017-01-02 20:20:32', 'd');
+INSERT INTO `ad_archive` VALUES ('414', 'sasdsa', 'wqwqwq', '5', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 20:20:33', 'u');
+INSERT INTO `ad_archive` VALUES ('415', 'sasdsa', 'wqwqwq', '6', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 21:05:58', 'u');
+INSERT INTO `ad_archive` VALUES ('416', 'sasdsa', 'wqwqwq', '7', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-02 21:10:51', 'u');
+INSERT INTO `ad_archive` VALUES ('417', 'sasdsa', 'wqwqwq', '8', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-03 23:12:26', 'u');
+INSERT INTO `ad_archive` VALUES ('418', 'sasdsa', 'wqwqwq', '9', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 10:56:55', 'u');
+INSERT INTO `ad_archive` VALUES ('419', 'sasdsa', 'wqwqwq', '10', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:55', 'u');
+INSERT INTO `ad_archive` VALUES ('420', 'sasdsa', 'wqwqwq', '11', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:58', 'u');
+INSERT INTO `ad_archive` VALUES ('421', 'sasdsa', 'wqwqwq', '12', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:58', 'u');
+INSERT INTO `ad_archive` VALUES ('422', 'sasdsa', 'wqwqwq', '13', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('423', 'sasdsa', 'wqwqwq', '14', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('424', 'sasdsa', 'wqwqwq', '15', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('425', 'sasdsa', 'wqwqwq', '16', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('426', 'sasdsa', 'wqwqwq', '17', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('427', 'sasdsa', 'wqwqwq', '18', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('428', 'sasdsa', 'wqwqwq', '19', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:14:00', 'u');
+INSERT INTO `ad_archive` VALUES ('429', 'sasdsa', 'wqwqwq', '20', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:14:00', 'u');
+INSERT INTO `ad_archive` VALUES ('430', 'sasdsa', 'wqwqwq', '21', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:14:00', 'u');
+INSERT INTO `ad_archive` VALUES ('431', 'sasdsa', 'wqwqwq', '22', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:14:00', 'u');
+INSERT INTO `ad_archive` VALUES ('432', 'sasdsa', 'wqwqwq', '23', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:19:43', 'u');
+INSERT INTO `ad_archive` VALUES ('433', 'sasdsa', 'wqwqwq', '24', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 11:23:40', 'u');
+INSERT INTO `ad_archive` VALUES ('434', '1', '11', '0', '14', '12', '84', '2017-01-05 11:23:33', '2017-01-19 11:23:33', '1', '66', '2017-01-05 11:23:43', 'u');
+INSERT INTO `ad_archive` VALUES ('435', '1', '11', '1', '14', '12', '84', '2017-01-05 11:23:33', '2017-01-19 11:23:33', '1', '66', '2017-01-05 12:24:10', 'u');
+INSERT INTO `ad_archive` VALUES ('436', 'kamil', 'wqwq', '0', '14', '14', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:27:54', 'u');
+INSERT INTO `ad_archive` VALUES ('437', 'kamil', 'wqwq', '1', '14', '14', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:28:12', 'u');
+INSERT INTO `ad_archive` VALUES ('438', 'kamil', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:28:23', 'u');
+INSERT INTO `ad_archive` VALUES ('439', 'kamil', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:30:54', 'u');
+INSERT INTO `ad_archive` VALUES ('440', 'kamil', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:32:06', 'u');
+INSERT INTO `ad_archive` VALUES ('441', 'kamilff', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:33:57', 'u');
+INSERT INTO `ad_archive` VALUES ('442', 'kamil', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:34:12', 'u');
+INSERT INTO `ad_archive` VALUES ('443', 'kamil', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:34:23', 'u');
+INSERT INTO `ad_archive` VALUES ('444', 'kamilff', 'wqwq', '1', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:34:32', 'u');
+INSERT INTO `ad_archive` VALUES ('445', 'kamilff', 'wqwq', '2', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:42:10', 'u');
+INSERT INTO `ad_archive` VALUES ('446', 'sasdsa', 'wqwqwq', '25', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 15:44:37', 'u');
+INSERT INTO `ad_archive` VALUES ('447', 'sasdsa', 'wqwqwq', '25', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 15:44:44', 'u');
+INSERT INTO `ad_archive` VALUES ('448', 'kamilff', 'wqwqdd', '2', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:45:13', 'u');
+INSERT INTO `ad_archive` VALUES ('449', 'kamilff', 'wqwqddeee', '2', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:46:00', 'u');
+INSERT INTO `ad_archive` VALUES ('450', 'kamilffzzz', 'wqwqddeee', '2', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:46:08', 'u');
+INSERT INTO `ad_archive` VALUES ('451', 'kamilffzzz', 'wqwqddeee', '2', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:46:15', 'u');
+INSERT INTO `ad_archive` VALUES ('452', 'kamilffzzz', 'wqwqddeee', '3', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:50:07', 'u');
+INSERT INTO `ad_archive` VALUES ('453', 'kamilffzzz', 'wqwqddeeesdsd', '3', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:50:20', 'u');
+INSERT INTO `ad_archive` VALUES ('454', 'sa', 'qw', '0', '14', '12', '366', '2017-01-05 15:57:26', '2017-01-19 15:57:26', '12', '69', '2017-01-05 15:57:36', 'u');
+INSERT INTO `ad_archive` VALUES ('455', 'kamilffzzz', 'wqwqddeeesdsd', '4', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:28', 'u');
+INSERT INTO `ad_archive` VALUES ('456', 'kamilffzzz', 'wqwqddeeesdsd', '5', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:29', 'u');
+INSERT INTO `ad_archive` VALUES ('457', 'kamilffzzz', 'wqwqddeeesdsd', '6', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:29', 'u');
+INSERT INTO `ad_archive` VALUES ('458', 'kamilffzzz', 'wqwqddeeesdsd', '7', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('459', 'kamilffzzz', 'wqwqddeeesdsd', '8', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('460', 'kamilffzzz', 'wqwqddeeesdsd', '9', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('461', 'kamilffzzz', 'wqwqddeeesdsd', '10', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('462', 'kamilffzzz', 'wqwqddeeesdsd', '11', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('463', 'kamilffzzz', 'wqwqddeeesdsd', '12', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:30', 'u');
+INSERT INTO `ad_archive` VALUES ('464', 'kamilffzzz', 'wqwqddeeesdsd', '13', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('465', 'kamilffzzz', 'wqwqddeeesdsd', '14', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('466', 'kamilffzzz', 'wqwqddeeesdsd', '15', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('467', 'kamilffzzz', 'wqwqddeeesdsd', '16', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('468', 'kamilffzzz', 'wqwqddeeesdsd', '17', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('469', 'kamilffzzz', 'wqwqddeeesdsd', '18', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:31', 'u');
+INSERT INTO `ad_archive` VALUES ('470', 'kamilffzzz', 'wqwqddeeesdsd', '19', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:32', 'u');
+INSERT INTO `ad_archive` VALUES ('471', 'kamilffzzz', 'wqwqddeeesdsd', '20', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:32', 'u');
+INSERT INTO `ad_archive` VALUES ('472', 'kamilffzzz', 'wqwqddeeesdsd', '21', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:32', 'u');
+INSERT INTO `ad_archive` VALUES ('473', 'kamilffzzz', 'wqwqddeeesdsd', '22', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:32', 'u');
+INSERT INTO `ad_archive` VALUES ('474', 'kamilffzzz', 'wqwqddeeesdsd', '23', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:32', 'u');
+INSERT INTO `ad_archive` VALUES ('475', 'kamilffzzz', 'wqwqddeeesdsd', '24', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('476', 'kamilffzzz', 'wqwqddeeesdsd', '25', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('477', 'kamilffzzz', 'wqwqddeeesdsd', '26', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('478', 'kamilffzzz', 'wqwqddeeesdsd', '27', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('479', 'kamilffzzz', 'wqwqddeeesdsd', '28', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('480', 'kamilffzzz', 'wqwqddeeesdsd', '29', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:33', 'u');
+INSERT INTO `ad_archive` VALUES ('481', 'kamilffzzz', 'wqwqddeeesdsd', '30', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('482', 'kamilffzzz', 'wqwqddeeesdsd', '31', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('483', 'kamilffzzz', 'wqwqddeeesdsd', '32', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('484', 'kamilffzzz', 'wqwqddeeesdsd', '33', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('485', 'kamilffzzz', 'wqwqddeeesdsd', '34', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('486', 'kamilffzzz', 'wqwqddeeesdsd', '35', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:34', 'u');
+INSERT INTO `ad_archive` VALUES ('487', 'kamilffzzz', 'wqwqddeeesdsd', '36', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('488', 'kamilffzzz', 'wqwqddeeesdsd', '37', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('489', 'kamilffzzz', 'wqwqddeeesdsd', '38', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('490', 'kamilffzzz', 'wqwqddeeesdsd', '39', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('491', 'kamilffzzz', 'wqwqddeeesdsd', '40', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('492', 'kamilffzzz', 'wqwqddeeesdsd', '41', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:35', 'u');
+INSERT INTO `ad_archive` VALUES ('493', 'kamilffzzz', 'wqwqddeeesdsd', '42', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('494', 'kamilffzzz', 'wqwqddeeesdsd', '43', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('495', 'kamilffzzz', 'wqwqddeeesdsd', '44', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('496', 'kamilffzzz', 'wqwqddeeesdsd', '45', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('497', 'kamilffzzz', 'wqwqddeeesdsd', '46', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('498', 'kamilffzzz', 'wqwqddeeesdsd', '47', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:36', 'u');
+INSERT INTO `ad_archive` VALUES ('499', 'kamilffzzz', 'wqwqddeeesdsd', '48', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('500', 'kamilffzzz', 'wqwqddeeesdsd', '49', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('501', 'kamilffzzz', 'wqwqddeeesdsd', '50', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('502', 'kamilffzzz', 'wqwqddeeesdsd', '51', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('503', 'kamilffzzz', 'wqwqddeeesdsd', '52', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('504', 'kamilffzzz', 'wqwqddeeesdsd', '53', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:37', 'u');
+INSERT INTO `ad_archive` VALUES ('505', 'kamilffzzz', 'wqwqddeeesdsd', '54', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:38', 'u');
+INSERT INTO `ad_archive` VALUES ('506', 'kamilffzzz', 'wqwqddeeesdsd', '55', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:38', 'u');
+INSERT INTO `ad_archive` VALUES ('507', 'kamilffzzz', 'wqwqddeeesdsd', '56', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:38', 'u');
+INSERT INTO `ad_archive` VALUES ('508', 'kamilffzzz', 'wqwqddeeesdsd', '57', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:38', 'u');
+INSERT INTO `ad_archive` VALUES ('509', 'kamilffzzz', 'wqwqddeeesdsd', '58', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:38', 'u');
+INSERT INTO `ad_archive` VALUES ('510', 'kamilffzzz', 'wqwqddeeesdsd', '59', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:39', 'u');
+INSERT INTO `ad_archive` VALUES ('511', 'kamilffzzz', 'wqwqddeeesdsd', '60', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:39', 'u');
+INSERT INTO `ad_archive` VALUES ('512', 'kamilffzzz', 'wqwqddeeesdsd', '61', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:39', 'u');
+INSERT INTO `ad_archive` VALUES ('513', 'kamilffzzz', 'wqwqddeeesdsd', '62', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:42', 'u');
+INSERT INTO `ad_archive` VALUES ('514', 'kamilffzzz', 'wqwqddeeesdsd', '63', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:43', 'u');
+INSERT INTO `ad_archive` VALUES ('515', 'kamilffzzz', 'wqwqddeeesdsd', '64', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:44', 'u');
+INSERT INTO `ad_archive` VALUES ('516', 'kamilffzzz', 'wqwqddeeesdsd', '65', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:44', 'u');
+INSERT INTO `ad_archive` VALUES ('517', 'kamilffzzz', 'wqwqddeeesdsd', '66', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:44', 'u');
+INSERT INTO `ad_archive` VALUES ('518', 'kamilffzzz', 'wqwqddeeesdsd', '67', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:45', 'u');
+INSERT INTO `ad_archive` VALUES ('519', 'kamilffzzz', 'wqwqddeeesdsd', '68', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:45', 'u');
+INSERT INTO `ad_archive` VALUES ('520', 'kamilffzzz', 'wqwqddeeesdsd', '69', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:46', 'u');
+INSERT INTO `ad_archive` VALUES ('521', 'kamilffzzz', 'wqwqddeeesdsd', '70', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:46', 'u');
+INSERT INTO `ad_archive` VALUES ('522', 'kamilffzzz', 'wqwqddeeesdsd', '71', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('523', 'kamilffzzz', 'wqwqddeeesdsd', '72', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('524', 'kamilffzzz', 'wqwqddeeesdsd', '73', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('525', 'kamilffzzz', 'wqwqddeeesdsd', '74', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('526', 'kamilffzzz', 'wqwqddeeesdsd', '75', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('527', 'kamilffzzz', 'wqwqddeeesdsd', '76', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:47', 'u');
+INSERT INTO `ad_archive` VALUES ('528', 'kamilffzzz', 'wqwqddeeesdsd', '77', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:48', 'u');
+INSERT INTO `ad_archive` VALUES ('529', 'kamilffzzz', 'wqwqddeeesdsd', '78', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:48', 'u');
+INSERT INTO `ad_archive` VALUES ('530', 'kamilffzzz', 'wqwqddeeesdsd', '79', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:48', 'u');
+INSERT INTO `ad_archive` VALUES ('531', 'kamilffzzz', 'wqwqddeeesdsd', '80', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:48', 'u');
+INSERT INTO `ad_archive` VALUES ('532', 'kamilffzzz', 'wqwqddeeesdsd', '81', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:49', 'u');
+INSERT INTO `ad_archive` VALUES ('533', 'kamilffzzz', 'wqwqddeeesdsd', '82', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:49', 'u');
+INSERT INTO `ad_archive` VALUES ('534', 'kamilffzzz', 'wqwqddeeesdsd', '83', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:49', 'u');
+INSERT INTO `ad_archive` VALUES ('535', 'kamilffzzz', 'wqwqddeeesdsd', '84', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:49', 'u');
+INSERT INTO `ad_archive` VALUES ('536', 'kamilffzzz', 'wqwqddeeesdsd', '85', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:49', 'u');
+INSERT INTO `ad_archive` VALUES ('537', 'kamilffzzz', 'wqwqddeeesdsd', '86', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:50', 'u');
+INSERT INTO `ad_archive` VALUES ('538', 'kamilffzzz', 'wqwqddeeesdsd', '87', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:50', 'u');
+INSERT INTO `ad_archive` VALUES ('539', 'kamilffzzz', 'wqwqddeeesdsd', '88', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:50', 'u');
+INSERT INTO `ad_archive` VALUES ('540', 'kamilffzzz', 'wqwqddeeesdsd', '89', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:50', 'u');
+INSERT INTO `ad_archive` VALUES ('541', 'kamilffzzz', 'wqwqddeeesdsd', '90', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:50', 'u');
+INSERT INTO `ad_archive` VALUES ('542', 'kamilffzzz', 'wqwqddeeesdsd', '91', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:51', 'u');
+INSERT INTO `ad_archive` VALUES ('543', 'kamilffzzz', 'wqwqddeeesdsd', '92', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:51', 'u');
+INSERT INTO `ad_archive` VALUES ('544', 'kamilffzzz', 'wqwqddeeesdsd', '93', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:51', 'u');
+INSERT INTO `ad_archive` VALUES ('545', 'kamilffzzz', 'wqwqddeeesdsd', '94', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:51', 'u');
+INSERT INTO `ad_archive` VALUES ('546', 'kamilffzzz', 'wqwqddeeesdsd', '95', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:51', 'u');
+INSERT INTO `ad_archive` VALUES ('547', 'kamilffzzz', 'wqwqddeeesdsd', '96', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 15:58:52', 'u');
+INSERT INTO `ad_archive` VALUES ('548', 'sasdsa', 'wqwqwq', '26', '14', '14', '390', '2017-01-02 20:02:14', '2017-01-16 20:02:14', '123', '65', '2017-01-05 16:04:34', 'd');
+INSERT INTO `ad_archive` VALUES ('549', '1', '11', '2', '14', '12', '84', '2017-01-05 11:23:33', '2017-01-19 11:23:33', '1', '66', '2017-01-05 16:04:37', 'd');
+INSERT INTO `ad_archive` VALUES ('550', 'sa', 'qw', '1', '14', '12', '366', '2017-01-05 15:57:26', '2017-01-19 15:57:26', '12', '69', '2017-01-05 16:30:22', 'u');
+INSERT INTO `ad_archive` VALUES ('551', 'kamilffzzz', 'wqwqddeeesdsd', '97', '14', '13', '84', '2017-01-05 15:27:44', '2017-01-19 15:27:44', '123', '67', '2017-01-05 16:30:36', 'd');
+INSERT INTO `ad_archive` VALUES ('552', 'ew', 'dssd', '0', '14', '13', '693', '2017-01-05 15:50:59', '2017-01-19 15:50:59', '33', '68', '2017-01-05 16:33:36', 'd');
+INSERT INTO `ad_archive` VALUES ('553', 'sa', 'qw', '2', '14', '12', '366', '2017-01-05 15:57:26', '2017-01-19 15:57:26', '12', '69', '2017-01-05 16:34:14', 'd');
+INSERT INTO `ad_archive` VALUES ('554', 'sasa', 'wwew', '0', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-05 17:52:48', 'u');
+INSERT INTO `ad_archive` VALUES ('555', 'sasa', 'wwew', '1', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-05 17:54:08', 'u');
+INSERT INTO `ad_archive` VALUES ('556', 'sasa', 'wwew', '2', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-05 17:54:11', 'u');
+INSERT INTO `ad_archive` VALUES ('557', 'sasa', 'wwew', '3', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-05 19:07:15', 'u');
+INSERT INTO `ad_archive` VALUES ('558', 'sasa', 'wwew', '4', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-06 19:20:15', 'u');
+INSERT INTO `ad_archive` VALUES ('559', 'sasa', 'wwew', '5', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-07 10:45:37', 'u');
+INSERT INTO `ad_archive` VALUES ('560', 'sasa', 'wwew', '6', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-07 11:24:30', 'u');
+INSERT INTO `ad_archive` VALUES ('561', 'sasa', 'wwew', '7', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-07 11:37:02', 'u');
+INSERT INTO `ad_archive` VALUES ('562', 'sasa', 'wwew', '8', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-07 11:43:18', 'u');
+INSERT INTO `ad_archive` VALUES ('563', '&lt;noscript&gt;', 'sas', '0', '39', '12', '84', '2017-01-07 11:53:35', '2017-01-21 11:53:35', '12', '71', '2017-01-07 11:53:43', 'u');
+INSERT INTO `ad_archive` VALUES ('564', '&lt;noscript&gt;', 'sas', '1', '39', '12', '84', '2017-01-07 11:53:35', '2017-01-21 11:53:35', '12', '71', '2017-01-07 12:30:11', 'u');
+INSERT INTO `ad_archive` VALUES ('565', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:30:00', '2017-01-21 12:30:00', '12', '122', '2017-01-07 12:30:22', 'u');
+INSERT INTO `ad_archive` VALUES ('566', '&lt;noscript&gt;', 'sas', '2', '39', '12', '84', '2017-01-07 11:53:35', '2017-01-21 11:53:35', '12', '71', '2017-01-07 12:39:25', 'u');
+INSERT INTO `ad_archive` VALUES ('567', '&lt;noscript&gt;', 'sas', '3', '39', '12', '84', '2017-01-07 11:53:35', '2017-01-21 11:53:35', '12', '71', '2017-01-07 12:39:36', 'd');
+INSERT INTO `ad_archive` VALUES ('568', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:57', '2017-01-21 12:29:57', '12', '120', '2017-01-07 12:40:09', 'u');
+INSERT INTO `ad_archive` VALUES ('569', 'kasia', 'qwqw', '0', '39', '12', '84', '2017-01-07 13:02:22', '2017-01-21 13:02:22', '12', '138', '2017-01-07 13:02:40', 'u');
+INSERT INTO `ad_archive` VALUES ('570', 'kasia', 'qwqw', '1', '39', '12', '84', '2017-01-07 13:02:22', '2017-01-21 13:02:22', '12', '138', '2017-01-07 13:31:48', 'u');
+INSERT INTO `ad_archive` VALUES ('571', 'srajfon', 'wq', '0', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-07 15:05:59', 'u');
+INSERT INTO `ad_archive` VALUES ('572', 'srajfon', 'wq', '1', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-07 15:06:03', 'u');
+INSERT INTO `ad_archive` VALUES ('573', 'srajfon', 'wq', '2', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-07 15:25:49', 'u');
+INSERT INTO `ad_archive` VALUES ('574', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:45', '2017-01-21 14:16:45', '1', '184', '2017-01-07 16:23:17', 'u');
+INSERT INTO `ad_archive` VALUES ('575', 'srajfon', 'wq', '3', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-07 22:15:57', 'u');
+INSERT INTO `ad_archive` VALUES ('576', 'srajfon', 'wq', '4', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-07 22:17:10', 'u');
+INSERT INTO `ad_archive` VALUES ('577', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '0', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-07 23:17:43', 'u');
+INSERT INTO `ad_archive` VALUES ('578', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '1', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-07 23:18:01', 'u');
+INSERT INTO `ad_archive` VALUES ('579', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '2', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-07 23:25:05', 'u');
+INSERT INTO `ad_archive` VALUES ('580', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '3', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-07 23:43:14', 'u');
+INSERT INTO `ad_archive` VALUES ('581', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '4', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-07 23:43:25', 'u');
+INSERT INTO `ad_archive` VALUES ('582', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '185', '2017-01-07 23:46:55', 'u');
+INSERT INTO `ad_archive` VALUES ('583', 'a', 'qqq', '1', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '185', '2017-01-07 23:46:55', 'u');
+INSERT INTO `ad_archive` VALUES ('584', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '186', '2017-01-07 23:48:32', 'u');
+INSERT INTO `ad_archive` VALUES ('585', 'a', 'sasa', '0', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 00:01:54', 'u');
+INSERT INTO `ad_archive` VALUES ('586', 'a', 'sasa', '1', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 00:30:04', 'u');
+INSERT INTO `ad_archive` VALUES ('587', 'a', 'qqq', '1', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '186', '2017-01-08 00:31:25', 'u');
+INSERT INTO `ad_archive` VALUES ('588', 'a', 'sasa', '2', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 00:36:29', 'u');
+INSERT INTO `ad_archive` VALUES ('589', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:27', '2017-01-21 12:28:27', '12', '79', '2017-01-08 00:45:10', 'u');
+INSERT INTO `ad_archive` VALUES ('590', 'asas', 'aa', '0', '39', '12', '172', '2017-01-08 00:31:45', '2017-01-22 00:31:45', '1', '190', '2017-01-08 00:50:59', 'u');
+INSERT INTO `ad_archive` VALUES ('591', 'asas', 'aa', '1', '39', '12', '172', '2017-01-08 00:31:45', '2017-01-22 00:31:45', '1', '190', '2017-01-08 00:52:50', 'u');
+INSERT INTO `ad_archive` VALUES ('592', 'a', 'sasa', '3', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 09:55:15', 'u');
+INSERT INTO `ad_archive` VALUES ('593', 'sasa', 'wwew', '9', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-08 10:51:21', 'u');
+INSERT INTO `ad_archive` VALUES ('594', 'aaa', 'Sprzedam coś i tak dalej', '0', '37', '12', '84', '2017-01-08 11:21:44', '2017-01-22 11:21:44', '12', '191', '2017-01-08 11:21:48', 'u');
+INSERT INTO `ad_archive` VALUES ('595', 'ania', '&lt;noscript&gt;', '0', '37', '12', '84', '2017-01-08 11:22:05', '2017-01-22 11:22:05', '123', '192', '2017-01-08 11:22:09', 'u');
+INSERT INTO `ad_archive` VALUES ('596', 'asas', 'aa', '2', '39', '12', '172', '2017-01-08 00:31:45', '2017-01-22 00:31:45', '1', '190', '2017-01-08 11:40:45', 'u');
+INSERT INTO `ad_archive` VALUES ('597', 'ania', '&lt;noscript&gt;', '1', '37', '12', '84', '2017-01-08 11:22:05', '2017-01-22 11:22:05', '123', '192', '2017-01-08 12:00:04', 'u');
+INSERT INTO `ad_archive` VALUES ('598', 'asas', 'asas', '0', '37', '15', '763', '2017-01-08 12:11:36', '2017-01-22 12:11:36', '123', '193', '2017-01-08 12:13:59', 'u');
+INSERT INTO `ad_archive` VALUES ('599', 'asas', 'asas', '1', '37', '15', '763', '2017-01-08 12:11:36', '2017-01-22 12:11:36', '123', '193', '2017-01-08 12:18:07', 'u');
+INSERT INTO `ad_archive` VALUES ('600', 'asas', 'asas', '2', '37', '15', '763', '2017-01-08 12:11:36', '2017-01-22 12:11:36', '123', '193', '2017-01-08 12:18:48', 'u');
+INSERT INTO `ad_archive` VALUES ('601', 'asas', 'asas', '3', '37', '15', '763', '2017-01-08 12:11:36', '2017-01-22 12:11:36', '123', '193', '2017-01-08 12:20:55', 'u');
+INSERT INTO `ad_archive` VALUES ('602', 'ania', '&lt;noscript&gt;', '2', '37', '12', '84', '2017-01-08 11:22:05', '2017-01-22 11:22:05', '123', '192', '2017-01-08 12:21:30', 'u');
+INSERT INTO `ad_archive` VALUES ('603', 'a', 'sasa', '4', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 12:29:17', 'u');
+INSERT INTO `ad_archive` VALUES ('604', 'ania', '&lt;noscript&gt;', '3', '37', '12', '84', '2017-01-08 11:22:05', '2017-01-22 11:22:05', '123', '192', '2017-01-08 12:36:25', 'u');
+INSERT INTO `ad_archive` VALUES ('605', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asas', '0', '37', '12', '172', '2017-01-08 12:37:22', '2017-01-22 12:37:22', '123', '194', '2017-01-08 14:30:48', 'u');
+INSERT INTO `ad_archive` VALUES ('606', 'test', '123', '0', '37', '12', '671', '2017-01-08 17:28:41', '2017-01-22 17:28:41', '123', '195', '2017-01-08 17:29:11', 'u');
+INSERT INTO `ad_archive` VALUES ('607', 'qw', 'asdsasdsad', '0', '37', '12', '459', '2017-01-08 17:30:02', '2017-01-22 17:30:02', '12', '196', '2017-01-08 17:30:08', 'u');
+INSERT INTO `ad_archive` VALUES ('608', 'test', 'asdsad', '0', '37', '12', '98', '2017-01-08 17:30:31', '2017-01-22 17:30:31', '12', '197', '2017-01-08 17:30:37', 'u');
+INSERT INTO `ad_archive` VALUES ('609', 'wqwqw', 'sdd', '0', '37', '12', '459', '2017-01-08 17:32:39', '2017-01-22 17:32:39', '123', '198', '2017-01-08 17:32:45', 'u');
+INSERT INTO `ad_archive` VALUES ('610', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asas', '1', '37', '12', '172', '2017-01-08 12:37:22', '2017-01-22 12:37:22', '123', '194', '2017-01-08 17:43:52', 'u');
+INSERT INTO `ad_archive` VALUES ('611', 'wqwqw', 'sdd', '1', '37', '12', '459', '2017-01-08 17:32:39', '2017-01-22 17:32:39', '123', '198', '2017-01-08 17:48:08', 'u');
+INSERT INTO `ad_archive` VALUES ('612', 'test', 'asdsad', '1', '37', '12', '98', '2017-01-08 17:30:31', '2017-01-22 17:30:31', '12', '197', '2017-01-08 17:48:12', 'u');
+INSERT INTO `ad_archive` VALUES ('613', 'qw', 'asdsasdsad', '1', '37', '12', '459', '2017-01-08 17:30:02', '2017-01-22 17:30:02', '12', '196', '2017-01-08 17:48:15', 'u');
+INSERT INTO `ad_archive` VALUES ('614', '12', 'qw', '0', '37', '12', '913', '2017-01-08 18:06:00', '2017-01-22 18:06:00', '12', '199', '2017-01-08 18:06:10', 'u');
+INSERT INTO `ad_archive` VALUES ('615', 'asas', 'assa', '0', '37', '12', '172', '2017-01-08 18:19:25', '2017-01-22 18:19:25', '12', '201', '2017-01-08 18:19:31', 'u');
+INSERT INTO `ad_archive` VALUES ('616', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:03', '2017-01-21 12:28:03', '12', '72', '2017-01-08 19:59:32', 'd');
+INSERT INTO `ad_archive` VALUES ('617', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:06', '2017-01-21 12:28:06', '12', '73', '2017-01-08 20:00:22', 'd');
+INSERT INTO `ad_archive` VALUES ('618', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:09', '2017-01-21 12:28:09', '12', '74', '2017-01-08 20:01:22', 'd');
+INSERT INTO `ad_archive` VALUES ('619', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:11', '2017-01-21 12:28:11', '12', '75', '2017-01-08 20:02:17', 'd');
+INSERT INTO `ad_archive` VALUES ('620', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:15', '2017-01-21 12:28:15', '12', '76', '2017-01-08 20:03:19', 'd');
+INSERT INTO `ad_archive` VALUES ('621', 'sasa', 'wwew', '10', '37', '12', '459', '2017-01-05 17:52:36', '2017-01-19 17:52:36', '12', '70', '2017-01-08 20:03:41', 'd');
+INSERT INTO `ad_archive` VALUES ('622', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:19', '2017-01-21 12:28:19', '12', '77', '2017-01-08 20:04:06', 'd');
+INSERT INTO `ad_archive` VALUES ('623', 'asas', 'aa', '3', '39', '12', '172', '2017-01-08 00:31:45', '2017-01-22 00:31:45', '1', '190', '2017-01-08 20:04:51', 'd');
+INSERT INTO `ad_archive` VALUES ('624', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:09', '2017-01-21 12:29:09', '12', '87', '2017-01-08 20:04:55', 'd');
+INSERT INTO `ad_archive` VALUES ('625', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:11', '2017-01-21 12:29:11', '12', '88', '2017-01-08 20:04:58', 'd');
+INSERT INTO `ad_archive` VALUES ('626', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:13', '2017-01-21 12:29:13', '12', '89', '2017-01-08 20:05:01', 'd');
+INSERT INTO `ad_archive` VALUES ('627', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:15', '2017-01-21 12:29:15', '12', '90', '2017-01-08 20:05:04', 'd');
+INSERT INTO `ad_archive` VALUES ('628', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:16', '2017-01-21 12:29:16', '12', '91', '2017-01-08 20:05:05', 'd');
+INSERT INTO `ad_archive` VALUES ('629', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:18', '2017-01-21 12:29:18', '12', '92', '2017-01-08 20:05:07', 'd');
+INSERT INTO `ad_archive` VALUES ('630', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:19', '2017-01-21 12:29:19', '12', '93', '2017-01-08 20:05:09', 'd');
+INSERT INTO `ad_archive` VALUES ('631', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:21', '2017-01-21 12:29:21', '12', '94', '2017-01-08 20:05:10', 'd');
+INSERT INTO `ad_archive` VALUES ('632', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:22', '2017-01-21 12:29:22', '12', '95', '2017-01-08 20:05:12', 'd');
+INSERT INTO `ad_archive` VALUES ('633', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:24', '2017-01-21 12:29:24', '12', '96', '2017-01-08 20:05:13', 'd');
+INSERT INTO `ad_archive` VALUES ('634', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:25', '2017-01-21 12:29:25', '12', '97', '2017-01-08 20:05:15', 'd');
+INSERT INTO `ad_archive` VALUES ('635', 'asas', 'sas', '0', '43', '12', '84', '2017-01-08 20:07:09', '2017-01-22 20:07:09', '1', '202', '2017-01-08 20:07:16', 'u');
+INSERT INTO `ad_archive` VALUES ('636', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:22', '2017-01-21 12:28:22', '12', '78', '2017-01-08 20:08:10', 'd');
+INSERT INTO `ad_archive` VALUES ('637', 'asas', 'sas', '1', '43', '12', '84', '2017-01-08 20:07:09', '2017-01-22 20:07:09', '1', '202', '2017-01-08 20:08:45', 'd');
+INSERT INTO `ad_archive` VALUES ('638', 'a', 'qq', '1', '39', '12', '366', '2017-01-07 12:28:27', '2017-01-21 12:28:27', '12', '79', '2017-01-08 20:08:54', 'd');
+INSERT INTO `ad_archive` VALUES ('639', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:29', '2017-01-21 12:28:29', '12', '80', '2017-01-08 20:09:21', 'd');
+INSERT INTO `ad_archive` VALUES ('640', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:34', '2017-01-21 12:28:34', '12', '81', '2017-01-08 20:09:57', 'd');
+INSERT INTO `ad_archive` VALUES ('641', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:38', '2017-01-21 12:28:38', '12', '82', '2017-01-08 20:10:07', 'd');
+INSERT INTO `ad_archive` VALUES ('642', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:42', '2017-01-21 12:28:42', '12', '83', '2017-01-08 20:11:46', 'd');
+INSERT INTO `ad_archive` VALUES ('643', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:45', '2017-01-21 12:28:45', '12', '84', '2017-01-08 20:11:53', 'd');
+INSERT INTO `ad_archive` VALUES ('644', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:47', '2017-01-21 12:28:47', '12', '85', '2017-01-08 20:13:09', 'd');
+INSERT INTO `ad_archive` VALUES ('645', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:28:49', '2017-01-21 12:28:49', '12', '86', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('646', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:27', '2017-01-21 12:29:27', '12', '98', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('647', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:28', '2017-01-21 12:29:28', '12', '99', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('648', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:30', '2017-01-21 12:29:30', '12', '100', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('649', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:31', '2017-01-21 12:29:31', '12', '101', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('650', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:33', '2017-01-21 12:29:33', '12', '102', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('651', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:34', '2017-01-21 12:29:34', '12', '103', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('652', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:36', '2017-01-21 12:29:36', '12', '104', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('653', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:37', '2017-01-21 12:29:37', '12', '105', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('654', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:38', '2017-01-21 12:29:38', '12', '106', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('655', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:40', '2017-01-21 12:29:40', '12', '107', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('656', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:41', '2017-01-21 12:29:41', '12', '108', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('657', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:42', '2017-01-21 12:29:42', '12', '109', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('658', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:43', '2017-01-21 12:29:43', '12', '110', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('659', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:45', '2017-01-21 12:29:45', '12', '111', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('660', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:46', '2017-01-21 12:29:46', '12', '112', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('661', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:47', '2017-01-21 12:29:47', '12', '113', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('662', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:48', '2017-01-21 12:29:48', '12', '114', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('663', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:49', '2017-01-21 12:29:49', '12', '115', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('664', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:51', '2017-01-21 12:29:51', '12', '116', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('665', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:52', '2017-01-21 12:29:52', '12', '117', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('666', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:53', '2017-01-21 12:29:53', '12', '118', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('667', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:55', '2017-01-21 12:29:55', '12', '119', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('668', 'a', 'qq', '1', '39', '12', '366', '2017-01-07 12:29:57', '2017-01-21 12:29:57', '12', '120', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('669', 'a', 'qq', '0', '39', '12', '366', '2017-01-07 12:29:59', '2017-01-21 12:29:59', '12', '121', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('670', 'a', 'qq', '1', '39', '12', '366', '2017-01-07 12:30:00', '2017-01-21 12:30:00', '12', '122', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('671', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:42', '2017-01-21 12:49:42', '1', '123', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('672', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:44', '2017-01-21 12:49:44', '1', '124', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('673', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:45', '2017-01-21 12:49:45', '1', '125', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('674', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:47', '2017-01-21 12:49:47', '1', '126', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('675', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:49', '2017-01-21 12:49:49', '1', '127', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('676', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:51', '2017-01-21 12:49:51', '1', '128', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('677', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:53', '2017-01-21 12:49:53', '1', '129', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('678', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:49:54', '2017-01-21 12:49:54', '1', '130', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('679', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:50:01', '2017-01-21 12:50:01', '1', '131', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('680', 'q', 'qwqw', '0', '39', '12', '470', '2017-01-07 12:50:08', '2017-01-21 12:50:08', '1', '132', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('681', 'aaa', 's', '0', '39', '14', '295', '2017-01-07 12:59:41', '2017-01-21 12:59:41', '1', '133', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('682', 'aaa', 's', '0', '39', '14', '295', '2017-01-07 12:59:43', '2017-01-21 12:59:43', '1', '134', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('683', 'aaa', 's', '0', '39', '14', '295', '2017-01-07 12:59:44', '2017-01-21 12:59:44', '1', '135', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('684', 'aaa', 's', '0', '39', '14', '295', '2017-01-07 12:59:45', '2017-01-21 12:59:45', '1', '136', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('685', 'aaa', 's', '0', '39', '14', '295', '2017-01-07 12:59:46', '2017-01-21 12:59:46', '1', '137', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('686', 'kasia', 'qwqw', '2', '39', '12', '84', '2017-01-07 13:02:22', '2017-01-21 13:02:22', '12', '138', '2017-01-08 20:15:09', 'd');
+INSERT INTO `ad_archive` VALUES ('687', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:15:56', '2017-01-21 14:15:56', '1', '139', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('688', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:15:57', '2017-01-21 14:15:57', '1', '140', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('689', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:15:58', '2017-01-21 14:15:58', '1', '141', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('690', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:00', '2017-01-21 14:16:00', '1', '142', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('691', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:01', '2017-01-21 14:16:01', '1', '143', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('692', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:01', '2017-01-21 14:16:01', '1', '144', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('693', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:02', '2017-01-21 14:16:02', '1', '145', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('694', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:03', '2017-01-21 14:16:03', '1', '146', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('695', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:03', '2017-01-21 14:16:03', '1', '147', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('696', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:05', '2017-01-21 14:16:05', '1', '148', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('697', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:06', '2017-01-21 14:16:06', '1', '149', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('698', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:07', '2017-01-21 14:16:07', '1', '150', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('699', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:08', '2017-01-21 14:16:08', '1', '151', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('700', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:09', '2017-01-21 14:16:09', '1', '152', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('701', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:10', '2017-01-21 14:16:10', '1', '153', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('702', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:11', '2017-01-21 14:16:11', '1', '154', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('703', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:12', '2017-01-21 14:16:12', '1', '155', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('704', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:13', '2017-01-21 14:16:13', '1', '156', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('705', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:14', '2017-01-21 14:16:14', '1', '157', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('706', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:15', '2017-01-21 14:16:15', '1', '158', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('707', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:16', '2017-01-21 14:16:16', '1', '159', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('708', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:17', '2017-01-21 14:16:17', '1', '160', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('709', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:17', '2017-01-21 14:16:17', '1', '161', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('710', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:18', '2017-01-21 14:16:18', '1', '162', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('711', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:19', '2017-01-21 14:16:19', '1', '163', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('712', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:20', '2017-01-21 14:16:20', '1', '164', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('713', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:21', '2017-01-21 14:16:21', '1', '165', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('714', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:22', '2017-01-21 14:16:22', '1', '166', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('715', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:22', '2017-01-21 14:16:22', '1', '167', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('716', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:23', '2017-01-21 14:16:23', '1', '168', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('717', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:24', '2017-01-21 14:16:24', '1', '169', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('718', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:25', '2017-01-21 14:16:25', '1', '170', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('719', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:26', '2017-01-21 14:16:26', '1', '171', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('720', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:26', '2017-01-21 14:16:26', '1', '172', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('721', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:34', '2017-01-21 14:16:34', '1', '173', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('722', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:35', '2017-01-21 14:16:35', '1', '174', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('723', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:36', '2017-01-21 14:16:36', '1', '175', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('724', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:37', '2017-01-21 14:16:37', '1', '176', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('725', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:38', '2017-01-21 14:16:38', '1', '177', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('726', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:39', '2017-01-21 14:16:39', '1', '178', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('727', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:40', '2017-01-21 14:16:40', '1', '179', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('728', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:41', '2017-01-21 14:16:41', '1', '180', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('729', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:42', '2017-01-21 14:16:42', '1', '181', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('730', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:43', '2017-01-21 14:16:43', '1', '182', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('731', 'a', 'qqq', '0', '37', '14', '84', '2017-01-07 14:16:44', '2017-01-21 14:16:44', '1', '183', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('732', 'a', 'qqq', '1', '37', '14', '84', '2017-01-07 14:16:45', '2017-01-21 14:16:45', '1', '184', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('733', 'a', 'qqq', '2', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '185', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('734', 'a', 'qqq', '2', '37', '14', '84', '2017-01-07 14:16:46', '2017-01-21 14:16:46', '1', '186', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('735', 'srajfon', 'wq', '5', '37', '13', '84', '2017-01-07 15:04:33', '2017-01-21 15:04:33', '12', '187', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('736', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'sas', '5', '37', '12', '459', '2017-01-07 22:18:33', '2017-01-21 22:18:33', '12', '188', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('737', 'a', 'sasa', '5', '37', '12', '84', '2017-01-08 00:01:20', '2017-01-22 00:01:20', '1234678978', '189', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('738', 'aaa', 'Sprzedam coś i tak dalej', '1', '37', '12', '84', '2017-01-08 11:21:44', '2017-01-22 11:21:44', '12', '191', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('739', 'ania', '&lt;noscript&gt;', '4', '37', '12', '84', '2017-01-08 11:22:05', '2017-01-22 11:22:05', '123', '192', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('740', 'asas', 'asas', '4', '37', '15', '763', '2017-01-08 12:11:36', '2017-01-22 12:11:36', '123', '193', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('741', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'asas', '2', '37', '12', '172', '2017-01-08 12:37:22', '2017-01-22 12:37:22', '123', '194', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('742', 'test', '123', '1', '37', '12', '671', '2017-01-08 17:28:41', '2017-01-22 17:28:41', '123', '195', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('743', 'qw', 'asdsasdsad', '2', '37', '12', '459', '2017-01-08 17:30:02', '2017-01-22 17:30:02', '12', '196', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('744', 'test', 'asdsad', '2', '37', '12', '98', '2017-01-08 17:30:31', '2017-01-22 17:30:31', '12', '197', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('745', 'wqwqw', 'sdd', '2', '37', '12', '459', '2017-01-08 17:32:39', '2017-01-22 17:32:39', '123', '198', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('746', '12', 'qw', '1', '37', '12', '913', '2017-01-08 18:06:00', '2017-01-22 18:06:00', '12', '199', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('747', 'asas', 'assa', '0', '37', '12', '172', '2017-01-08 18:19:10', '2017-01-22 18:19:10', '12', '200', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('748', 'asas', 'assa', '1', '37', '12', '172', '2017-01-08 18:19:25', '2017-01-22 18:19:25', '12', '201', '2017-01-08 20:16:35', 'd');
+INSERT INTO `ad_archive` VALUES ('749', 'asasas', 'qwer', '0', '44', '12', '366', '2017-01-08 20:20:22', '2017-01-22 20:20:22', '123', '204', '2017-01-08 20:20:28', 'u');
+INSERT INTO `ad_archive` VALUES ('750', 'asasas', 'qwer', '0', '44', '12', '366', '2017-01-08 20:19:29', '2017-01-22 20:19:29', '123', '203', '2017-01-08 20:20:44', 'u');
+INSERT INTO `ad_archive` VALUES ('751', 'asasas', 'qwer', '1', '44', '12', '366', '2017-01-08 20:19:29', '2017-01-22 20:19:29', '123', '203', '2017-01-08 20:25:49', 'd');
+INSERT INTO `ad_archive` VALUES ('752', 'asasas', 'qwer', '1', '44', '12', '366', '2017-01-08 20:20:22', '2017-01-22 20:20:22', '123', '204', '2017-01-08 20:25:58', 'd');
+INSERT INTO `ad_archive` VALUES ('753', 'aaa', 'qwqw', '0', '45', '12', '84', '2017-01-08 20:29:58', '2017-01-22 20:29:58', '12', '205', '2017-01-08 20:30:05', 'u');
+INSERT INTO `ad_archive` VALUES ('754', 'aaa', 'qwqw', '1', '45', '12', '84', '2017-01-08 20:29:58', '2017-01-22 20:29:58', '12', '205', '2017-01-08 20:30:45', 'u');
+INSERT INTO `ad_archive` VALUES ('755', 'aaa', 'qwqw', '2', '45', '12', '84', '2017-01-08 20:29:58', '2017-01-22 20:29:58', '12', '205', '2017-01-08 20:31:19', 'u');
+INSERT INTO `ad_archive` VALUES ('756', 'aaa', 'qwqw', '2', '45', '12', '84', '2017-01-08 20:29:58', '2017-01-22 20:29:58', '12', '205', '2017-01-08 20:31:54', 'u');
+INSERT INTO `ad_archive` VALUES ('757', 'aaa', 'qwqw', '2', '45', '12', '84', '2017-01-08 20:29:58', '2017-01-22 20:29:58', '12', '205', '2017-01-08 20:36:40', 'd');
+INSERT INTO `ad_archive` VALUES ('758', 'ania', 'qwqw', '0', '46', '12', '366', '2017-01-08 20:42:00', '2017-01-22 20:42:00', '123', '207', '2017-01-08 20:42:06', 'u');
+INSERT INTO `ad_archive` VALUES ('759', 'ania', 'qwqw', '0', '46', '12', '366', '2017-01-08 20:41:58', '2017-01-22 20:41:58', '123', '206', '2017-01-08 20:42:10', 'u');
+INSERT INTO `ad_archive` VALUES ('760', 'aa', 'qwqw', '0', '46', '12', '366', '2017-01-08 20:42:26', '2017-01-22 20:42:26', '12', '208', '2017-01-08 20:42:32', 'u');
+INSERT INTO `ad_archive` VALUES ('761', 'ania', 'qwqw', '1', '46', '12', '366', '2017-01-08 20:41:58', '2017-01-22 20:41:58', '123', '206', '2017-01-08 20:42:58', 'u');
+INSERT INTO `ad_archive` VALUES ('762', 'aa', 'qwqw', '1', '46', '12', '366', '2017-01-08 20:42:26', '2017-01-22 20:42:26', '12', '208', '2017-01-08 20:43:15', 'u');
+INSERT INTO `ad_archive` VALUES ('763', 'ania', 'qwqw', '1', '46', '12', '366', '2017-01-08 20:41:58', '2017-01-22 20:41:58', '123', '206', '2017-01-08 20:43:32', 'd');
+INSERT INTO `ad_archive` VALUES ('764', 'ania', 'qwqw', '1', '46', '12', '366', '2017-01-08 20:42:00', '2017-01-22 20:42:00', '123', '207', '2017-01-08 20:43:35', 'd');
+INSERT INTO `ad_archive` VALUES ('765', 'aa', 'qwqw', '2', '46', '12', '366', '2017-01-08 20:42:26', '2017-01-22 20:42:26', '12', '208', '2017-01-08 20:43:38', 'd');
+INSERT INTO `ad_archive` VALUES ('766', 'aa', 'asasa', '0', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 20:51:18', 'u');
+INSERT INTO `ad_archive` VALUES ('767', 'aa', 'asasa', '0', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 20:51:24', 'u');
+INSERT INTO `ad_archive` VALUES ('768', 'aa', 'asasa', '1', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 20:53:25', 'u');
+INSERT INTO `ad_archive` VALUES ('769', 'aa', 'asasa', '1', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 20:53:31', 'u');
+INSERT INTO `ad_archive` VALUES ('770', 'aa', 'asasa', '2', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 20:53:57', 'u');
+INSERT INTO `ad_archive` VALUES ('771', 'asasas', 'qsqsq', '0', '47', '12', '84', '2017-01-08 20:54:55', '2017-01-22 20:54:55', '12', '210', '2017-01-08 20:55:11', 'u');
+INSERT INTO `ad_archive` VALUES ('772', 'asasas', 'qsqsq', '0', '47', '12', '84', '2017-01-08 20:54:55', '2017-01-22 20:54:55', '12', '210', '2017-01-08 22:04:46', 'u');
+INSERT INTO `ad_archive` VALUES ('773', 'asasas', 'qsqsq', '1', '47', '12', '84', '2017-01-08 20:54:55', '2017-01-22 20:54:55', '12', '210', '2017-01-08 22:05:12', 'u');
+INSERT INTO `ad_archive` VALUES ('774', 'asasas', 'qsqsq', '1', '47', '12', '84', '2017-01-08 20:54:55', '2017-01-22 20:54:55', '12', '210', '2017-01-08 22:05:20', 'u');
+INSERT INTO `ad_archive` VALUES ('775', 'asasas', 'qsqsq', '2', '47', '12', '84', '2017-01-08 20:54:55', '2017-01-22 20:54:55', '12', '210', '2017-01-08 22:15:05', 'd');
+INSERT INTO `ad_archive` VALUES ('776', 'aa', 'asasa', '2', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-08 22:16:34', 'u');
+INSERT INTO `ad_archive` VALUES ('777', 'a', 'asasa', '0', '48', '13', '509', '2017-01-08 22:23:14', '2017-01-22 22:23:14', '1', '211', '2017-01-08 22:28:22', 'd');
+INSERT INTO `ad_archive` VALUES ('778', 'a', 'asasa', '0', '48', '13', '509', '2017-01-08 22:23:23', '2017-01-22 22:23:23', '1', '212', '2017-01-08 22:31:07', 'd');
+INSERT INTO `ad_archive` VALUES ('779', 'aa', 'asasa', '3', '37', '12', '172', '2017-01-08 20:51:05', '2017-01-22 20:51:05', '11', '209', '2017-01-09 18:13:00', 'd');
+INSERT INTO `ad_archive` VALUES ('780', 'as', 'asas', '0', '49', '12', '172', '2017-01-08 22:23:44', '2017-01-22 22:23:44', '12', '213', '2017-01-09 18:13:04', 'd');
+INSERT INTO `ad_archive` VALUES ('781', 'ala', 'asa', '0', '50', '12', '366', '2017-01-09 18:18:15', '2017-01-23 18:18:15', '12', '215', '2017-01-09 18:22:04', 'u');
+INSERT INTO `ad_archive` VALUES ('782', 'ala', 'asa', '0', '50', '12', '366', '2017-01-09 18:18:15', '2017-01-23 18:18:15', '12', '215', '2017-01-09 18:35:56', 'd');
+INSERT INTO `ad_archive` VALUES ('783', 'ala', 'asa', '0', '50', '12', '366', '2017-01-09 18:18:19', '2017-01-23 18:18:19', '12', '216', '2017-01-09 18:37:05', 'd');
+INSERT INTO `ad_archive` VALUES ('784', 'aa', 'sas', '0', '51', '12', '853', '2017-01-09 18:41:25', '2017-01-23 18:41:25', '12', '217', '2017-01-09 19:12:58', 'd');
+INSERT INTO `ad_archive` VALUES ('785', 'aa', 'sas', '0', '51', '12', '853', '2017-01-09 18:41:29', '2017-01-23 18:41:29', '12', '218', '2017-01-09 19:13:03', 'd');
+INSERT INTO `ad_archive` VALUES ('786', 'as', 'asas', '0', '49', '12', '172', '2017-01-08 22:23:51', '2017-01-22 22:23:51', '12', '214', '2017-01-09 19:14:29', 'd');
+INSERT INTO `ad_archive` VALUES ('787', 'aaa', 'asas', '0', '53', '12', '366', '2017-01-09 19:19:57', '2017-01-23 19:19:57', '123', '222', '2017-01-09 19:23:20', 'd');
+INSERT INTO `ad_archive` VALUES ('788', 'aaa', 'asas', '0', '53', '12', '366', '2017-01-09 19:20:04', '2017-01-23 19:20:04', '123', '223', '2017-01-09 19:29:34', 'd');
+INSERT INTO `ad_archive` VALUES ('789', 'aa', 'asasa', '0', '52', '12', '526', '2017-01-09 19:19:10', '2017-01-23 19:19:10', '12', '221', '2017-01-09 19:36:36', 'u');
+INSERT INTO `ad_archive` VALUES ('790', 'a', 'asas', '0', '54', '12', '366', '2017-01-09 19:42:47', '2017-01-23 19:42:47', '12', '224', '2017-01-09 19:43:12', 'd');
+INSERT INTO `ad_archive` VALUES ('794', 'a', 'asas', '0', '54', '12', '366', '2017-01-09 19:42:54', '2017-01-23 19:42:54', '12', '225', '2017-01-09 20:02:06', 'd');
+INSERT INTO `ad_archive` VALUES ('801', '12', 'asas', '0', '55', '12', '172', '2017-01-09 19:47:46', '2017-01-23 19:47:46', '12', '226', '2017-01-09 20:17:52', 'd');
+INSERT INTO `ad_archive` VALUES ('802', '12', 'asas', '0', '55', '12', '172', '2017-01-09 19:47:50', '2017-01-23 19:47:50', '12', '227', '2017-01-09 20:17:52', 'd');
+INSERT INTO `ad_archive` VALUES ('803', 'karina', 'as', '0', '56', '12', '172', '2017-01-09 20:19:27', '2017-01-23 20:19:27', '12', '228', '2017-01-09 20:20:32', 'd');
+INSERT INTO `ad_archive` VALUES ('804', 'karina', 'as', '0', '56', '12', '172', '2017-01-09 20:19:34', '2017-01-23 20:19:34', '12', '229', '2017-01-09 20:20:32', 'd');
+INSERT INTO `ad_archive` VALUES ('805', 'katerena', 'katerena', '0', '57', '12', '526', '2017-01-09 20:23:08', '2017-01-23 20:23:08', '12', '230', '2017-01-09 20:25:35', 'd');
+INSERT INTO `ad_archive` VALUES ('806', 'katerena', 'katerena', '0', '57', '12', '526', '2017-01-09 20:23:12', '2017-01-23 20:23:12', '12', '231', '2017-01-09 20:25:35', 'd');
+INSERT INTO `ad_archive` VALUES ('807', 'aa', 'asasa', '0', '52', '12', '526', '2017-01-09 19:18:40', '2017-01-23 19:18:40', '12', '219', '2017-01-09 20:26:16', 'd');
+INSERT INTO `ad_archive` VALUES ('808', 'aa', 'asasa', '0', '52', '12', '526', '2017-01-09 19:18:46', '2017-01-23 19:18:46', '12', '220', '2017-01-09 20:26:16', 'd');
+INSERT INTO `ad_archive` VALUES ('809', 'aa', 'asasa', '1', '52', '12', '526', '2017-01-09 19:19:10', '2017-01-23 19:19:10', '12', '221', '2017-01-09 20:26:16', 'd');
+INSERT INTO `ad_archive` VALUES ('810', 'qa', 'asas', '0', '58', '12', '172', '2017-01-09 20:29:23', '2017-01-23 20:29:23', '1', '232', '2017-01-09 20:30:10', 'u');
+INSERT INTO `ad_archive` VALUES ('811', 'qa', 'asas', '0', '58', '12', '172', '2017-01-09 20:29:27', '2017-01-23 20:29:27', '1', '233', '2017-01-09 20:30:16', 'u');
+INSERT INTO `ad_archive` VALUES ('812', 'qa', 'asas', '0', '58', '12', '172', '2017-01-09 20:29:23', '2017-01-23 20:29:23', '1', '232', '2017-01-09 20:30:20', 'u');
+INSERT INTO `ad_archive` VALUES ('813', 'qa', 'asas', '1', '58', '12', '172', '2017-01-09 20:29:27', '2017-01-23 20:29:27', '1', '233', '2017-01-09 20:30:24', 'u');
+INSERT INTO `ad_archive` VALUES ('814', 'qa', 'asas', '2', '58', '12', '172', '2017-01-09 20:29:27', '2017-01-23 20:29:27', '1', '233', '2017-01-09 20:30:36', 'u');
+INSERT INTO `ad_archive` VALUES ('815', 'qa', 'asas', '2', '58', '12', '172', '2017-01-09 20:29:27', '2017-01-23 20:29:27', '1', '233', '2017-01-09 20:30:41', 'u');
+INSERT INTO `ad_archive` VALUES ('816', 'qa', 'asas', '1', '58', '12', '172', '2017-01-09 20:29:23', '2017-01-23 20:29:23', '1', '232', '2017-01-09 20:31:02', 'd');
+INSERT INTO `ad_archive` VALUES ('817', 'qa', 'asas', '3', '58', '12', '172', '2017-01-09 20:29:27', '2017-01-23 20:29:27', '1', '233', '2017-01-09 20:31:02', 'd');
+INSERT INTO `ad_archive` VALUES ('818', 'asasa', 'qwqw', '0', '37', '12', '172', '2017-01-09 22:41:07', '2017-01-23 22:41:07', '12', '235', '2017-01-09 22:45:04', 'u');
+INSERT INTO `ad_archive` VALUES ('819', 'asasa', 'qwqw', '0', '37', '12', '172', '2017-01-09 22:41:07', '2017-01-23 22:41:07', '1223', '235', '2017-01-09 22:46:03', 'u');
+INSERT INTO `ad_archive` VALUES ('820', 'a', 'asas', '0', '44', '12', '172', '2017-01-10 00:55:43', '2017-01-24 00:55:43', '1', '236', '2017-01-10 01:00:03', 'd');
+INSERT INTO `ad_archive` VALUES ('821', 'a', 'asas', '0', '44', '12', '172', '2017-01-10 00:55:46', '2017-01-24 00:55:46', '1', '237', '2017-01-10 01:00:03', 'd');
 
 -- ----------------------------
 -- Table structure for `category`
@@ -663,7 +1356,6 @@ CREATE TABLE `gallery` (
 -- ----------------------------
 -- Records of gallery
 -- ----------------------------
-INSERT INTO `gallery` VALUES ('20', '27');
 
 -- ----------------------------
 -- Table structure for `gender`
@@ -1621,63 +2313,6 @@ INSERT INTO `location` VALUES ('918', 'Byczyna', '16', '16004');
 INSERT INTO `location` VALUES ('919', 'Leszno', '30', '300063');
 
 -- ----------------------------
--- Table structure for `message`
--- ----------------------------
-DROP TABLE IF EXISTS `message`;
-CREATE TABLE `message` (
-  `id_message` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `from_message` int(10) unsigned NOT NULL,
-  `to_message` int(10) unsigned NOT NULL,
-  `ad_message` int(10) unsigned NOT NULL,
-  `title_message` varchar(50) NOT NULL,
-  `content_message` text NOT NULL,
-  `parent_message` int(10) unsigned DEFAULT NULL,
-  `send_date_message` datetime NOT NULL,
-  `receive_date_message` datetime NOT NULL,
-  PRIMARY KEY (`id_message`),
-  KEY `parent_message_FK` (`parent_message`),
-  KEY `ad_message_FK` (`ad_message`),
-  KEY `from_message_FK` (`from_message`),
-  KEY `to_message_FK` (`to_message`),
-  CONSTRAINT `ad_message_FK` FOREIGN KEY (`ad_message`) REFERENCES `ad` (`id_ad`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `from_message_FK` FOREIGN KEY (`from_message`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `parent_message_FK` FOREIGN KEY (`parent_message`) REFERENCES `message` (`id_message`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  CONSTRAINT `to_message_FK` FOREIGN KEY (`to_message`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of message
--- ----------------------------
-
--- ----------------------------
--- Table structure for `message_archive`
--- ----------------------------
-DROP TABLE IF EXISTS `message_archive`;
-CREATE TABLE `message_archive` (
-  `id_message_archive` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `from_message_archive` int(10) unsigned NOT NULL,
-  `to_message_archive` int(10) unsigned NOT NULL,
-  `ad_message_archive` int(10) unsigned NOT NULL,
-  `title_message_archive` varchar(50) NOT NULL,
-  `content_message_archive` text NOT NULL,
-  `parent_message_archive` int(10) unsigned DEFAULT NULL,
-  `send_date_message_archive` datetime NOT NULL,
-  `receive_date_message_archive` datetime NOT NULL,
-  `id_message_message_archive` int(11) NOT NULL,
-  `operation_date_message_archive` datetime NOT NULL,
-  `operation_type_message_archive` char(1) NOT NULL,
-  PRIMARY KEY (`id_message_archive`),
-  KEY `from_message_archive_FK` (`from_message_archive`),
-  KEY `to_message_archive_FK` (`to_message_archive`),
-  KEY `ad_message_archive_FK` (`ad_message_archive`),
-  KEY `parent_message_archive_FK` (`parent_message_archive`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of message_archive
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `photo`
 -- ----------------------------
 DROP TABLE IF EXISTS `photo`;
@@ -1685,12 +2320,11 @@ CREATE TABLE `photo` (
   `id_photo` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `location_photo` varchar(2083) NOT NULL,
   PRIMARY KEY (`id_photo`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of photo
 -- ----------------------------
-INSERT INTO `photo` VALUES ('27', '47faf3d50f0a05fec53a0bbe20fadae2/PIC_2.jpeg');
 
 -- ----------------------------
 -- Table structure for `session`
@@ -1706,12 +2340,11 @@ CREATE TABLE `session` (
   PRIMARY KEY (`id_session`),
   KEY `id_user_session_FK` (`id_user_session`),
   CONSTRAINT `id_user_session_FK` FOREIGN KEY (`id_user_session`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of session
 -- ----------------------------
-INSERT INTO `session` VALUES ('87', '14', '0bd3dd089e332791257783c970c231b6f7a6d35460bf4d5eeb3185c6fe446ea134688e8989045aca', '::1', 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1', '2016-12-29 03:15:22');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -1731,6 +2364,8 @@ CREATE TABLE `user` (
   `register_datetime_user` datetime NOT NULL,
   `lock_user` enum('no','yes') NOT NULL DEFAULT 'no',
   `salt_user` varchar(255) NOT NULL,
+  `first_failed_login_user` datetime DEFAULT NULL,
+  `failed_login_count_user` int(10) DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `login_user_UK` (`login_user`) USING BTREE,
   UNIQUE KEY `mail_user_UK` (`mail_user`) USING BTREE,
@@ -1740,14 +2375,12 @@ CREATE TABLE `user` (
   CONSTRAINT `address_user_FK` FOREIGN KEY (`address_user`) REFERENCES `address` (`id_address`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `gender_user_FK` FOREIGN KEY (`gender_user`) REFERENCES `gender` (`id_gender`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `type_user_FK` FOREIGN KEY (`type_user`) REFERENCES `user_type` (`id_user_type`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('14', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '2', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', 'etTFI18KLs');
-INSERT INTO `user` VALUES ('15', 'interia', 'bcc6558640cf09ca4c0c572d0300fb2f7b2138cd', 'interia@interia.pl', '3', 'interia', 'kamil', '2', '123', '30', '2016-12-13 13:57:32', 'no', 'nN5yBVSwCX');
-INSERT INTO `user` VALUES ('16', 'kasia', '8711e52ac6935d54e8974ae5f530e5c6a400f43d', 'kasia@p.pl', '3', 'Kasia', 'Kapka', '2', '123', '31', '2016-12-13 18:40:27', 'no', 'F8cRW6OSMe');
+INSERT INTO `user` VALUES ('37', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', 'eHIgMWTqz6', '2017-01-08 22:05:56', '1');
 
 -- ----------------------------
 -- Table structure for `user_archive`
@@ -1770,7 +2403,10 @@ CREATE TABLE `user_archive` (
   `type_operation_user_archive` char(1) NOT NULL,
   `operation_date_user_archive` datetime NOT NULL,
   PRIMARY KEY (`id_user_archive`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=171 DEFAULT CHARSET=utf8
+/*!50100 PARTITION BY RANGE (id_user_archive)
+(PARTITION p0 VALUES LESS THAN (10000) ENGINE = InnoDB,
+ PARTITION p1 VALUES LESS THAN (20000) ENGINE = InnoDB) */;
 
 -- ----------------------------
 -- Records of user_archive
@@ -1793,24 +2429,151 @@ INSERT INTO `user_archive` VALUES ('22', 'kamil', 'f8029115524750cdc26c1e90fc033
 INSERT INTO `user_archive` VALUES ('23', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '3', 'kamil', 'kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'u', '2016-12-29 03:07:37');
 INSERT INTO `user_archive` VALUES ('24', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '3', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'u', '2016-12-29 03:09:05');
 INSERT INTO `user_archive` VALUES ('25', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '3', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'u', '2016-12-29 03:12:24');
-
--- ----------------------------
--- Table structure for `user_log`
--- ----------------------------
-DROP TABLE IF EXISTS `user_log`;
-CREATE TABLE `user_log` (
-  `id_user_log` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `user_user_log` int(6) unsigned NOT NULL,
-  `login_datetime_user_log` datetime NOT NULL,
-  `ip_user_log` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_user_log`),
-  KEY `user_FK` (`user_user_log`),
-  CONSTRAINT `user_FK` FOREIGN KEY (`user_user_log`) REFERENCES `user` (`id_user`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of user_log
--- ----------------------------
+INSERT INTO `user_archive` VALUES ('26', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '2', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'u', '2016-12-30 11:14:43');
+INSERT INTO `user_archive` VALUES ('27', 'interia', 'bcc6558640cf09ca4c0c572d0300fb2f7b2138cd', 'interia@interia.pl', '3', 'interia', 'kamil', '2', '123', '30', '2016-12-13 13:57:32', 'no', '15', 'd', '2016-12-30 16:29:05');
+INSERT INTO `user_archive` VALUES ('28', 'kasia', '8711e52ac6935d54e8974ae5f530e5c6a400f43d', 'kasia@p.pl', '3', 'Kasia', 'Kapka', '2', '123', '31', '2016-12-13 18:40:27', 'no', '16', 'd', '2016-12-30 21:14:44');
+INSERT INTO `user_archive` VALUES ('29', 'kasia', '548c1aa414f6836228f0de74394f72315ac6af50', 'kasia@a.pl', '3', 'kasia', 'kasia', '2', '2', '32', '2016-12-30 21:17:02', 'no', '17', 'd', '2016-12-30 21:22:57');
+INSERT INTO `user_archive` VALUES ('30', 'kasia', 'a06e0b0746e4afc4c2975c0300c60086832918fc', 'kasia@a.pl', '3', 'kasia', 'kasia', '2', '3', '33', '2016-12-30 21:23:46', 'no', '18', 'u', '2016-12-30 21:24:57');
+INSERT INTO `user_archive` VALUES ('31', 'kasia', 'fd7fdcc76f5f7560ca4fdcc5a6e640f7e7cc02db', 'kasia@a.pl', '3', 'kasia', 'kapka', '2', '3', '33', '2016-12-30 21:23:46', 'no', '18', 'd', '2016-12-30 21:25:44');
+INSERT INTO `user_archive` VALUES ('32', 'kasia', '56fb201c2aff26d1a736998ba4ef194474cd4926', 'kasia@a.pl', '3', 'aa', 'aa', '2', '2', '34', '2016-12-30 21:27:59', 'no', '19', 'd', '2016-12-30 21:33:14');
+INSERT INTO `user_archive` VALUES ('33', 'julia', 'f8b271e78ad50bcc82f28225fbd3e27e9e637120', 'julia@p.pl', '3', 'julia', 'julia', '2', '4', '35', '2016-12-30 21:35:02', 'no', '20', 'd', '2016-12-30 21:44:29');
+INSERT INTO `user_archive` VALUES ('34', 'kasia', 'd35356bd459cf4db9684b1032132ad082f9f2379', 'k@p.pl', '3', 'Kasia', 'Kasia', '1', '56464', '36', '2017-01-01 21:20:51', 'no', '15', 'd', '2017-01-01 21:22:24');
+INSERT INTO `user_archive` VALUES ('35', 'kasia', '8313bbfe097b769bd490219fb7ecba57d5fd5d65', 'k@p.pl', '3', 'kasia', 'kasia', '2', '54', '37', '2017-01-01 21:24:18', 'no', '16', 'd', '2017-01-01 21:25:55');
+INSERT INTO `user_archive` VALUES ('36', 'ilona', '39a7554a1fd23510b72f682495c91a4907e36acf', 'i@w.pl', '3', 'a', 'a', '2', '232', '38', '2017-01-01 23:16:49', 'no', '17', 'd', '2017-01-01 23:30:38');
+INSERT INTO `user_archive` VALUES ('37', 'kasia', '101f9681e8fca88fce78af5fea739848fc88e63c', 'k@p.pl', '3', 'k', 'k', '2', '12', '39', '2017-01-02 20:34:18', 'no', '15', 'd', '2017-01-02 20:34:33');
+INSERT INTO `user_archive` VALUES ('38', 'oidfkdsjskdla', '795d6be7e71e8e265f9999ef8b376bc255566329', 'oidfkdsjskdl@oidfkdsjskdl.pla', '3', 'oidfkdsjskdl', 'oidfkdsjskdl', '1', '123', '55', '2017-01-05 12:19:16', 'no', '30', 'd', '2017-01-05 16:04:57');
+INSERT INTO `user_archive` VALUES ('39', 'uuuuu', 'f067d47d6587a36ed6a9641d914dba3a57d09271', 'uuuuu@uuuuu.pl', '3', 'uuuuu', 'uuuuu', '2', '123', '45', '2017-01-05 11:50:38', 'no', '20', 'd', '2017-01-05 16:05:04');
+INSERT INTO `user_archive` VALUES ('40', 'uuuop', 'de27f95bb06d48970643a603ebfcacda63ca8d8c', 'uuuop@p.ppl', '3', 'uuuop', 'uuuop', '2', '233', '46', '2017-01-05 11:51:48', 'no', '21', 'd', '2017-01-05 16:05:13');
+INSERT INTO `user_archive` VALUES ('41', 'kamil', 'f8029115524750cdc26c1e90fc033c019d48ee5e', 'kamilkf1@wp.pl', '1', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'u', '2017-01-05 16:10:04');
+INSERT INTO `user_archive` VALUES ('42', 'kasia321', 'b3c8f89c7b93a99a52a6428edd6b5e317a63e932', 'ada@p.pl', '3', 'asas', 'sas', '2', '2', '61', '2017-01-05 16:26:47', 'no', '36', 'u', '2017-01-05 16:28:22');
+INSERT INTO `user_archive` VALUES ('43', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '3', 'admin', 'admin', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-05 16:29:35');
+INSERT INTO `user_archive` VALUES ('44', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'admin', 'admin', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-05 16:30:17');
+INSERT INTO `user_archive` VALUES ('45', 'qwerty', '0a6902dd67c98e8978d588b445c370ade4f318d2', 'qwerty@qwerty.qwerty', '3', 'qwerty', 'qwerty', '2', '123', '48', '2017-01-05 11:56:12', 'no', '23', 'd', '2017-01-05 16:34:19');
+INSERT INTO `user_archive` VALUES ('46', 'rtgfgd', '00c0a1b3c4ad949318ebe5c26f83aecb807596c9', 'rtgfgd@rtgfgd.pl', '3', 'rtgfgd', 'rtgfgd', '2', '12', '58', '2017-01-05 12:24:32', 'no', '33', 'd', '2017-01-05 16:34:23');
+INSERT INTO `user_archive` VALUES ('47', 'retggdfg', 'cf6a401f9bf7704edf7e9b7bdf5c366d6a13e5fe', 'retggdfg@retggdfg.pl', '3', 'retggdfg', 'retggdfg', '2', '123', '60', '2017-01-05 12:37:31', 'no', '35', 'd', '2017-01-05 16:48:58');
+INSERT INTO `user_archive` VALUES ('48', 'asia123', 'ecabab29b5a7fdcbfc0b95bad5c5cdf1cbd406a6', 'asia123@asia123.pl', '3', 'asia', 'asia', '2', '12', '40', '2017-01-05 11:27:30', 'no', '15', 'd', '2017-01-05 16:49:48');
+INSERT INTO `user_archive` VALUES ('49', 'noscript', 'f1d372d5c4c35644397929e2ef8b39e7a8e33c0d', 'aa@a.pl', '3', 'noscript', 'noscript', '2', '122', '51', '2017-01-05 12:13:25', 'no', '26', 'd', '2017-01-05 16:49:54');
+INSERT INTO `user_archive` VALUES ('50', 'zxcera', '13f46a493d2efa5dfeb44895ea09725d0cfb7e80', 'zxcera@zxcera.zxcera', '3', 'zxcera', 'zxcera', '1', '12', '50', '2017-01-05 12:09:28', 'no', '25', 'd', '2017-01-05 17:44:23');
+INSERT INTO `user_archive` VALUES ('51', 'kkoewjrke', '06293eb2deb87d7868c19e2a6c313e95440fa9d8', 'kkoewjrke@p.pl', '3', 'kkoewjrke', 'kkoewjrke', '2', '12', '56', '2017-01-05 12:20:47', 'no', '31', 'd', '2017-01-05 17:46:41');
+INSERT INTO `user_archive` VALUES ('52', 'ppppp', '21b9fb4a3c4554e74e079ef45a2872df8f0d25fc', 'ppppp@ppppp.ty', '3', 'ppppp', 'ppppp', '2', '123', '44', '2017-01-05 11:47:57', 'no', '19', 'd', '2017-01-05 17:47:07');
+INSERT INTO `user_archive` VALUES ('53', 'kasia321', 'd095cefe14c34ca3f401cd867503264729cdb6d1', 'ada@p.pl', '3', 'asas', 'sas', '2', '2', '61', '2017-01-05 16:26:47', 'no', '36', 'd', '2017-01-05 17:47:12');
+INSERT INTO `user_archive` VALUES ('54', 'kamil', '22306c4fb0f778de1ee3914ed5443ae1b087a17d', 'kamilkf1@wp.pl', '1', 'Kamil', 'Kapka', '1', '798687923', '29', '2016-12-13 13:47:20', 'no', '14', 'd', '2017-01-05 17:47:17');
+INSERT INTO `user_archive` VALUES ('55', 'kasia123', 'a49bd5f830c786dae90aa97286504b420f634015', 'kasia123@wp.pl', '3', 'kakaka', 'kakak', '2', '12', '41', '2017-01-05 11:33:30', 'no', '16', 'd', '2017-01-06 19:19:41');
+INSERT INTO `user_archive` VALUES ('56', 'kkkkkk', 'a47abd895e666621e189f7434886b2d334fa0ec8', 'kkkkkk@wp.pl', '3', 'kkkkkk', 'kkkkkk', '2', '1', '42', '2017-01-05 11:36:42', 'no', '17', 'd', '2017-01-06 19:19:44');
+INSERT INTO `user_archive` VALUES ('57', 'qqqqqq', '5a561316a4f439482b7457cfaf5c3ec30eb33d95', 'qqqqqq@wp.pl', '3', 'qqqqqq', 'qqqqqq', '2', '123', '43', '2017-01-05 11:37:28', 'no', '18', 'd', '2017-01-06 19:19:46');
+INSERT INTO `user_archive` VALUES ('58', 'qqwwe', '3329fbd268896e780ca4656f9de09ec09830c68c', 'qqwwe@qqwwe.pl', '3', 'qqwwe', 'qqwwe', '1', '23', '47', '2017-01-05 11:53:56', 'no', '22', 'd', '2017-01-06 19:19:50');
+INSERT INTO `user_archive` VALUES ('59', 'trfbgyhj', '8e4df5d3878663555e1b615cd6b12900050f2e33', 'trfbgyhj@wew.pl', '3', 'trfbgyhj', 'trfbgyhj', '2', '34', '49', '2017-01-05 12:04:40', 'no', '24', 'd', '2017-01-06 19:19:52');
+INSERT INTO `user_archive` VALUES ('60', 'noscripta', '2955e580cd0271a35912494ab827c0b753305061', 'aaa@a.pl', '3', 'noscript', 'noscript', '2', '122', '52', '2017-01-05 12:15:34', 'no', '27', 'd', '2017-01-06 19:19:54');
+INSERT INTO `user_archive` VALUES ('61', 'noscriptaa', 'af1e52d15e008c86c8bd6cc8f5519de93297a5a4', 'aaa@a.pla', '3', 'noscript', 'noscript', '2', '122', '53', '2017-01-05 12:16:28', 'no', '28', 'd', '2017-01-06 19:19:56');
+INSERT INTO `user_archive` VALUES ('62', 'oidfkdsjskdl', '7fff4d8ca6589a53b3ca906b9d18de354451e0ba', 'oidfkdsjskdl@oidfkdsjskdl.pl', '3', 'oidfkdsjskdl', 'oidfkdsjskdl', '1', '123', '54', '2017-01-05 12:18:49', 'no', '29', 'd', '2017-01-06 19:19:58');
+INSERT INTO `user_archive` VALUES ('63', 'lfregjergj', 'dae93fedd014c5ad3162359568bb1a67f7b4f2a5', 'lfregjergj@lfregjergj.pl', '3', 'lfregjergj', 'lfregjergj', '1', '123', '57', '2017-01-05 12:23:44', 'no', '32', 'd', '2017-01-06 19:20:00');
+INSERT INTO `user_archive` VALUES ('64', 'dfgdfgfgd', '3264db1a05da543ae36a68cc6b7fdbe5b1c98bc2', 'dfgdfgfgd@dfgdfgfgd.pl', '3', 'dfgdfgfgd', 'dfgdfgfgd', '1', '12', '59', '2017-01-05 12:36:39', 'no', '34', 'd', '2017-01-06 19:20:05');
+INSERT INTO `user_archive` VALUES ('65', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 19:20:58');
+INSERT INTO `user_archive` VALUES ('66', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:20:24');
+INSERT INTO `user_archive` VALUES ('67', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:20:42');
+INSERT INTO `user_archive` VALUES ('68', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:20:47');
+INSERT INTO `user_archive` VALUES ('69', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-06 20:24:18');
+INSERT INTO `user_archive` VALUES ('70', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-06 20:24:22');
+INSERT INTO `user_archive` VALUES ('71', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-06 20:24:25');
+INSERT INTO `user_archive` VALUES ('72', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:26:21');
+INSERT INTO `user_archive` VALUES ('73', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:26:48');
+INSERT INTO `user_archive` VALUES ('74', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:26:52');
+INSERT INTO `user_archive` VALUES ('75', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-06 20:26:57');
+INSERT INTO `user_archive` VALUES ('76', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 10:58:44');
+INSERT INTO `user_archive` VALUES ('77', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 10:58:49');
+INSERT INTO `user_archive` VALUES ('78', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 10:58:53');
+INSERT INTO `user_archive` VALUES ('79', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:05:13');
+INSERT INTO `user_archive` VALUES ('80', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:05:18');
+INSERT INTO `user_archive` VALUES ('81', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:05:24');
+INSERT INTO `user_archive` VALUES ('82', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:06:51');
+INSERT INTO `user_archive` VALUES ('83', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:06:55');
+INSERT INTO `user_archive` VALUES ('84', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:06:59');
+INSERT INTO `user_archive` VALUES ('85', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:13:03');
+INSERT INTO `user_archive` VALUES ('86', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:13:07');
+INSERT INTO `user_archive` VALUES ('87', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:13:11');
+INSERT INTO `user_archive` VALUES ('88', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:16:14');
+INSERT INTO `user_archive` VALUES ('89', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:16:18');
+INSERT INTO `user_archive` VALUES ('90', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:16:22');
+INSERT INTO `user_archive` VALUES ('91', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:25:19');
+INSERT INTO `user_archive` VALUES ('92', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:25:23');
+INSERT INTO `user_archive` VALUES ('93', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'u', '2017-01-07 11:25:26');
+INSERT INTO `user_archive` VALUES ('94', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:26:54');
+INSERT INTO `user_archive` VALUES ('95', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:27:08');
+INSERT INTO `user_archive` VALUES ('96', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:27:21');
+INSERT INTO `user_archive` VALUES ('97', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:37:07');
+INSERT INTO `user_archive` VALUES ('98', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:37:21');
+INSERT INTO `user_archive` VALUES ('99', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:37:28');
+INSERT INTO `user_archive` VALUES ('100', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:38:45');
+INSERT INTO `user_archive` VALUES ('101', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:38:49');
+INSERT INTO `user_archive` VALUES ('102', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:38:53');
+INSERT INTO `user_archive` VALUES ('103', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:39:43');
+INSERT INTO `user_archive` VALUES ('104', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:39:46');
+INSERT INTO `user_archive` VALUES ('105', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:39:50');
+INSERT INTO `user_archive` VALUES ('106', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:40:30');
+INSERT INTO `user_archive` VALUES ('107', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:40:33');
+INSERT INTO `user_archive` VALUES ('108', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:40:36');
+INSERT INTO `user_archive` VALUES ('109', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:41:36');
+INSERT INTO `user_archive` VALUES ('110', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:41:48');
+INSERT INTO `user_archive` VALUES ('111', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:41:53');
+INSERT INTO `user_archive` VALUES ('112', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:43:22');
+INSERT INTO `user_archive` VALUES ('113', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:43:26');
+INSERT INTO `user_archive` VALUES ('114', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:43:30');
+INSERT INTO `user_archive` VALUES ('115', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:44:49');
+INSERT INTO `user_archive` VALUES ('116', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:44:52');
+INSERT INTO `user_archive` VALUES ('117', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:44:57');
+INSERT INTO `user_archive` VALUES ('118', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:48:04');
+INSERT INTO `user_archive` VALUES ('119', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:48:08');
+INSERT INTO `user_archive` VALUES ('120', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:48:11');
+INSERT INTO `user_archive` VALUES ('121', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:17');
+INSERT INTO `user_archive` VALUES ('122', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:24');
+INSERT INTO `user_archive` VALUES ('123', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:28');
+INSERT INTO `user_archive` VALUES ('124', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:32');
+INSERT INTO `user_archive` VALUES ('125', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:35');
+INSERT INTO `user_archive` VALUES ('126', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:39');
+INSERT INTO `user_archive` VALUES ('127', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:49:42');
+INSERT INTO `user_archive` VALUES ('128', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:50:48');
+INSERT INTO `user_archive` VALUES ('129', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:50:56');
+INSERT INTO `user_archive` VALUES ('130', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 11:51:00');
+INSERT INTO `user_archive` VALUES ('131', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:19:22');
+INSERT INTO `user_archive` VALUES ('132', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:19:26');
+INSERT INTO `user_archive` VALUES ('133', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:19:31');
+INSERT INTO `user_archive` VALUES ('134', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:39:07');
+INSERT INTO `user_archive` VALUES ('135', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:39:10');
+INSERT INTO `user_archive` VALUES ('136', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 12:39:14');
+INSERT INTO `user_archive` VALUES ('137', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 22:46:55');
+INSERT INTO `user_archive` VALUES ('138', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 22:47:00');
+INSERT INTO `user_archive` VALUES ('139', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-07 22:47:05');
+INSERT INTO `user_archive` VALUES ('140', 'zosia', '4a208dc85c210f90e1d60cf05ad3f72f59ca7494', 'zosia@zosia.pl', '3', 'zosia', 'zosia', '2', '12', '63', '2017-01-06 19:25:11', 'no', '38', 'd', '2017-01-08 11:35:14');
+INSERT INTO `user_archive` VALUES ('141', 'dominika', '09766d453f9ac1fefae9ab4bb450e5b2a8d31cee', 'asa@p.pl', '3', 'a', 'a', '1', '12', '65', '2017-01-08 14:55:53', 'no', '40', 'u', '2017-01-08 14:56:01');
+INSERT INTO `user_archive` VALUES ('142', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-08 14:57:02');
+INSERT INTO `user_archive` VALUES ('143', 'dominika', '09766d453f9ac1fefae9ab4bb450e5b2a8d31cee', 'asa@p.pl', '3', 'a', 'a', '1', '12', '65', '2017-01-08 14:55:53', 'no', '40', 'd', '2017-01-08 14:57:13');
+INSERT INTO `user_archive` VALUES ('144', 'iwona', '672bcaa866c26be9c46422b921f32388136438b0', 'qwqwqw@p.pl', '3', 'qwqw', 'qwq', '2', '23', '67', '2017-01-08 17:18:38', 'no', '42', 'd', '2017-01-08 20:00:13');
+INSERT INTO `user_archive` VALUES ('145', 'dominika', 'a64f8a3cb8201ca19ba20660ececd7da1c0edfbe', 'asas@p.pl', '3', 'asas', 'asas', '2', '0', '66', '2017-01-08 14:59:15', 'no', '41', 'u', '2017-01-08 20:01:06');
+INSERT INTO `user_archive` VALUES ('146', 'dominika', 'a64f8a3cb8201ca19ba20660ececd7da1c0edfbe', 'asas@p.pl', '3', 'asas', 'asas', '2', '0', '66', '2017-01-08 14:59:15', 'no', '41', 'u', '2017-01-08 20:06:23');
+INSERT INTO `user_archive` VALUES ('147', 'iwona', '2d1d0e65a0c2c8f872bb686afcd133c8d555e82c', 'asa@p.pl', '3', 'iwona', 'iwona', '2', '12', '68', '2017-01-08 20:06:46', 'no', '43', 'd', '2017-01-08 20:09:17');
+INSERT INTO `user_archive` VALUES ('148', 'dominika', 'a64f8a3cb8201ca19ba20660ececd7da1c0edfbe', 'asas@p.pl', '3', 'asas', 'asas', '2', '0', '66', '2017-01-08 14:59:15', 'no', '41', 'd', '2017-01-08 20:13:02');
+INSERT INTO `user_archive` VALUES ('149', 'kasia', '0dece0389c92b15dfd6f11361aeb2e2f50aaaf55', 'kasia@p.pl', '3', 'kasia', 'kasia', '2', '12', '64', '2017-01-06 20:22:32', 'no', '39', 'd', '2017-01-08 20:15:35');
+INSERT INTO `user_archive` VALUES ('150', 'kasia', '689a235b3234764f9361b7e3dccfec931887c57f', 'kasia@kasia.pl', '3', 'kasia', 'kasia', '2', '123', '69', '2017-01-08 20:18:45', 'no', '44', 'd', '2017-01-08 20:27:06');
+INSERT INTO `user_archive` VALUES ('151', 'kasia', '83740918d1137d80806cc09a6f77abded491b9ef', 'kasia@kasia.pl', '3', 'kasia', 'kasia', '2', '123', '70', '2017-01-08 20:28:14', 'no', '45', 'd', '2017-01-08 20:36:40');
+INSERT INTO `user_archive` VALUES ('152', 'kasia', '4a54f304d3846ace5e1d8cddb3854f5c5a65bdeb', 'kasia@kasia.pl', '3', 'kasia', 'kasia', '2', '123', '71', '2017-01-08 20:41:38', 'no', '46', 'd', '2017-01-08 20:50:17');
+INSERT INTO `user_archive` VALUES ('153', 'admin', '67d7cac4bad0e5331f688c334a59e6413e67dce2', 'admin@admin.pl', '1', 'Administrator', 'Kamil', '2', '123', '62', '2017-01-05 16:29:17', 'no', '37', 'u', '2017-01-08 22:05:56');
+INSERT INTO `user_archive` VALUES ('154', 'kasia', 'b21d05edb9329a0f9db539b050470aebc9280df1', 'kasia@kasia.pl', '3', 'ksaia', 'asa', '2', '4', '72', '2017-01-08 20:54:40', 'no', '47', 'd', '2017-01-08 22:15:05');
+INSERT INTO `user_archive` VALUES ('155', 'kasia', 'b5fede899a232d47e42ba76185f7e7c62f610277', 'kasia@kasia.pl', '3', 'a', 'a', '2', '2', '73', '2017-01-08 22:22:17', 'no', '48', 'd', '2017-01-08 22:31:35');
+INSERT INTO `user_archive` VALUES ('156', 'wiktoria', '74c664ea37cde03d3b98abb291f40a9833e2c73d', 'wiki@wp.pl', '3', 'wiki', 'waka', '2', '23', '75', '2017-01-09 18:17:48', 'no', '50', 'd', '2017-01-09 18:37:06');
+INSERT INTO `user_archive` VALUES ('157', 'wiktoria', '9bfd732652e7c13a86e1ad9056ba233b0b063bd8', 'wiktoria@wiktoria.pl', '3', 'wiktoria', 'wiktoria', '1', '123', '76', '2017-01-09 18:39:42', 'no', '51', 'd', '2017-01-09 19:14:13');
+INSERT INTO `user_archive` VALUES ('158', 'weronika', 'ab8d9e0438b59b15a8243f040d9e9cfebc13b159', 'weronika@weronika.pl', '3', 'weronika', 'weronika', '2', '123', '74', '2017-01-08 22:22:49', 'no', '49', 'd', '2017-01-09 19:14:30');
+INSERT INTO `user_archive` VALUES ('159', 'weronika', '578845f7419dcd5cb30d224db63b4b0d0ae2d906', 'weronika@p.pl', '3', 'weronika', 'weronika', '2', '123', '78', '2017-01-09 19:18:14', 'no', '53', 'd', '2017-01-09 19:29:34');
+INSERT INTO `user_archive` VALUES ('160', 'kasia', 'c05ff55ac8951398e7caf5506efe3ac42299ab4b', 'a@p.pl', '3', 'a', 'a', '2', '12', '79', '2017-01-09 19:32:08', 'no', '54', 'd', '2017-01-09 20:02:06');
+INSERT INTO `user_archive` VALUES ('161', 'wiktoria', '21c6a225662cef5f0bd605e5a44f5129f6943d58', 'wiki@wiki.pl', '3', 'wiktoria', 'wiktoria', '2', '123', '80', '2017-01-09 19:32:37', 'no', '55', 'd', '2017-01-09 20:17:52');
+INSERT INTO `user_archive` VALUES ('162', 'karina', '1ba0f1304ed7999fc65b6612c7f73e4b2e291b90', 'karina@wp.pl', '3', 'karina', 'karina', '2', '123', '81', '2017-01-09 20:19:05', 'no', '56', 'd', '2017-01-09 20:20:32');
+INSERT INTO `user_archive` VALUES ('163', 'katerena', 'b38d5edd8e5ee8bcf9d666655b61c8ea1151af4e', 'katerena@p.pl', '3', 'katerena', 'katerena', '1', '123', '82', '2017-01-09 20:22:45', 'no', '57', 'd', '2017-01-09 20:25:35');
+INSERT INTO `user_archive` VALUES ('164', 'dominika', '5f1560e339d94f1399606398bb8b058e744632db', 'dominika@p.pl', '3', 'dominika', 'dominika', '2', '12', '77', '2017-01-09 19:17:52', 'no', '52', 'd', '2017-01-09 20:26:16');
+INSERT INTO `user_archive` VALUES ('165', 'kasia', '9365b5d51b8bbfc4a8c584c48136f1d4d18cb968', 'kasia@kasia.pl', '3', 'kasia', 'kasia', '2', '123', '83', '2017-01-09 20:29:06', 'no', '58', 'd', '2017-01-09 20:31:02');
+INSERT INTO `user_archive` VALUES ('166', 'izabela', '4a40353a22683e01052ff0b4f56985e1a1be7526', 'sasa@wp.plsa', '3', 'aa', 'aa', '2', '123', '89', '2017-01-09 23:37:43', 'no', '43', 'd', '2017-01-09 23:40:23');
+INSERT INTO `user_archive` VALUES ('167', 'zbyszek', 'a99ca31ee0611df1e549653c8cbc836c66e4b35f', 'sasa@wp.pl', '3', 'aa', 'aa', '2', '123', '87', '2017-01-09 23:34:33', 'no', '41', 'd', '2017-01-09 23:40:58');
+INSERT INTO `user_archive` VALUES ('168', 'weronika', 'd3f7b32bce98dfadff9b2efec4097f4b9856b44b', 'sasa@wp.pls', '3', 'aa', 'aa', '2', '123', '88', '2017-01-09 23:36:15', 'no', '42', 'd', '2017-01-10 00:54:52');
+INSERT INTO `user_archive` VALUES ('169', 'kasia', '20ec4b0f02c7baa0ece30a6e0a9788f72399f310', 'kasia@w.pl', '3', 'kasia', 'ksia', '2', '123', '85', '2017-01-09 23:20:30', 'no', '39', 'd', '2017-01-10 00:54:57');
+INSERT INTO `user_archive` VALUES ('170', 'kasia', 'fc7e2a4e39bf463b0cf53cd26a665725bdc9411a', 'kasia@kasia.pl', '3', 'k', 'a', '2', '12', '90', '2017-01-10 00:55:29', 'no', '44', 'd', '2017-01-10 01:00:03');
 
 -- ----------------------------
 -- Table structure for `user_type`
@@ -1881,14 +2644,60 @@ DROP VIEW IF EXISTS `five_newest_ads`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `five_newest_ads` AS select `ad`.`id_ad` AS `id_ad`,`ad`.`title_ad` AS `title_ad`,`location`.`name_location` AS `name_location`,`voivodeship`.`name_voivodeship` AS `name_voivodeship`,`category`.`name_category` AS `name_category`,`ad`.`datetime_add_ad` AS `datetime_add_ad`,`ad`.`price_ad` AS `price_ad` from (((`ad` join `location`) join `category`) join `voivodeship`) where ((`ad`.`location_ad` = `location`.`id_location`) and (`location`.`id_voivodeship_location` = `voivodeship`.`id_voivodeship`) and (`ad`.`category_ad` = `category`.`id_category`)) order by `ad`.`datetime_add_ad` desc limit 5 ;
 
 -- ----------------------------
+-- View structure for `listvoivodeships`
+-- ----------------------------
+DROP VIEW IF EXISTS `listvoivodeships`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listvoivodeships` AS select `voivodeship`.`id_voivodeship` AS `id_voivodeship`,`voivodeship`.`name_voivodeship` AS `name_voivodeship` from `voivodeship` ;
+
+-- ----------------------------
 -- Procedure structure for `add_user`
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `add_user`;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_user`(IN login varchar(255), IN password varchar(255), IN mail varchar(255), IN type int(10), IN name varchar(100), IN surname varchar(100), IN gender int(10), IN telephone int(10), IN address int(10), IN salt varchar(255))
 BEGIN
-	INSERT INTO user (id_user,login_user,password_user, mail_user,type_user,name_user,surname_user,gender_user,telephone_number_user,address_user,register_datetime_user,lock_user,salt_user)
-	VALUES (NULL,login,password, mail,type,name,surname,gender,telephone,address,SYSDATE(),'no',salt);
+	INSERT INTO user (id_user,login_user,password_user, mail_user,type_user,name_user,surname_user,gender_user,telephone_number_user,address_user,register_datetime_user,lock_user,salt_user,first_failed_login_user,failed_login_count_user)
+	VALUES (NULL,login,password, mail,type,name,surname,gender,telephone,address,SYSDATE(),'no',salt,SYSDATE()-INTERVAL 1 DAY,0);
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for `deleteuser`
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `deleteuser`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteuser`(IN `user_id` int(10))
+BEGIN
+	DELETE FROM user WHERE id_user=user_id;
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Function structure for `check_location`
+-- ----------------------------
+DROP FUNCTION IF EXISTS `check_location`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `check_location`(ad_location int(10)) RETURNS int(11)
+begin
+declare zm int;
+select id_location into zm FROM location WHERE id_location=ad_location;
+return zm;
+end
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Function structure for `check_name`
+-- ----------------------------
+DROP FUNCTION IF EXISTS `check_name`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `check_name`(`login` varchar(255)) RETURNS int(10)
+BEGIN
+	DECLARE A INT(10);
+	SELECT COUNT(*) INTO A FROM user WHERE login_user=login;
+	RETURN A;
 END
 ;;
 DELIMITER ;
@@ -1912,14 +2721,14 @@ CREATE DEFINER=`root`@`localhost` EVENT `delete_archived_users_event` ON SCHEDUL
 DELIMITER ;
 DROP TRIGGER IF EXISTS `ON_UPDATE`;
 DELIMITER ;;
-CREATE TRIGGER `ON_UPDATE` AFTER UPDATE ON `ad` FOR EACH ROW INSERT INTO ad_archive (title_ad_archive,description_ad_archive,view_counter_ad_archive,author_ad_archive,category_ad_archive,location_ad_archive,datetime_add_ad_archive,datetime_end_ad_archive,gallery_ad_archive,price_ad_archive,id_ad_ad_archive,operation_date_ad_archive,operation_type_ad_archive,thumbnail_ad_archive)
-VALUES (old.title_ad,old.description_ad,old.view_counter_ad,old.author_ad,old.category_ad,old.location_ad,old.datetime_add_ad,old.datetime_end_ad,old.gallery_ad,old.price_ad,old.id_ad,SYSDATE(),'u',old.thumbnail_ad)
+CREATE TRIGGER `ON_UPDATE` AFTER UPDATE ON `ad` FOR EACH ROW INSERT INTO ad_archive (title_ad_archive,description_ad_archive,view_counter_ad_archive,author_ad_archive,category_ad_archive,location_ad_archive,datetime_add_ad_archive,datetime_end_ad_archive,price_ad_archive,id_ad_ad_archive,operation_date_ad_archive,operation_type_ad_archive)
+VALUES (old.title_ad,old.description_ad,old.view_counter_ad,old.author_ad,old.category_ad,old.location_ad,old.datetime_add_ad,old.datetime_end_ad,old.price_ad,old.id_ad,SYSDATE(),'u')
 ;;
 DELIMITER ;
 DROP TRIGGER IF EXISTS `ON_DELETE`;
 DELIMITER ;;
-CREATE TRIGGER `ON_DELETE` AFTER DELETE ON `ad` FOR EACH ROW INSERT INTO ad_archive (title_ad_archive,description_ad_archive,view_counter_ad_archive,author_ad_archive,category_ad_archive,location_ad_archive,datetime_add_ad_archive,datetime_end_ad_archive,gallery_ad_archive,price_ad_archive,id_ad_ad_archive,operation_date_ad_archive,operation_type_ad_archive,thumbnail_ad_archive)
-VALUES (old.title_ad,old.description_ad,old.view_counter_ad,old.author_ad,old.category_ad,old.location_ad,old.datetime_add_ad,old.datetime_end_ad,old.gallery_ad,old.price_ad,old.id_ad,SYSDATE(),'d',old.thumbnail_ad)
+CREATE TRIGGER `ON_DELETE` AFTER DELETE ON `ad` FOR EACH ROW INSERT INTO ad_archive (title_ad_archive,description_ad_archive,view_counter_ad_archive,author_ad_archive,category_ad_archive,location_ad_archive,datetime_add_ad_archive,datetime_end_ad_archive,price_ad_archive,id_ad_ad_archive,operation_date_ad_archive,operation_type_ad_archive)
+VALUES (old.title_ad,old.description_ad,old.view_counter_ad,old.author_ad,old.category_ad,old.location_ad,old.datetime_add_ad,old.datetime_end_ad,old.price_ad,old.id_ad,SYSDATE(),'d')
 ;;
 DELIMITER ;
 DROP TRIGGER IF EXISTS `ON_GALLERY_DELETE`;

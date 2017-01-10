@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 include_once "./components/important_includes.php";
 
 if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
@@ -176,4 +177,6 @@ else{
     echo "Błąd edycji adresu";
 }
 $connection->query("commit");
+$connection->close();
+session_destroy();
 ?>

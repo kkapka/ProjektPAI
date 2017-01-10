@@ -13,6 +13,10 @@ session_start();
 
     $connection=getConnection();
 
+    foreach($_POST as $k=>$v){
+        $_POST[$k]=mysqli_real_escape_string($connection,$v);
+    }
+
     if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password']))){
         header("location: login.php");
         exit;
@@ -51,7 +55,7 @@ session_start();
 
         /*password validation-------------------------------------------------*/
         $password=$_POST['password'];
-        $password_pattern='/^[^;\'" -]{5,20}$/u';
+        $password_pattern='/^[^;<\'" -]{5,20}$/u';
 
         if(!preg_match($login_pattern,$password)){
             //echo "Wprowadziłeś hasło w błędnym formacie!";

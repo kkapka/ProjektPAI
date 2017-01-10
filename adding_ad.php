@@ -49,7 +49,7 @@
     $ad_content_pattern="/^.{1,255}$/u";
 
     if(!preg_match($ad_content_pattern,$ad_content)){
-        echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
+        echo "Wprowadziłeś treść ogłoszenia w błędnym formacie!";
         exit;
     }
 

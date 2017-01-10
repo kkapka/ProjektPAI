@@ -14,6 +14,10 @@ if(!isset($_COOKIE['id'])){
 }
 else{
     $connection=getConnection();
+    foreach ($_GET as $k=>$v) {
+        $_GET[$k]=intval($v);
+    }
+    $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
     $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
 
     if($result=mysqli_query($connection,$query)){
@@ -24,6 +28,7 @@ else{
                 $ad_id=intval($_GET['ad_id']);
                 $ad_author=intval($_GET['author_ad']);
 
+                $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
                 $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
 
                 if($result=mysqli_query($connection,$query)){
@@ -74,6 +79,7 @@ else{
                                         //echo "10";
                                         header("location: ../index.php");
                                     }
+                                    $connection->close();
                                     //echo "9";
                                 }
                                 //echo "8";

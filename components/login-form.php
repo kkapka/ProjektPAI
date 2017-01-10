@@ -11,9 +11,11 @@
 session_start();
 
 if(isset($_SESSION['login-error-info'])){
-    echo $_SESSION['login-error-info'];
+    $connection=getConnection();
+    echo mysqli_real_escape_string($connection,htmlentities($_SESSION['login-error-info']));
+    $connection->close();
 }
-session_unset();
+session_destroy();
 ?>
 </div>
 <script>

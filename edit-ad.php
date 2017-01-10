@@ -1,6 +1,30 @@
 <?php
 session_start();
 
+if(isset($_COOKIE['id'])){
+    $connection=getConnection();
+    $_COOKIE['id']=mysqli_real_escape_string($connection,htmlentities($_COOKIE['id']));
+
+    $query="SELECT permission_user_type FROM (user JOIN user_type on type_user=id_user_type) JOIN session ON id_user_session=id_user WHERE token_session='$_COOKIE[id]'";
+    $result=mysqli_query($connection,$query);
+    $row_count=mysqli_num_rows($result);
+    if($row_count>0){
+        $row=mysqli_fetch_assoc($result);
+        if($row['permission_user_type']<100){
+            header("location: dashboard.php");
+            exit;
+        }
+    }
+    else{
+        header("location: login.php");
+        exit;
+    }
+}
+else{
+    header("location: index.php");
+    exit;
+}
+
 include_once "./components/important_includes.php";
 //include_once "./show_errors.php";
 
@@ -10,11 +34,14 @@ if(isset($_COOKIE['id'])){
     $result=mysqli_query($connection,$query);
     $num_rows=mysqli_num_rows($result);
     if($num_rows>0){
-        $id_ad=$_GET['ad_id'];
-        $author_ad=$_GET['author_ad'];
+        $id_ad=intval($_GET['ad_id']);
+        $author_ad=intval($_GET['author_ad']);
 
         $row=mysqli_fetch_assoc($result);
         $id_user=$row['id_user_session'];
+
+        $_SESSION['id_ad']=$id_ad;
+        $_SESSION['ad_id']=$id_ad;
 
         $query="SELECT permission_user_type FROM user JOIN user_type ON type_user=id_user_type
                           WHERE id_user=$id_user";
@@ -44,9 +71,6 @@ if(isset($_COOKIE['id'])){
                     $voivodeship_ad=$loc_row['id_voivodeship_location'];
 
                     $category_ad=$row['category_ad'];
-
-                    $_SESSION['id_ad']=$id_ad;
-                    $_SESSION['ad_id']=$id_ad;
 ?>
                     <form name="edit-upload-photos" id="edit-upload-photos" method="post" enctype="multipart/form-data">
                         Wybierz zdjęcia(max. 5, rozmiar do 500kB): </br></br>

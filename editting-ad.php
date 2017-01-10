@@ -33,7 +33,8 @@ session_start();
         exit;
     }
 
-    $query="SELECT id_location FROM location WHERE id_location=$ad_location";
+    //$query="SELECT id_location FROM location WHERE id_location=$ad_location";
+    $query="SELECT check_location($ad_location)";
     $result=mysqli_query($connection,$query);
     $row_count=mysqli_num_rows($result);
 
@@ -68,4 +69,6 @@ session_start();
     else{
         echo "Błąd edycji ogłoszenia";
     }
+
+    $connection->close();
 ?>

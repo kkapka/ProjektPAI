@@ -1,6 +1,7 @@
 <?php
     $connection=getConnection();
-    $sql="SELECT id_voivodeship, name_voivodeship FROM voivodeship";
+    //$sql="SELECT id_voivodeship, name_voivodeship FROM voivodeship";
+$sql="SELECT * FROM listVoivodeships";
     $result=$connection->query($sql);
     $row_count=mysqli_num_rows($result);
 ?>

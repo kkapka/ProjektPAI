@@ -60,6 +60,14 @@ if($count>0){
             } else {
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
 
+                    $fil_nam=$_FILES["fileToUpload"]["name"][$i];
+                    $fil_nam_pattern="/^[^';-]+$/";
+
+                    if(!preg_match($fil_nam_pattern,$fil_nam)){
+                        echo "Błąd podczas wysyłania pliku";
+                        continue;
+                    }
+
                     $photo_name=$generated_folder_name.'/'.basename($_FILES["fileToUpload"]["name"][$i]);
                     $query="INSERT INTO photo (id_photo,location_photo) VALUES (NULL,'$photo_name')";
                     $result=mysqli_query($connection,$query);
@@ -69,6 +77,7 @@ if($count>0){
                     $query="INSERT INTO gallery (id_ad_gallery,id_photo_gallery) VALUES ($_SESSION[ad_id],$last_inserted_photo_id)";
                     $result=mysqli_query($connection,$query);
 
+
                     echo "Plik ". basename( $_FILES["fileToUpload"]["name"][$i]). " został wgrany\n";
                 } else {
                     echo "Wystąpił błąd podczas wgrywania twojego pliku !\n";
@@ -76,10 +85,6 @@ if($count>0){
             }
         }
     }
-
-    mysqli_close($connection);
-    session_unset();
-    session_destroy();
 
 }
 ?>

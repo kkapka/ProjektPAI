@@ -8,6 +8,8 @@
             $_SERVER[$k]=mysqli_real_escape_string($connection,$v);
         }
 
+        $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
+
         $query="DELETE FROM session WHERE token_session='$_COOKIE[id]' AND user_web_browser_session='$_SERVER[HTTP_USER_AGENT]'";
 
         if(mysqli_query($connection,$query)){

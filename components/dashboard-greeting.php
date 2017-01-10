@@ -1,5 +1,6 @@
 <?php
     $connection=getConnection();
+    $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
     $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
     $result=mysqli_query($connection,$query);
     $num_rows=mysqli_num_rows($result);

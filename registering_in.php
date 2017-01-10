@@ -17,25 +17,22 @@
         return $rand;
     }
 
+
+    foreach($_POST as $k=>$v){
+        $_POST[$k]=mysqli_real_escape_string($connection,$v);
+    }
+
+
+
     if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
     ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
-        header("location: register.php");
+        //header("location: register.php");
+        echo "Przynajmniej jedno pole w formularzu jest puste !";
         exit;
     }
 
     if(isset($_COOKIE['id'])){
-        $query="SELECT id_session FROM session WHERE token_session='$_COOKIE[id]' AND DATE_ADD(login_time_session, INTERVAL 1 HOUR)>NOW()";
-        $result=mysqli_query($connection,$query);
-        $count=mysqli_num_rows($result);
-
-        if($count>0){
-            header("location: dashboard.php");
-            exit;
-        }
-        else{
-            header("location: index.php");
-            exit;
-        }
+        header("location: index.php");
     }
 
     if($connection->connect_errno!=0) {
@@ -52,19 +49,23 @@
         exit;
     }
 
-    $query="SELECT login_user FROM user WHERE login_user='$login'";
+    //$query="SELECT login_user FROM user WHERE login_user='$login'";
+    $query="SELECT check_name(\"$login\");";
     $result=mysqli_query($connection,$query);
-    $row_count=mysqli_num_rows($result);
+    $row=mysqli_fetch_assoc($result);
 
-    if($row_count>0) {
-        echo "Użytkownik o podanym loginie już istnieje !";
-        exit;
+    foreach ($row as $k=>$v){
+        if($row[$k]>0) {
+            echo "Użytkownik o podanym loginie już istnieje !";
+            exit;
+        }
     }
+
     /*--------------------------------------------------------------------*/
 
 
     /*password validation-------------------------------------------------*/
-    $password_pattern='/^[^;\'" -]{5,20}$/u';
+    $password_pattern='/^[^;<\'" -]{5,20}$/u';
     $password=$_POST['password'];
 
     if(!preg_match($password_pattern,$password)){
@@ -195,7 +196,6 @@
     }
     /*--------------------------------------------------------------------*/
 
-
     $sql_location="INSERT INTO address(id_address,location_address,street_address,street_number_address) VALUES(NULL,'$location','$street','$street_nr')";
     $sql_last_id_in_address="SET @last_id_in_address = LAST_INSERT_ID()";
 
@@ -213,7 +213,7 @@
         intval($phone_nr),
         $salt
         );
-    $connection->query("start transaction");
+    /*$connection->query("start transaction");
 
     if($connection->query($sql_location)){
         if($connection->query($sql_last_id_in_address)){
@@ -230,7 +230,37 @@
     }
     else{
         echo "Błąd tworzenia adresu";
+    }*/
+    $flag=true;
+
+    mysqli_autocommit($connection,false);
+
+    $result = mysqli_query($connection,$sql_location);
+
+    if(!$result){
+        $flag=false;
     }
 
-    $connection->query("commit");
+    $result = mysqli_query($connection,$sql_last_id_in_address);
+
+    if(!$result){
+        $flag=false;
+    }
+
+    $result = mysqli_query($connection,$sql_user);
+
+    if(!$result){
+        $flag=false;
+    }
+
+    if($flag){
+        mysqli_commit($connection);
+        echo "Dodano użytkownika";
+    }
+    else{
+        mysqli_rollback($connection);
+        echo "Błąd dodawania użytkownika!";
+    }
+
+    $connection->close();
 ?>

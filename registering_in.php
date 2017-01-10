@@ -24,20 +24,15 @@
 
 
 
-    if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
+    if((!isset($_COOKIE['id']) ||  !isset($_COOKIE['token']) )&& (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
     ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
         //header("location: register.php");
         echo "Przynajmniej jedno pole w formularzu jest puste !";
         exit;
     }
 
-    if(isset($_COOKIE['id'])){
+    if(isset($_COOKIE['id']) || isset($_COOKIE['token'])){
         header("location: index.php");
-    }
-
-    if($connection->connect_errno!=0) {
-        echo "Error: " . $connection->connection_errno();
-        exit();
     }
 
     /*login validation----------------------------------------------------*/

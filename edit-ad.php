@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-if(isset($_COOKIE['id'])){
+if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
     $connection=getConnection();
     $_COOKIE['id']=mysqli_real_escape_string($connection,htmlentities($_COOKIE['id']));
+    $_COOKIE['token']=mysqli_real_escape_string($connection,htmlentities($_COOKIE['token']));
 
-    $query="SELECT permission_user_type FROM (user JOIN user_type on type_user=id_user_type) JOIN session ON id_user_session=id_user WHERE token_session='$_COOKIE[id]'";
+    $query="SELECT permission_user_type FROM (user JOIN user_type on type_user=id_user_type) JOIN session ON id_user_session=id_user WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
     $result=mysqli_query($connection,$query);
     $row_count=mysqli_num_rows($result);
     if($row_count>0){
@@ -28,9 +29,12 @@ else{
 include_once "./components/important_includes.php";
 //include_once "./show_errors.php";
 
-if(isset($_COOKIE['id'])){
+if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
     $connection=getConnection();
-    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+    $_COOKIE['id']=mysqli_real_escape_string($connection,htmlentities($_COOKIE['id']));
+    $_COOKIE['token']=mysqli_real_escape_string($connection,htmlentities($_COOKIE['token']));
+
+    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
     $result=mysqli_query($connection,$query);
     $num_rows=mysqli_num_rows($result);
     if($num_rows>0){

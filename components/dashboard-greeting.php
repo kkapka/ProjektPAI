@@ -1,7 +1,8 @@
 <?php
     $connection=getConnection();
     $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
-    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+    $_COOKIE['token']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['token']));
+    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
     $result=mysqli_query($connection,$query);
     $num_rows=mysqli_num_rows($result);
 
@@ -21,5 +22,3 @@
         echo "Zarządzaj ogłoszeniami</br></br>";
     }
 ?>
-
-

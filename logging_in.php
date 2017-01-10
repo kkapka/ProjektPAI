@@ -17,13 +17,18 @@ session_start();
         $_POST[$k]=mysqli_real_escape_string($connection,$v);
     }
 
-    if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password']))){
+    foreach($_COOKIE as $k=>$v){
+        $_COOKIE[$k]=htmlentities(mysqli_real_escape_string($connection,$v));
+
+    }
+
+    if((!isset($_COOKIE['id']) || !$_COOKIE['token']) && (empty($_POST['login'])||empty($_POST['password']))){
         header("location: login.php");
         exit;
     }
 
-    if(isset($_COOKIE['id'])){
-        $query="SELECT id_session FROM session WHERE token_session='$_COOKIE[id]' AND DATE_ADD(login_time_session, INTERVAL 1 HOUR)>NOW()";
+    if(isset($_COOKIE['id'])&& $_COOKIE['token']){
+        $query="SELECT id_session FROM session WHERE token_session='$_COOKIE[id]' AND secon_token_session='$_COOKIE[id]'";
         $result=mysqli_query($connection,$query);
         $count=mysqli_num_rows($result);
 
@@ -84,6 +89,7 @@ if(isset($login)){
 
             if($row_count>0){
                 $token = sha1(rand(-10000,10000) . microtime()) . sha1(crc32(microtime()) . $_SERVER['REMOTE_ADDR']);
+                $token_2=sha1(rand(-1235,8965) . microtime()) . sha1(crc32(microtime()));
                 $row=mysqli_fetch_assoc($result);
 
                 $bad_login_limit=3;
@@ -102,14 +108,14 @@ if(isset($login)){
                 mysqli_query($connection,$query);
 
                 $query="INSERT INTO session (id_session,id_user_session,token_session,ip_user_session,
-                user_web_browser_session,login_time_session) VALUES
-                (NULL,'$row[id_user]','$token','$_SERVER[REMOTE_ADDR]','$_SERVER[HTTP_USER_AGENT]',SYSDATE())";
+                user_web_browser_session,login_time_session,second_token_session) VALUES
+                (NULL,'$row[id_user]','$token','$_SERVER[REMOTE_ADDR]','$_SERVER[HTTP_USER_AGENT]',SYSDATE(),'$token_2')";
 
                 mysqli_query($connection,$query);
 
                 if(!mysqli_errno($connection)){
                     setcookie("id",$token,time()+60*60,'/');
-                    echo "Zalogowano pomyślnie";
+                    setcookie("token",$token_2,time()+60*60,'/');
                     header("location: dashboard.php");
 
                 }

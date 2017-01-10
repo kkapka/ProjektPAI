@@ -7,7 +7,7 @@ header("Pragma: no-cache");
 include_once "../connect.php";
 include_once "./generate_token.php";
 
-if(!isset($_COOKIE['id'])){
+if(!isset($_COOKIE['id']) || !isset($_COOKIE['token'])){
     session_destroy();
     header("location: ../index.php");
     exit();
@@ -18,7 +18,8 @@ else{
         $_GET[$k]=intval($v);
     }
     $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
-    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+    $_COOKIE['token']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['token']));
+    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
 
     if($result=mysqli_query($connection,$query)){
         $num_rows=mysqli_num_rows($result);
@@ -29,7 +30,8 @@ else{
                 $ad_author=intval($_GET['author_ad']);
 
                 $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
-                $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+                $_COOKIE['token']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['token']));
+                $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
 
                 if($result=mysqli_query($connection,$query)){
                     $row_count=mysqli_num_rows($result);

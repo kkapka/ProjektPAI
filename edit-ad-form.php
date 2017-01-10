@@ -12,6 +12,7 @@ if(!isset($_COOKIE['id'])){
 
 <?php
 require "./components/html-head.php";
+include_once "./components/generate_token.php";
 setSiteTitle("Serwis ogłoszeniowy - Strona główna");
 ?>
 

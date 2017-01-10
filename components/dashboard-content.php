@@ -30,14 +30,16 @@ else{
 
 include_once "./components/important_includes.php";
 
-if(!isset($_COOKIE['id'])){
+if(!isset($_COOKIE['id']) || !isset($_COOKIE['token'])){
     header("location: ../index.php");
     exit();
 }
 else{
     $connection=getConnection();
     $_COOKIE['id']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['id']));
-    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
+    $_COOKIE['token']=htmlentities(mysqli_real_escape_string($connection,$_COOKIE['token']));
+
+    $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]' AND second_token_session='$_COOKIE[token]'";
 
     if($result=mysqli_query($connection,$query)){
         $row_count=mysqli_num_rows($result);

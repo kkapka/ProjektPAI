@@ -1,7 +1,7 @@
 <?php
 	include_once "./components/important_includes.php";
 
-	if(isset($_COOKIE['id'])){
+	if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
 		header("location: dashboard.php");
 		exit;
 	}

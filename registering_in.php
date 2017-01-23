@@ -59,8 +59,15 @@
     /*--------------------------------------------------------------------*/
 
 
+
+$password=addslashes($_POST['password']);
+
+if($password!=$_POST['password2']){
+    echo "Hasła są różne!";
+    exit;
+}
     /*password validation-------------------------------------------------*/
-    $password_pattern='/^[^;<\'" -]{5,20}$/u';
+    /*$password_pattern='/^[^;<\'" -]{5,20}$/u';
     $password=$_POST['password'];
 
     if(!preg_match($password_pattern,$password)){
@@ -72,7 +79,7 @@
             echo "Hasła są różne!";
             exit;
         }
-    }
+    }*/
     /*--------------------------------------------------------------------*/
 
 
@@ -96,7 +103,7 @@
 
 
     /*name validation-----------------------------------------------------*/
-    $name_pattern="/^[\p{L}]{1,100}$/u";
+    $name_pattern="/^[\p{L} ]{1,100}$/u";
     $name=$_POST['name'];
 
     if(!preg_match($name_pattern,$name)){
@@ -107,7 +114,7 @@
 
 
     /*surname validation--------------------------------------------------*/
-    $surname_pattern="/^[\p{L}]{1,100}$/u";
+    $surname_pattern="/^[\p{L} ]{1,100}$/u";
     $surname=$_POST['surname'];
 
     if(!preg_match($surname_pattern,$surname)){
@@ -182,7 +189,8 @@
 
 
     /*phone validation----------------------------------------------------*/
-    $phone_nr_pattern="/^[\p{N}]{1,10}$/";
+    $phone_nr=$_POST['phone_number'];
+    $phone_nr_pattern="/^[+][0-9]{1,49}$/";
     $phone_nr=$_POST['phone_number'];
 
     if(!preg_match($phone_nr_pattern,$phone_nr)){
@@ -197,7 +205,7 @@
     $salt=generateSalt();
     $password=sha1($password.$salt);
 
-    $sql_user=sprintf("CALL add_user('%s','%s','%s',%d,'%s','%s',%d,%d,@last_id_in_address,'%s')",
+    $sql_user=sprintf("CALL add_user('%s','%s','%s',%d,'%s','%s',%d,'%s',@last_id_in_address,'%s')",
         mysqli_real_escape_string($connection,$login),
         mysqli_real_escape_string($connection,$password),
         mysqli_real_escape_string($connection,$mail),
@@ -205,7 +213,7 @@
         mysqli_real_escape_string($connection,$name),
         mysqli_real_escape_string($connection,$surname),
         intval($gender),
-        intval($phone_nr),
+        htmlentities(mysqli_real_escape_string($connection,$phone_nr)),
         $salt
         );
     /*$connection->query("start transaction");

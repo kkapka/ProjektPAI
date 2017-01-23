@@ -36,6 +36,13 @@ while($row=mysqli_fetch_assoc($result)){
 echo '</select>';
 
 echo '<button onclick="deleteUser(getSelectedOption())">Usuń użytkownika</button>';
+echo '<select id="group">';
+echo '<option value=1>Administratorzy</option>';
+echo '<option value=2>Moderatorzy</option>';
+echo '<option value=3>Userzy</option>';
+echo '</select>';
+
+echo '<button onclick="grantUser(document.getElementById(\'users\').value,document.getElementById(\'group\').value)">Przydziel</button>'
 ?>
 
 <script>
@@ -51,6 +58,21 @@ echo '<button onclick="deleteUser(getSelectedOption())">Usuń użytkownika</butt
                     window.location.href="users-management.php";
                 }
             }
+        })
+    }
+
+    function grantUser(userId,group){
+        $.ajax({
+            url: './grant_user.php',
+            method: 'POST',
+            data: {user_id:userId,group:group},
+            success: function (data) {
+                alert(data);
+                if(data=="Pomyślnie dodano użytkownika do grupy"){
+                    window.location.href="users-management.php";
+                }
+            }
+
         })
     }
 

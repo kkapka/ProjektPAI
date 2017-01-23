@@ -76,7 +76,7 @@ else{
                         '</tr></thead>';
 
                     while($row=mysqli_fetch_assoc($result)){
-                        echo '<tbody><tr>'.'<td style="word-break: break-all;" data-title="Tytuł ogłoszenia">'.$row['title_ad'].'</td>'.'<td data-title="Data dodania">'.$row['datetime_add_ad'].'</td>'.'<td data-title="Data wygaśnięcia">'.$row['datetime_end_ad'].'</td>'.
+                        echo '<tbody><tr>'.'<td style="word-break: break-all;" data-title="Tytuł ogłoszenia">'.htmlentities($row['title_ad']).'</td>'.'<td data-title="Data dodania">'.$row['datetime_add_ad'].'</td>'.'<td data-title="Data wygaśnięcia">'.$row['datetime_end_ad'].'</td>'.
                             '<td data-title="Podgląd ogłoszenia">'.'<a href="'.'./ad.php?id='.$row['id_ad'].'">'.'Podgląd'.'</a>'.'</td>'.
                             '<td data-title="Edycja ogłoszenia">'.'<a href="'.'./edit-ad-form.php?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'">'.'Edytuj'.'</a>'.'</td>'.
                             '<td data-title="Usuń ogłoszenie">'.'<a href="'.'./components/delete-ad.php'.'?ad_id='.$row['id_ad'].'&author_ad='.$row['author_ad'].'"'.'onclick="return confirmAdDelete();"'.'>'.'Usuń'.'</a>'.'</td>'.

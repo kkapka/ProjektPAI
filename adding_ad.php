@@ -3,9 +3,13 @@
 
     include_once "./components/important_includes.php";
     $connection=getConnection();
+    if(empty($_POST['ad-price']) || empty($_POST['ad-title']) || empty($_POST['category-list']) || empty($_POST['list-locations']) ||  empty($_POST['ad-content'])){
+        echo "Conajmniej jedno pole jest puste !";
+        exit;
+    }
 
     $ad_title=$_POST['ad-title'];
-    $ad_title=htmlspecialchars($ad_title, ENT_QUOTES, 'UTF-8');
+    //$ad_title=htmlspecialchars($ad_title, ENT_QUOTES, 'UTF-8');
     $ad_title=mysqli_real_escape_string($connection,$ad_title);
     $ad_title_pattern="/^.{1,255}$/u";
 
@@ -13,6 +17,8 @@
         echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
         exit;
     }
+
+    $ad_title=addslashes($ad_title);
 
     $ad_price=$_POST['ad-price'];
     $ad_price_pattern="/^[0-9]{1,10}$/";
@@ -44,14 +50,17 @@
     }
 
     $ad_content=$_POST['ad-content'];
-    $ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
+    //$ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
     $ad_content=mysqli_real_escape_string($connection,$ad_content);
-    $ad_content_pattern="/^.{1,255}$/u";
+    //$ad_content=htmlentities($ad_content);
+    $ad_content_pattern="/.{1,255}/u";
 
     if(!preg_match($ad_content_pattern,$ad_content)){
         echo "Wprowadziłeś treść ogłoszenia w błędnym formacie!";
         exit;
     }
+
+    $ad_content=addslashes($ad_content);
 
     $query="SELECT id_user_session FROM session WHERE token_session='$_COOKIE[id]'";
     $result=mysqli_query($connection,$query);

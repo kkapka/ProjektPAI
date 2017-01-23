@@ -58,6 +58,7 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
             if(($author_ad==$id_user) || ($row['permission_user_type'])>=110){
 
                 $query="SELECT * FROM ad WHERE id_ad=$id_ad AND author_ad=$author_ad";
+
                 $result=mysqli_query($connection,$query);
                 $num_rows=mysqli_num_rows($result);
 
@@ -75,7 +76,7 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
                     $voivodeship_ad=$loc_row['id_voivodeship_location'];
 
                     $category_ad=$row['category_ad'];
-?>
+                    ?>
                     <form name="edit-upload-photos" id="edit-upload-photos" method="post" enctype="multipart/form-data">
                         Wybierz zdjęcia(max. 5, rozmiar do 500kB): </br></br>
                         <input type="file" name="fileToUpload[]" >
@@ -92,7 +93,7 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
                         Cena: <br/> <input type="text" name="ad-price" id="2"/><br/>
 
                         <?php
-                            include_once "./components/list-voivodeships.php";
+                        include_once "./components/list-voivodeships.php";
                         ?>
 
                         <div id="counties"></div>
@@ -105,29 +106,29 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
                         <input id="submit-button" type="submit" value="Edytuj artykuł"/><br/>
                     </form>
                     <?php
-                        function deleteOldFiles(){
-                            $connection=getConnection();
-                            $ad_id=$_GET['ad_id'];
-                            $query="SELECT location_photo FROM photo JOIN gallery ON id_photo_gallery=id_photo WHERE id_ad_gallery=$ad_id";
-                            if($result=mysqli_query($connection,$query)){
-                                if($row=mysqli_fetch_assoc($result)){
-                                    $folder_name=explode('/',$row['location_photo']);
+                    function deleteOldFiles(){
+                        $connection=getConnection();
+                        $ad_id=$_GET['ad_id'];
+                        $query="SELECT location_photo FROM photo JOIN gallery ON id_photo_gallery=id_photo WHERE id_ad_gallery=$ad_id";
+                        if($result=mysqli_query($connection,$query)){
+                            if($row=mysqli_fetch_assoc($result)){
+                                $folder_name=explode('/',$row['location_photo']);
 
-                                    $query="DELETE FROM gallery WHERE id_ad_gallery=$ad_id";
-                                    if($result=mysqli_query($connection,$query)){
-                                        //print_r(glob('.././uploads/'.$folder_name[0].'/*'));
-                                        array_map('unlink',glob('./uploads/'.$folder_name[0].'/*'));
-                                        rmdir('./uploads/'.$folder_name[0].'/');
-                                        //echo "13";
-                                        return true;
-                                    }
-                                    //echo "12";
-
+                                $query="DELETE FROM gallery WHERE id_ad_gallery=$ad_id";
+                                if($result=mysqli_query($connection,$query)){
+                                    //print_r(glob('.././uploads/'.$folder_name[0].'/*'));
+                                    array_map('unlink',glob('./uploads/'.$folder_name[0].'/*'));
+                                    rmdir('./uploads/'.$folder_name[0].'/');
+                                    //echo "13";
+                                    return true;
                                 }
+                                //echo "12";
+
                             }
-                            //echo "11";
-                            return false;
                         }
+                        //echo "11";
+                        return false;
+                    }
                     ?>
                     <script>
                         $(document).ready(function () {
@@ -181,6 +182,8 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
                                                     }
                                                 });
                                             }
+
+                                            window.location.href ='./ad.php?id='+'<?php echo $id_ad;?>';
                                         }
                                     }
                                 });
@@ -190,7 +193,7 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
                         });
 
                     </script>
-<?php
+                    <?php
 
                 }
                 else{
@@ -214,7 +217,7 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
     }
 
 } else{
-  header("location: index.php");
-  exit();
+    header("location: index.php");
+    exit();
 }
 ?>

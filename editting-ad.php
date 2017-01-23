@@ -4,7 +4,7 @@ session_start();
     $connection=getConnection();
 
     $ad_title=$_POST['ad-title'];
-    $ad_title=htmlspecialchars($ad_title, ENT_QUOTES, 'UTF-8');
+    //$ad_title=htmlspecialchars($ad_title, ENT_QUOTES, 'UTF-8');
     $ad_title=mysqli_real_escape_string($connection,$ad_title);
     $ad_title_pattern="/^.{1,255}$/u";
 
@@ -12,6 +12,8 @@ session_start();
         echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
         exit;
     }
+
+    $ad_title=addslashes($ad_title);
 
     $ad_price=$_POST['ad-price'];
     $ad_price_pattern="/^[0-9]{1,10}$/";
@@ -44,15 +46,17 @@ session_start();
     }
 
     $ad_content=$_POST['ad-content'];
-    $ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
+    //$ad_content=htmlspecialchars($ad_content, ENT_QUOTES, 'UTF-8');
     $ad_content=mysqli_real_escape_string($connection,$ad_content);
-    $ad_content_pattern="/^.{1,255}$/u";
+    //$ad_content=htmlentities($ad_content);
+    $ad_content_pattern="/.{1,255}/u";
 
     if(!preg_match($ad_content_pattern,$ad_content)){
-        echo "Wprowadziłeś tytuł ogłoszenia w błędnym formacie!";
+        echo "Wprowadziłeś treść ogłoszenia w błędnym formacie!";
         exit;
     }
 
+    $ad_content=addslashes($ad_content);
     //echo $ad_title," ",$ad_price," ",$ad_category," ",$ad_location," ",$ad_content;
 
     /*$query="INSERT INTO ad (id_ad,title_ad,description_ad,view_counter_ad,author_ad,category_ad,

@@ -59,13 +59,13 @@ session_start();
         /*--------------------------------------------------------------------*/
 
         /*password validation-------------------------------------------------*/
-        $password=$_POST['password'];
-        $password_pattern='/^[^;<\'" -]{5,20}$/u';
+        $password=addslashes($_POST['password']);
+        /*$password_pattern='/^[^;<\'" -]{5,20}$/u';
 
         if(!preg_match($login_pattern,$password)){
             //echo "Wprowadziłeś hasło w błędnym formacie!";
             throw new Exception("Wprowadziłeś hasło w błędnym formacie!");
-        }
+        }*/
 
         /*--------------------------------------------------------------------*/
     }

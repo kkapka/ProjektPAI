@@ -4,11 +4,23 @@ session_start();
 
 include_once "./components/important_includes.php";
 
-if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
+/*if(!isset($_COOKIE['id']) && (empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
         ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
     header("location: register.php");
     exit;
+}*/
+
+if(!isset($_COOKIE['id'])){
+    header("location: register.php");
+    exit;
 }
+
+if((empty($_POST['login'])||empty($_POST['password'])||empty($_POST['password2'])||empty($_POST['mail'])||empty($_POST['name'])||empty($_POST['surname'])||empty($_POST['street'])
+    ||empty($_POST['street_nr'])||empty($_POST['genders'])||empty($_POST['list-locations'])||empty($_POST['phone_number']))){
+    echo "Co najmniej jedno pole jest puste!";
+    exit;
+}
+
 
 /*login validation----------------------------------------------------*/
 $login_pattern = '/^[\p{L}\p{N}_]{5,20}$/u';
@@ -22,18 +34,11 @@ if(!preg_match($login_pattern,$login)) {
 
 
 /*password validation-------------------------------------------------*/
-$password_pattern='/^[^;\'" -]{5,20}$/u';
-$password=$_POST['password'];
+$password=addslashes($_POST['password']);
 
-if(!preg_match($password_pattern,$password)){
-    echo "Wprowadziłeś hasło w błędnym formacie!";
+if($password!=$_POST['password2']){
+    echo "Hasła są różne!";
     exit;
-}
-else{
-    if($password!=$_POST['password2']){
-        echo "Hasła są różne!";
-        exit;
-    }
 }
 /*--------------------------------------------------------------------*/
 
@@ -49,7 +54,7 @@ if(!preg_match($mail_pattern,$mail)){
 
 
 /*name validation-----------------------------------------------------*/
-$name_pattern="/^[\p{L}]{1,100}$/u";
+$name_pattern="/^[\p{L} ]{1,100}$/u";
 $name=$_POST['name'];
 
 if(!preg_match($name_pattern,$name)){
@@ -60,7 +65,7 @@ if(!preg_match($name_pattern,$name)){
 
 
 /*surname validation--------------------------------------------------*/
-$surname_pattern="/^[\p{L}]{1,100}$/u";
+$surname_pattern="/^[\p{L} ]{1,100}$/u";
 $surname=$_POST['surname'];
 
 if(!preg_match($surname_pattern,$surname)){
@@ -135,7 +140,8 @@ if($row_count<1){
 
 
 /*phone validation----------------------------------------------------*/
-$phone_nr_pattern="/^[\p{N}]{1,10}$/";
+$phone_nr=$_POST['phone_number'];
+$phone_nr_pattern="/^[+][0-9]{1,49}$/";
 $phone_nr=$_POST['phone_number'];
 
 if(!preg_match($phone_nr_pattern,$phone_nr)){
@@ -154,15 +160,16 @@ $salt=$row['salt_user'];
 
 $password=sha1($password.$salt);
 
-$sql_user=sprintf("UPDATE user SET login_user='%s', password_user='%s', mail_user='%s', name_user='%s', surname_user='%s', gender_user=%d, telephone_number_user=%d WHERE id_user=$_SESSION[id_user]",
+$sql_user=sprintf("UPDATE user SET login_user='%s', password_user='%s', mail_user='%s', name_user='%s', surname_user='%s', gender_user=%d, telephone_number_user='%s' WHERE id_user=$_SESSION[id_user]",
     mysqli_real_escape_string($connection,$login),
     mysqli_real_escape_string($connection,$password),
     mysqli_real_escape_string($connection,$mail),
     mysqli_real_escape_string($connection,$name),
     mysqli_real_escape_string($connection,$surname),
-    intval($gender),
-    intval($phone_nr)
+    mysqli_real_escape_string($connection,intval($gender)),
+    htmlentities(mysqli_real_escape_string($connection,$phone_nr))
 );
+
 $connection->query("start transaction");
 
 if($connection->query($sql_location)){

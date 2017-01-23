@@ -24,7 +24,7 @@ echo '<div id="locations"></div>';
 include "gender-list.php";
 
 echo<<<echo_end
-    Numer telefonu: <br/><input type="number" name="phone_number"/>
+    Numer telefonu: <br/><input type="text" name="phone_number"/>
     <br/><br/>
     <input type="submit" value="Edytuj dane"/><br/>
     </form>
@@ -74,6 +74,10 @@ echo_end;
                 data: $("#details-change-form").serialize(),
                 success: function (data) {
                     alert(data);
+
+                    if(data=="Edycja danych użytkownika przebiegła pomyślnie"){
+                        window.location.href='dashboard.php';
+                    }
                 }
             })
         });

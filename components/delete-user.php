@@ -7,9 +7,8 @@ header("Pragma: no-cache");
 include_once "../connect.php";
 include_once "./generate_token.php";
 
-$user_id=intval($_POST['user_id']);
-
 if(isset($_COOKIE['id']) && isset($_COOKIE['token'])){
+    $user_id=intval($_POST['user_id']);
     $connection=getConnection();
     mysqli_autocommit($connection,false);
     if($user_id!=NULL){

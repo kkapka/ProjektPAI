@@ -19,14 +19,15 @@
             $i=1;
             while($row=$result->fetch_assoc()){
                 echo '<table class="detailed-ad-table">';
-                echo '<tr><td class="detailed-ad-title" colspan="2">'.$row["title_ad"].'</td>';
+                echo '<tr><td class="detailed-ad-title" colspan="2">'.htmlentities($row["title_ad"]).'</td>';
                 echo '<tr><td class="detailed-ad-price-left">Cena</td><td class="detailed-ad-price-right">'.$row["price_ad"].'zł</td></tr>';
                 echo '<tr><td class="detailed-ad-location-left">Lokalizacja</td><td class="detailed-ad-location-right">'.$row["name_location"].','.$row["name_voivodeship"].'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Kategoria</td><td class="right-column-latest-ads">'.$row["name_category"].'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Data dodania</td><td class="right-column-latest-ads">'.$row["datetime_add_ad"].'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Autor</td><td class="right-column-latest-ads">'.$row["name_user"],' ',$row["surname_user"][0],'</td></tr>';
                 echo '<tr><td class="left-column-latest-ads">Numer telefonu</td><td class="right-column-latest-ads">'.$row["telephone_number_user"].'</td></tr>';
-                echo '<tr><td class="detailed-ad-title" colspan="2">'.$row["description_ad"].'</td>';
+                //echo '<tr><td class="detailed-ad-title" colspan="2">'.htmlentities(nl2br(stripslashes($row["description_ad"]))).'</td>';
+                echo '<tr><td class="detailed-ad-title" colspan="2" style="text-align: left;">'.str_replace('\r\n','</br>',htmlentities($row["description_ad"])).'</td>';
                 echo '<tr><td class="left-column-latest-ads">Liczba wyświetleń</td><td class="right-column-latest-ads">'.$row["view_counter_ad"].'</td></tr>';
                 echo '</table>';
 

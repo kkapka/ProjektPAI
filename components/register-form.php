@@ -23,7 +23,7 @@ echo_end;
     include "gender-list.php";
 
     echo<<<echo_end
-    Numer telefonu: <br/><input type="number" name="phone_number"/>
+    Numer telefonu: <br/><input type="text" name="phone_number"/>
     <br/><br/>
     <input type="checkbox" name="remember_login_details" required>Akceptuję regulamin</input><br/>
     <input type="submit" value="Zarejestruj się"/><br/>

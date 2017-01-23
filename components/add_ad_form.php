@@ -38,6 +38,7 @@
             success: function(data)
             {
                 if(data=="Dodano ogłoszenie do bazy"){
+                    alert(data);
                     var ajaxData = new FormData();
 
                     var k=0;
@@ -65,10 +66,13 @@
                             }
                         });
                     }
-
+                    window.location.href = "dashboard.php";
                 }
-                alert(data);
+                else{
+                    alert(data);
+                }
             }
+
         });
     })
 </script>

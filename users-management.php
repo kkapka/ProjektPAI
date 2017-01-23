@@ -35,7 +35,6 @@ setTopBarTitle("Zarządzaj użytkownikami");
     <div class="col-2-3">
         <?php
             include_once "./components/manage-users.php";
-
         ?>
     </div>
 </div>

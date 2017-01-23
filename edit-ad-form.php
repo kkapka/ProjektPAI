@@ -5,6 +5,11 @@ include "./show_errors.php";
 if(!isset($_COOKIE['id'])){
     header("location: index.php");
 }
+
+if(empty($_GET["ad_id"])||empty($_GET["author_ad"])){
+    header("location: index.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE HTML>
